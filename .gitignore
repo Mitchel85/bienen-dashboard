@@ -1,0 +1,20 @@
+# OpenClaw interne Dateien
+.openclaw/
+.clawhub/
+memory/
+skills/
+*.pptx
+*.xlsx
+
+# Temporäre Dateien
+*.pyc
+__pycache__/
+*.log
+/tmp/
+/cronjobs.json
+
+# Sensible Daten
+*.json
+*.env
+config.json
+openclaw.json
