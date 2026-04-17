@@ -18,3 +18,19 @@ __pycache__/
 *.env
 config.json
 openclaw.json
+
+# Persönliche Workspace‑Dateien (nicht fürs Repo)
+AGENTS.md
+BOOT.md
+BOOTSTRAP.md
+HEARTBEAT.md
+IDENTITY.md
+MEMORY.md
+SOUL.md
+TOOLS.md
+USER.md
+clean_transcripts.py
+create_sample_excel.py
+peek_excel.py
+server.pid
+whiteboard/
