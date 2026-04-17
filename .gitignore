@@ -34,3 +34,16 @@ create_sample_excel.py
 peek_excel.py
 server.pid
 whiteboard/
+
+# Nicht‑Dashboard‑Dateien (thematisch nicht zum Bienen‑Dashboard)
+dame.html
+tic_tac_toe.html
+excel_visualizer.html
+beispiel.xlsx
+generate_dynamic_excel.py
+generate_excel_fixed.py
+format_table.py
+format_table2.py
+example_table.py
+example_table2.py
+create_clawdia_ppt.py
