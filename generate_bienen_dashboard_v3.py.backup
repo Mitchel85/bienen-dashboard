@@ -162,9 +162,6 @@ def extract_latest_logs(logs, limit=3):
     return list(reversed(logs))[:limit]
 
 def generate_html(voelker, cronjobs):
-    # Entferne meta-Eintrag, der keine Volksdaten enthält
-    volksdaten = {k: v for k, v in voelker.items() if k != "meta"}
-    voelker = volksdaten  # ersetze für den weiteren Verlauf
     now = datetime.now().strftime("%d.%m.%Y %H:%M")
     active_volks = sum(1 for v in voelker.values() if v.get("logs"))
     total_logs = sum(len(v.get("logs", [])) for v in voelker.values())
@@ -214,9 +211,6 @@ def generate_html(voelker, cronjobs):
         <header>
             <h1>🐝 Bienenvölker Dashboard</h1>
             <div class="subtitle">Aktuelle Übersicht aller Völker & nächste Termine – Stand {now}</div>
-            <div class="quality-note" style="margin-top: 15px; padding: 10px; background-color: #e6f4ea; border-left: 4px solid #34a853; border-radius: 6px; font-size: 0.95rem; color: #0d652d;">
-                🏆 <strong>Qualitätshinweis:</strong> Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als <strong>sehr gut</strong> eingestuft.
-            </div>
         </header>
         
         <div class="stats">
