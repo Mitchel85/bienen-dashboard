@@ -1,0 +1,43 @@
+[
+  {
+    "timestamp": "2026-04-16T15:31:40.055766+00:00",
+    "aktion": "kontrollieren",
+    "menge": "",
+    "details": "Visuelle Kontrolle Dach‑Beuten: Volk besetzt (unten rot?), Flugaktivität mäßig, Hitzeschutz prüfen.",
+    "transkript": "Hier siehst du meine Völker, es sind insgesamt drei Stöcke, aber davon sind nur der der unten rot ist und der der unten grün ist, also die ersten beiden mit Bienen besetzt."
+  },
+  {
+    "timestamp": "2026-04-16T15:34:00.166823+00:00",
+    "aktion": "varroa_diagnose",
+    "menge": "",
+    "details": "Windel sauber gemacht, beginne 3‑tägige Messung des Varroabefalls.",
+    "transkript": "Nächster Protokolleintrag, ich habe heute die Varroa-Einschübe sauber gemacht und werde jetzt den Varroa-Befall messen für die nächsten drei Tage."
+  },
+  {
+    "timestamp": "2026-04-16T15:37:07.902660+00:00",
+    "aktion": "wiegen",
+    "menge": "40 kg",
+    "details": "Gewichtsmessung roter Stock",
+    "transkript": "Der Stock Nummer eins, also der rote, wiegt 40 Kilo insgesamt."
+  },
+  {
+    "timestamp": "2026-04-16T15:43:27.563741+00:00",
+    "aktion": "foto_analyse",
+    "menge": "",
+    "details": "Foto‑Analyse: Volksstärke mittel, Brutbild lückenhaft (königinbedingt?), Brut gesund, keine Krankheitszeichen, Varroa‑Diagnose fortsetzen.",
+    "transkript": "Bilder Volk nur. 1 (rot)"
+  },
+  {
+    "timestamp": "2026-04-16T15:44:19.751312+00:00",
+    "aktion": "kontrollieren",
+    "menge": "",
+    "details": "Brutraum zu 2/3 mit Wabengängen besetzt (ca. 8 von 12)",
+    "transkript": "Beide Stöcke sind zu 2/3 mit Wabengängen im Brutraum besetzt"
+  },
+  {
+    "timestamp": "2026-04-17T07:25:26.516570+00:00",
+    "aktion": "kontrollieren",
+    "menge": "",
+    "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+  }
+]

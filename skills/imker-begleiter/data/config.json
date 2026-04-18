@@ -1,0 +1,14 @@
+{
+  "user_id": "6882251060",
+  "location": {
+    "latitude": 52.30,
+    "longitude": 13.26,
+    "city": "Ludwigsfelde"
+  },
+  "alert_thresholds": {
+    "swarm_temperature": 18,
+    "swarm_wind_max": 15,
+    "swarm_cloud_max": 30
+  },
+  "cron_enabled": true
+}

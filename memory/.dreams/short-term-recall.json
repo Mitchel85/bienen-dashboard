@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-17T17:51:36.594Z",
+  "entries": {
+    "memory:memory/2026-04-16.md:37:61": {
+      "key": "memory:memory/2026-04-16.md:37:61",
+      "path": "memory/2026-04-16.md",
+      "startLine": 37,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "- Psychedelisches, überladenes Generation-Alpha-Bild gesendet (Telegram 8665383554). ## Bienenvölker-Dashboard (HTML) entwickelt - `generate_bienen_dashboard.py` liest `voelker.json` und erzeugt responsive HTML-Übersicht. - Enthält Volksübersicht (Gewicht, letzte Fütterung/Behandlung), neueste Protokolleinträge, Statistik. - Design: Bienen-farbig (gelb/orange), mobiloptimiert. - Kann manuell oder per Cron-Job aktualisiert werden (Option für tägliche Aktualisierung). ## Nächste Schritte (offen) - Foto‑Analyse‑Modul im Skill implementieren (KI‑Vision mit GPT‑4o/Gemini). - Excel‑Export der Logs. - Regel‑basierte Ableitungen („Varroa‑Befall hoch → behandeln!“). - Cron‑Job für wöchentliche Schw",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4167084068059921,
+      "maxScore": 0.4167084068059921,
+      "firstRecalledAt": "2026-04-17T17:51:36.594Z",
+      "lastRecalledAt": "2026-04-17T17:51:36.594Z",
+      "queryHashes": [
+        "d46676470855"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "gpt",
+        "generation-alpha-bild",
+        "bienenvölker-dashboard",
+        "generate-bienen-dashboard.py",
+        "voelker.json",
+        "html-übersicht",
+        "fütterung/behandlung",
+        "bienen-farbig"
+      ]
+    },
+    "memory:memory/2026-04-16.md:1:19": {
+      "key": "memory:memory/2026-04-16.md:1:19",
+      "path": "memory/2026-04-16.md",
+      "startLine": 1,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "# 2026-04-16 - Bienenprojekt & Dashboard-Entwicklung ## Telegram-Formatierung entschieden - Nach Recherche bekannter OpenClaw-Telegram-Probleme (Issue #36323: Tabellen als Textwand) festgelegt: **Tabellen in Code-Blöcken** ausgeben, maximale Breite ≤40 Zeichen für Mobile-Optimierung. - Getestet mit Cronjob-Tabelle - Darstellung auf Telegram nun korrekt. ## Imker-Begleiter-Skill intensiv genutzt ### Sprach-Logs verarbeitet (automatische Transkription & Parsing) 1. \"Hier siehst du meine Völker, es sind insgesamt drei Stöcke, aber davon sind nur der der unten rot ist und der der unten grün ist, also die ersten beiden mit Bienen besetzt.\" → Visuelle Kontrolle protokolliert. 2. \"Nächster Protok",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.39054421484470364,
+      "maxScore": 0.39054421484470364,
+      "firstRecalledAt": "2026-04-17T17:51:36.594Z",
+      "lastRecalledAt": "2026-04-17T17:51:36.594Z",
+      "queryHashes": [
+        "d46676470855"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "dashboard-entwicklung",
+        "telegram-formatierung",
+        "openclaw-telegram-probleme",
+        "code-blöcken",
+        "mobile-optimierung",
+        "cronjob-tabelle",
+        "imker-begleiter-skill",
+        "sprach-logs"
+      ]
+    },
+    "memory:memory/2026-04-16.md:15:41": {
+      "key": "memory:memory/2026-04-16.md:15:41",
+      "path": "memory/2026-04-16.md",
+      "startLine": 15,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "- **Volk 1 (rot)**: Mittelstark, Brutbild lückenhaft (königinbedingt?), Brut gesund, keine Krankheitszeichen. - **Volk 2 (grün)**: Schwach-mittelstark, Brutbild sehr lückenhaft (\"schrotschüssig\"), Futtervorräte knapp, Zustand instabil (\"Sorgenkind\"). - Empfehlungen: Futter prüfen (Volk 2), Varroa-Diagnose fortsetzen, Königin beobachten, bei Trachtbeginn erweitern. ### Zielsetzung festgehalten - **Volk 3 (gelb)** ist leer. Ziel: In Schwarmzeit (Mai/Juni) mit Ablegern aus Volk 1 & 2 besetzen. - Standort aller drei Völker: **Garagen-Dach, Ludwigsfelde**. ### Datenbank aktualisiert (`voelker.json`) - Logs chronologisch gespeichert (Datum, Aktion, Menge, Details, Transkript). - Besondere Hinwei",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.362481552362442,
+      "maxScore": 0.362481552362442,
+      "firstRecalledAt": "2026-04-17T17:51:36.594Z",
+      "lastRecalledAt": "2026-04-17T17:51:36.594Z",
+      "queryHashes": [
+        "d46676470855"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "schwach-mittelstark",
+        "varroa-diagnose",
+        "mai/juni",
+        "garagen-dach",
+        "voelker.json",
+        "volk",
+        "rot",
+        "mittelstark"
+      ]
+    }
+  }
+}

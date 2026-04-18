@@ -1,0 +1,120 @@
+{
+  "1": {
+    "volk_id": "1",
+    "name": "Roter Stock",
+    "standort": "Garagen-Dach, Ludwigsfelde",
+    "rasse": "Carnica",
+    "königin_gezeichnet": "2025-05",
+    "letzte_varroa_behandlung": "2026-03-15",
+    "letzte_fütterung": "",
+    "besondere_hinweise": "schwärmt leicht",
+    "logs": [
+      {
+        "timestamp": "2026-04-16T15:31:40.055766+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Visuelle Kontrolle Dach‑Beuten: Volk besetzt (unten rot?), Flugaktivität mäßig, Hitzeschutz prüfen."
+      },
+      {
+        "timestamp": "2026-04-16T15:34:00.166823+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "Windel sauber gemacht, beginne 3‑tägige Messung des Varroabefalls."
+      },
+      {
+        "timestamp": "2026-04-16T15:37:07.902660+00:00",
+        "aktion": "wiegen",
+        "menge": "40 kg",
+        "details": "Gewichtsmessung roter Stock"
+      },
+      {
+        "timestamp": "2026-04-16T15:43:27.563741+00:00",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto‑Analyse: Volksstärke mittel, Brutbild lückenhaft (königinbedingt?), Brut gesund, keine Krankheitszeichen, Varroa‑Diagnose fortsetzen."
+      },
+      {
+        "timestamp": "2026-04-16T15:44:19.751312+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Brutraum zu 2/3 mit Wabengängen besetzt (ca. 8 von 12)"
+      },
+      {
+        "timestamp": "2026-04-17T07:25:26.516570+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      }
+    ]
+  },
+  "2": {
+    "volk_id": "2",
+    "name": "Grüner Stock",
+    "standort": "Garagen-Dach, Ludwigsfelde",
+    "rasse": "Buckfast",
+    "königin_gezeichnet": "2025-07",
+    "letzte_varroa_behandlung": "2026-03-10",
+    "letzte_fütterung": "",
+    "besondere_hinweise": "sanftmütig",
+    "logs": [
+      {
+        "timestamp": "2026-04-16T15:31:50.868888+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Visuelle Kontrolle Dach‑Beuten: Volk besetzt (unten grün?), Flugaktivität mäßig, Hitzeschutz prüfen."
+      },
+      {
+        "timestamp": "2026-04-16T15:34:09.860278+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "Windel sauber gemacht, beginne 3‑tägige Messung des Varroabefalls."
+      },
+      {
+        "timestamp": "2026-04-16T15:35:52.366522+00:00",
+        "aktion": "wiegen",
+        "menge": "42 kg",
+        "details": "Gewichtsmessung grüner Stock"
+      },
+      {
+        "timestamp": "2026-04-16T15:44:26.776409+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Brutraum zu 2/3 mit Wabengängen besetzt (ca. 8 von 12)"
+      },
+      {
+        "timestamp": "2026-04-16T15:46:46.821622+00:00",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto‑Analyse: Volk schwach‑mittelstark, Brutbild sehr lückenhaft (schrotschüssig), Futtervorräte knapp, Varroa‑Diagnose dringend, Königin beobachten, evtl. einengen."
+      },
+      {
+        "timestamp": "2026-04-17T07:25:26.518729+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      }
+    ]
+  },
+  "3": {
+    "volk_id": "3",
+    "name": "Gelber Stock",
+    "standort": "Garagen-Dach, Ludwigsfelde",
+    "rasse": "unbekannt",
+    "königin_gezeichnet": "",
+    "letzte_varroa_behandlung": "",
+    "letzte_fütterung": "",
+    "besondere_hinweise": "Leerer Stock. Ziel: In Schwarmzeit (Mai/Juni) mit Ablegern aus Volk 1 & 2 besetzen.",
+    "logs": [
+      {
+        "timestamp": "2026-04-17T07:25:26.519430+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      }
+    ]
+  },
+  "meta": {
+    "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
+    "letzte_aktualisierung": "2026-04-17"
+  }
+}
