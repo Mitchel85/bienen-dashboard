@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Clawdia – Öffentlicher Server</title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 2rem; background: #fafafa; color: #333; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        h1 { color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 0.5rem; }
+        .note { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 4px; }
+        code { background: #f1f5f9; padding: 0.2em 0.4em; border-radius: 4px; font-family: monospace; }
+        footer { margin-top: 2rem; font-size: 0.875rem; color: #6b7280; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🦞 Clawdia – Öffentlicher Server</h1>
+        <p>Dieser Server wird für öffentliche Inhalte genutzt, die über den Cloudflare Tunnel erreichbar sind.</p>
+        <div class="note">
+            <strong>Sicherheitshinweis:</strong> Directory‑Listing ist deaktiviert. Nur explizit hinterlegte Dateien sind sichtbar.
+        </div>
+        <h2>Verfügbare Inhalte</h2>
+        <ul>
+            <li>Dies ist die Standard‑Index‑Seite.</li>
+            <li>Weitere Dateien können im Ordner <code>public_3001</code> abgelegt werden.</li>
+        </ul>
+        <h2>Server‑Status</h2>
+        <p><strong>Port:</strong> 3001<br>
+           <strong>Protokoll:</strong> HTTP<br>
+           <strong>Tunnel:</strong> Cloudflare → <code>https://oc.clawdia26.com/</code></p>
+        <footer>
+            Erstellt am <span id="date"></span> – Clawdia 🦞
+        </footer>
+    </div>
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleDateString('de-DE');
+    </script>
+</body>
+</html>
