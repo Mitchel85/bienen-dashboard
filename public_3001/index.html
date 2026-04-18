@@ -5,29 +5,88 @@
     <title>Clawdia – Öffentlicher Server</title>
     <style>
         body { font-family: system-ui, sans-serif; margin: 2rem; background: #fafafa; color: #333; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .container { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         h1 { color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 0.5rem; }
         .note { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 4px; }
         code { background: #f1f5f9; padding: 0.2em 0.4em; border-radius: 4px; font-family: monospace; }
         footer { margin-top: 2rem; font-size: 0.875rem; color: #6b7280; text-align: center; }
+        .games { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 2rem 0; }
+        .game-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .game-card h3 { margin-top: 0; color: #1e40af; }
+        .game-card .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .game-card .btn:hover {
+            background: #1d4ed8;
+        }
+        .game-card .desc {
+            font-size: 0.9em;
+            color: #4b5563;
+        }
+        .server-info {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🦞 Clawdia – Öffentlicher Server</h1>
         <p>Dieser Server wird für öffentliche Inhalte genutzt, die über den Cloudflare Tunnel erreichbar sind.</p>
-        <div class="note">
-            <strong>Sicherheitshinweis:</strong> Directory‑Listing ist deaktiviert. Nur explizit hinterlegte Dateien sind sichtbar.
+        <h2>🎮 Gemeinsame Spiele</h2>
+        <div class="games">
+            <div class="game-card">
+                <h3>🖌️ Gemeinsames Malen (Echtzeit)</h3>
+                <p class="desc">Zeichne zusammen mit Mitch in Echtzeit auf derselben Leinwand. WebSocket‑basiert, synchronisiert für alle.</p>
+                <a href="/malen_ws.html" class="btn">Jetzt gemeinsam malen</a>
+            </div>
+            <div class="game-card">
+                <h3>🎨 Lokales Malen</h3>
+                <p class="desc">Ein einfacher Mal‑Canvas nur in deinem Browser. Keine Synchronisation, aber speicherbar.</p>
+                <a href="/mal.html" class="btn">Alleine malen</a>
+            </div>
+            <div class="game-card">
+                <h3>❓ Tic‑Tac‑Toe</h3>
+                <p class="desc">Klassisches Spiel gegen den Computer (lokales Spiel).</p>
+                <a href="/tic_tac_toe.html" class="btn">Spielen</a>
+            </div>
+            <div class="game-card">
+                <h3>👑 Dame (Checkers)</h3>
+                <p class="desc">Strategie‑Brettspiel gegen eine einfache KI.</p>
+                <a href="/dame.html" class="btn">Spielen</a>
+            </div>
         </div>
-        <h2>Verfügbare Inhalte</h2>
+
+        <h2>📁 Verfügbare Inhalte</h2>
         <ul>
-            <li>Dies ist die Standard‑Index‑Seite.</li>
-            <li>Weitere Dateien können im Ordner <code>public_3001</code> abgelegt werden.</li>
+            <li><strong>Index</strong> – diese Seite</li>
+            <li><strong>Gemeinsames Malen</strong> – <code>/malen_ws.html</code></li>
+            <li><strong>Lokales Malen</strong> – <code>/mal.html</code></li>
+            <li><strong>Tic‑Tac‑Toe</strong> – <code>/tic_tac_toe.html</code></li>
+            <li><strong>Dame</strong> – <code>/dame.html</code></li>
         </ul>
-        <h2>Server‑Status</h2>
-        <p><strong>Port:</strong> 3001<br>
-           <strong>Protokoll:</strong> HTTP<br>
-           <strong>Tunnel:</strong> Cloudflare → <code>https://oc.clawdia26.com/</code></p>
+
         <footer>
             Erstellt am <span id="date"></span> – Clawdia 🦞
         </footer>

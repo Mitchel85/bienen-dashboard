@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>🦞 Clawdia's Mal-Ecke</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .canvas-container {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin: 20px auto;
+            background: white;
+        }
+        canvas {
+            display: block;
+            cursor: crosshair;
+        }
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        button, input, select {
+            padding: 10px 15px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #f9f9f9;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e0e0e0;
+        }
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #888;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🦞 Clawdia's Mal‑Ecke</h1>
+        <p class="subtitle">Ein einfacher Mal‑Canvas – nur lokal in deinem Browser. <strong>Nicht gemeinsam!</strong></p>
+        
+        <div class="warning">
+            <strong>⚠️ Hinweis:</strong> Dies ist eine rein lokale Malfläche. Was du hier malst, sieht nur du. Für gemeinsames Malen bräuchten wir einen Echtzeit‑Server.
+        </div>
+
+        <div class="controls">
+            <button id="clear">🧹 Leinwand löschen</button>
+            <button id="eraser">🧽 Radiergummi</button>
+            <button id="brush">🖌️ Pinsel</button>
+            <input type="color" id="colorPicker" value="#2563eb">
+            <select id="brushSize">
+                <option value="2">Fein</option>
+                <option value="5" selected>Mittel</option>
+                <option value="10">Groß</option>
+                <option value="20">Riesenpinsel</option>
+            </select>
+            <button id="save">💾 Bild speichern</button>
+        </div>
+
+        <div class="color-palette">
+            <div class="color-option" style="background-color: #2563eb;" data-color="#2563eb"></div>
+            <div class="color-option" style="background-color: #dc2626;" data-color="#dc2626"></div>
+            <div class="color-option" style="background-color: #16a34a;" data-color="#16a34a"></div>
+            <div class="color-option" style="background-color: #ea580c;" data-color="#ea580c"></div>
+            <div class="color-option" style="background-color: #7c3aed;" data-color="#7c3aed"></div>
+            <div class="color-option" style="background-color: #000000;" data-color="#000000"></div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="canvas" width="760" height="500"></canvas>
+        </div>
+
+        <div class="info">
+            <p><strong>Anleitung:</strong> Wähle einen Pinsel oder Radiergummi, klicke auf eine Farbe und male auf der Leinwand. <strong>Speichern</strong> speichert das Bild als PNG.</p>
+            <p>🔗 <a href="/">Zurück zur Startseite</a> | 🦞 Erstellt von Clawdia</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let painting = false;
+        let brushColor = '#2563eb';
+        let brushSize = 5;
+        let isErasing = false;
+
+        // Canvas initial weiß füllen
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = brushColor;
+        ctx.lineWidth = brushSize;
+        ctx.lineCap = 'round';
+
+        function startPosition(e) {
+            painting = true;
+            draw(e);
+        }
+
+        function endPosition() {
+            painting = false;
+            ctx.beginPath();
+        }
+
+        function draw(e) {
+            if (!painting) return;
+            ctx.lineWidth = brushSize;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = isErasing ? 'white' : brushColor;
+
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+        }
+
+        // Event‑Listener
+        canvas.addEventListener('mousedown', startPosition);
+        canvas.addEventListener('mouseup', endPosition);
+        canvas.addEventListener('mousemove', draw);
+
+        // Steuerelemente
+        document.getElementById('clear').addEventListener('click', () => {
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        });
+
+        document.getElementById('eraser').addEventListener('click', () => {
+            isErasing = true;
+        });
+
+        document.getElementById('brush').addEventListener('click', () => {
+            isErasing = false;
+        });
+
+        document.getElementById('colorPicker').addEventListener('input', (e) => {
+            brushColor = e.target.value;
+            isErasing = false;
+        });
+
+        document.querySelectorAll('.color-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                brushColor = btn.getAttribute('data-color');
+                document.getElementById('colorPicker').value = brushColor;
+                isErasing = false;
+            });
+        });
+
+        document.getElementById('brushSize').addEventListener('change', (e) => {
+            brushSize = parseInt(e.target.value);
+        });
+
+        document.getElementById('save').addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.download = 'clawdia-malerei.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+
+        // Touch‑Support für Mobile
+        canvas.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent('mousedown', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(mouseEvent);
+        });
+
+        canvas.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent('mousemove', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(mouseEvent);
+        });
+
+        canvas.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            const mouseEvent = new MouseEvent('mouseup', {});
+            canvas.dispatchEvent(mouseEvent);
+        });
+    </script>
+</body>
+</html>

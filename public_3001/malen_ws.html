@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>🦞 Gemeinsames Malen – Clawdia & Mitch</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .connected {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #10b981;
+        }
+        .disconnected {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
+        }
+        .canvas-container {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin: 20px auto;
+            background: white;
+        }
+        canvas {
+            display: block;
+            cursor: crosshair;
+        }
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        button, input, select {
+            padding: 10px 15px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #f9f9f9;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e0e0e0;
+        }
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #888;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+        .users {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🦞 Gemeinsames Malen – Clawdia & Mitch</h1>
+        <p class="subtitle">Echtzeit‑Canvas – was du malst, sehen alle, die gerade auf dieser Seite sind.</p>
+        
+        <div id="status" class="status disconnected">🚫 Nicht verbunden</div>
+        <div id="users" class="users">👤 Aktive Maler: <span id="userCount">0</span></div>
+
+        <div class="controls">
+            <button id="clear">🧹 Leinwand löschen (für alle)</button>
+            <button id="eraser">🧽 Radiergummi</button>
+            <button id="brush">🖌️ Pinsel</button>
+            <input type="color" id="colorPicker" value="#2563eb">
+            <select id="brushSize">
+                <option value="2">Fein</option>
+                <option value="5" selected>Mittel</option>
+                <option value="10">Groß</option>
+                <option value="20">Riesenpinsel</option>
+            </select>
+            <button id="save">💾 Bild speichern</button>
+        </div>
+
+        <div class="color-palette">
+            <div class="color-option" style="background-color: #2563eb;" data-color="#2563eb"></div>
+            <div class="color-option" style="background-color: #dc2626;" data-color="#dc2626"></div>
+            <div class="color-option" style="background-color: #16a34a;" data-color="#16a34a"></div>
+            <div class="color-option" style="background-color: #ea580c;" data-color="#ea580c"></div>
+            <div class="color-option" style="background-color: #7c3aed;" data-color="#7c3aed"></div>
+            <div class="color-option" style="background-color: #000000;" data-color="#000000"></div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="canvas" width="800" height="500"></canvas>
+        </div>
+
+        <div class="info">
+            <p><strong>Anleitung:</strong> Wähle Farbe/Pinsel und male – deine Striche erscheinen bei allen verbundenen Nutzern in Echtzeit. <strong>Achtung:</strong> „Leinwand löschen“ löscht für alle!</p>
+            <p>🔗 <a href="/">Zurück zur Startseite</a> | 🦞 Erstellt von Clawdia</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let painting = false;
+        let brushColor = '#2563eb';
+        let brushSize = 5;
+        let isErasing = false;
+        let socket = null;
+        let userCount = 0;
+
+        // Canvas initial weiß füllen
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = brushColor;
+        ctx.lineWidth = brushSize;
+        ctx.lineCap = 'round';
+
+        // WebSocket‑Verbindung herstellen
+        function connectWebSocket() {
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${window.location.host}`;
+            socket = new WebSocket(wsUrl);
+
+            socket.addEventListener('open', () => {
+                console.log('✅ Mit Server verbunden');
+                updateStatus(true);
+            });
+
+            socket.addEventListener('message', (event) => {
+                try {
+                    const data = JSON.parse(event.data);
+                    if (data.type === 'history') {
+                        // Zeichne die gesamte Historie
+                        data.data.forEach(item => drawRemote(item));
+                    } else {
+                        drawRemote(data);
+                    }
+                } catch (e) {
+                    console.error('Fehler beim Verarbeiten der Nachricht:', e);
+                }
+            });
+
+            socket.addEventListener('close', () => {
+                console.log('🚫 Verbindung zum Server verloren');
+                updateStatus(false);
+                // Nach 3 Sekunden neu verbinden
+                setTimeout(connectWebSocket, 3000);
+            });
+
+            socket.addEventListener('error', (err) => {
+                console.error('WebSocket‑Fehler:', err);
+                updateStatus(false);
+            });
+        }
+
+        function updateStatus(connected) {
+            const statusEl = document.getElementById('status');
+            if (connected) {
+                statusEl.textContent = '✅ Verbunden – du malst jetzt mit anderen!';
+                statusEl.className = 'status connected';
+            } else {
+                statusEl.textContent = '🚫 Nicht verbunden – Malen nur lokal';
+                statusEl.className = 'status disconnected';
+            }
+        }
+
+        function sendDrawingEvent(type, data) {
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                socket.send(JSON.stringify({ type, data }));
+            }
+        }
+
+        function drawRemote(event) {
+            if (!event.data) return;
+            const { x, y, color, size, action, isEraser } = event.data;
+            ctx.lineWidth = size;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = isEraser ? 'white' : color;
+
+            if (action === 'start') {
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            } else if (action === 'move') {
+                ctx.lineTo(x, y);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            } else if (action === 'clear') {
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        // Lokales Zeichnen
+        function startPosition(e) {
+            painting = true;
+            const { x, y } = getCanvasCoords(e);
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            sendDrawingEvent('draw', {
+                x, y, color: brushColor, size: brushSize,
+                action: 'start', isEraser: isErasing
+            });
+            draw(e);
+        }
+
+        function endPosition() {
+            painting = false;
+            ctx.beginPath();
+        }
+
+        function draw(e) {
+            if (!painting) return;
+            ctx.lineWidth = brushSize;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = isErasing ? 'white' : brushColor;
+
+            const { x, y } = getCanvasCoords(e);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            sendDrawingEvent('draw', {
+                x, y, color: brushColor, size: brushSize,
+                action: 'move', isEraser: isErasing
+            });
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+        }
+
+        function getCanvasCoords(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+            return {
+                x: clientX - rect.left,
+                y: clientY - rect.top
+            };
+        }
+
+        // Steuerelemente
+        document.getElementById('clear').addEventListener('click', () => {
+            if (confirm('Leinwand für alle löschen? 😱')) {
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                sendDrawingEvent('draw', { action: 'clear' });
+            }
+        });
+
+        document.getElementById('eraser').addEventListener('click', () => {
+            isErasing = true;
+        });
+
+        document.getElementById('brush').addEventListener('click', () => {
+            isErasing = false;
+        });
+
+        document.getElementById('colorPicker').addEventListener('input', (e) => {
+            brushColor = e.target.value;
+            isErasing = false;
+        });
+
+        document.querySelectorAll('.color-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                brushColor = btn.getAttribute('data-color');
+                document.getElementById('colorPicker').value = brushColor;
+                isErasing = false;
+            });
+        });
+
+        document.getElementById('brushSize').addEventListener('change', (e) => {
+            brushSize = parseInt(e.target.value);
+        });
+
+        document.getElementById('save').addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.download = 'clawdia-gemeinsam.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+
+        // Event‑Listener für Canvas
+        canvas.addEventListener('mousedown', startPosition);
+        canvas.addEventListener('mouseup', endPosition);
+        canvas.addEventListener('mousemove', draw);
+
+        // Touch‑Support
+        canvas.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            startPosition(e);
+        });
+        canvas.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            draw(e);
+        });
+        canvas.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            endPosition();
+        });
+
+        // WebSocket verbinden
+        connectWebSocket();
+    </script>
+</body>
+</html>
