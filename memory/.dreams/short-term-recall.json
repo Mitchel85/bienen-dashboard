@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-17T17:51:36.594Z",
+  "updatedAt": "2026-04-19T07:01:43.367Z",
   "entries": {
     "memory:memory/2026-04-16.md:37:61": {
       "key": "memory:memory/2026-04-16.md:37:61",
@@ -9,18 +9,20 @@
       "endLine": 61,
       "source": "memory",
       "snippet": "- Psychedelisches, überladenes Generation-Alpha-Bild gesendet (Telegram 8665383554). ## Bienenvölker-Dashboard (HTML) entwickelt - `generate_bienen_dashboard.py` liest `voelker.json` und erzeugt responsive HTML-Übersicht. - Enthält Volksübersicht (Gewicht, letzte Fütterung/Behandlung), neueste Protokolleinträge, Statistik. - Design: Bienen-farbig (gelb/orange), mobiloptimiert. - Kann manuell oder per Cron-Job aktualisiert werden (Option für tägliche Aktualisierung). ## Nächste Schritte (offen) - Foto‑Analyse‑Modul im Skill implementieren (KI‑Vision mit GPT‑4o/Gemini). - Excel‑Export der Logs. - Regel‑basierte Ableitungen („Varroa‑Befall hoch → behandeln!“). - Cron‑Job für wöchentliche Schw",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4167084068059921,
-      "maxScore": 0.4167084068059921,
+      "totalScore": 0.8697887507849948,
+      "maxScore": 0.4530803439790028,
       "firstRecalledAt": "2026-04-17T17:51:36.594Z",
-      "lastRecalledAt": "2026-04-17T17:51:36.594Z",
+      "lastRecalledAt": "2026-04-19T07:01:43.367Z",
       "queryHashes": [
-        "d46676470855"
+        "d46676470855",
+        "ac2fb9f8b898"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-19"
       ],
       "conceptTags": [
         "gpt",
@@ -40,18 +42,20 @@
       "endLine": 19,
       "source": "memory",
       "snippet": "# 2026-04-16 - Bienenprojekt & Dashboard-Entwicklung ## Telegram-Formatierung entschieden - Nach Recherche bekannter OpenClaw-Telegram-Probleme (Issue #36323: Tabellen als Textwand) festgelegt: **Tabellen in Code-Blöcken** ausgeben, maximale Breite ≤40 Zeichen für Mobile-Optimierung. - Getestet mit Cronjob-Tabelle - Darstellung auf Telegram nun korrekt. ## Imker-Begleiter-Skill intensiv genutzt ### Sprach-Logs verarbeitet (automatische Transkription & Parsing) 1. \"Hier siehst du meine Völker, es sind insgesamt drei Stöcke, aber davon sind nur der der unten rot ist und der der unten grün ist, also die ersten beiden mit Bienen besetzt.\" → Visuelle Kontrolle protokolliert. 2. \"Nächster Protok",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.39054421484470364,
-      "maxScore": 0.39054421484470364,
+      "totalScore": 0.8894643029841147,
+      "maxScore": 0.49892008813941113,
       "firstRecalledAt": "2026-04-17T17:51:36.594Z",
-      "lastRecalledAt": "2026-04-17T17:51:36.594Z",
+      "lastRecalledAt": "2026-04-19T07:01:43.367Z",
       "queryHashes": [
-        "d46676470855"
+        "d46676470855",
+        "ac2fb9f8b898"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-19"
       ],
       "conceptTags": [
         "dashboard-entwicklung",
@@ -71,18 +75,20 @@
       "endLine": 41,
       "source": "memory",
       "snippet": "- **Volk 1 (rot)**: Mittelstark, Brutbild lückenhaft (königinbedingt?), Brut gesund, keine Krankheitszeichen. - **Volk 2 (grün)**: Schwach-mittelstark, Brutbild sehr lückenhaft (\"schrotschüssig\"), Futtervorräte knapp, Zustand instabil (\"Sorgenkind\"). - Empfehlungen: Futter prüfen (Volk 2), Varroa-Diagnose fortsetzen, Königin beobachten, bei Trachtbeginn erweitern. ### Zielsetzung festgehalten - **Volk 3 (gelb)** ist leer. Ziel: In Schwarmzeit (Mai/Juni) mit Ablegern aus Volk 1 & 2 besetzen. - Standort aller drei Völker: **Garagen-Dach, Ludwigsfelde**. ### Datenbank aktualisiert (`voelker.json`) - Logs chronologisch gespeichert (Datum, Aktion, Menge, Details, Transkript). - Besondere Hinwei",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.362481552362442,
-      "maxScore": 0.362481552362442,
+      "totalScore": 0.8956112617960512,
+      "maxScore": 0.5331297094336092,
       "firstRecalledAt": "2026-04-17T17:51:36.594Z",
-      "lastRecalledAt": "2026-04-17T17:51:36.594Z",
+      "lastRecalledAt": "2026-04-19T07:01:43.367Z",
       "queryHashes": [
-        "d46676470855"
+        "d46676470855",
+        "ac2fb9f8b898"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-19"
       ],
       "conceptTags": [
         "schwach-mittelstark",
@@ -93,6 +99,68 @@
         "volk",
         "rot",
         "mittelstark"
+      ]
+    },
+    "memory:memory/2026-04-17.md:1:20": {
+      "key": "memory:memory/2026-04-17.md:1:20",
+      "path": "memory/2026-04-17.md",
+      "startLine": 1,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "# 2026-04-17 – Bienen‑Updates & Cron‑Job‑Anpassungen ## Sprach‑Log verarbeitet (Mitch, 09:18) - **Transkript:** „Jetzt geht es um die Bienen. Die Bienenstöcke müssen nicht gefüttert werden, weil direkt neben uns jetzt die ganzen Kirschbäume blühen. Also die Fütterung ist nicht notwendig. In zwei Tagen die Varroa-Kontrolle. Und jetzt noch ein wichtiger Hinweis. Ich brauche keine Benachrichtigung darüber, dass ein Cronjob richtig läuft. Ich brauche lediglich dann direkt den Schwarmalarm, wenn es soweit ist.“ - **Aktionen:** 1. **Log‑Einträge** für alle drei Völker hinzugefügt (Aktion `kontrollieren`, Details: „Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.).“)",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4633861021149751,
+      "maxScore": 0.4633861021149751,
+      "firstRecalledAt": "2026-04-19T07:01:43.367Z",
+      "lastRecalledAt": "2026-04-19T07:01:43.367Z",
+      "queryHashes": [
+        "ac2fb9f8b898"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "varroa-kontrolle",
+        "19.04",
+        "bienen",
+        "updates",
+        "cron",
+        "job",
+        "anpassungen",
+        "sprach"
+      ]
+    },
+    "memory:memory/2026-04-16.md:57:82": {
+      "key": "memory:memory/2026-04-16.md:57:82",
+      "path": "memory/2026-04-16.md",
+      "startLine": 57,
+      "endLine": 82,
+      "source": "memory",
+      "snippet": "- `imker‑wochenreport` → „Wochenreport erstellen“ - `imker‑varroa` → „Varroa‑Behandlungserinnerung“ - Statistik‑Kästchen „Geplante Termine“ statt „Geplante Cronjobs“. - Überschrift „Nächste Termine“ statt „Nächste Termine (Cronjobs)“. - **Sprachnachrichten** werden nur noch gekürzt gespeichert (`details`), kein volles Transkript mehr. - **Fütterungsfelder** leer (keine Fütterung hat stattgefunden). ## Technische Anpassungen - `voice_logger.py`: Übergibt kein `transkript` mehr an `add_log`. - `volk_db.py`: `transkript` optional (nur speichern, wenn nicht leer). - `clean_transcripts.py`: Entfernte `transkript` aus allen vorhandenen Logs (10 Einträge). - `generate_bienen_dashboard_v3.py`:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36982253121245623,
+      "maxScore": 0.36982253121245623,
+      "firstRecalledAt": "2026-04-19T07:01:43.367Z",
+      "lastRecalledAt": "2026-04-19T07:01:43.367Z",
+      "queryHashes": [
+        "ac2fb9f8b898"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "voice-logger.py",
+        "add-log",
+        "volk-db.py",
+        "clean-transcripts.py",
+        "generate-bienen-dashboard-v3.py",
+        "imker",
+        "wochenreport",
+        "erstellen"
       ]
     }
   }
