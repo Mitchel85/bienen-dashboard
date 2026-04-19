@@ -1,1 +1,4 @@
 WebSocket server listening on port 3001
+Client connected
+Received: Test
+Client disconnected

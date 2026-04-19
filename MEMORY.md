@@ -45,6 +45,11 @@
 
 **Hinweis:** Das interne `tts`‑Tool generiert zwar Audio, aber die automatische Zustellung scheint nicht immer zuverlässig. Der manuelle Workflow ist ein Backup.
 
+## Wichtige System-Regeln (Sicherheit)
+- **KEIN "cd" in Befehlen verwenden:** Das Gateway verbietet komplexe Interpreter-Aufrufe (Navigation mit &&).
+- **Absolute Pfade nutzen:** Befehle müssen immer mit absoluten Pfaden ausgeführt werden (z.B. `python3 /data/.openclaw/workspace/script.py`).
+- **Keine Befehlsketten:** Vermeide `&&`, `;` oder Pipes in `exec`-Aufrufen, wenn möglich.
+
 ## Wichtige Entscheidungen & Erkenntnisse
 - PDF-Erstellung: HTML + Browser-Druck ist zuverlässigster Weg
 - Cron-Jobs: Jeder Chat eigene isolierte Session (sessionTarget: "isolated")

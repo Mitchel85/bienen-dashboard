@@ -153,18 +153,18 @@ Die Konfiguration liegt in `data/config.json`:
 ### Manuelle Eingabe (falls gewünscht)
 ```bash
 # Über OpenClaw exec
-python3 skills/imker‑begleiter/scripts/volk_db.py add-log --volk 1 --aktion "füttern" --menge "3 kg"
+python3 /data/.openclaw/workspace/skills/imker-begleiter/scripts/volk_db.py add-log --volk 1 --aktion "füttern" --menge "3 kg"
 ```
 
 ### Status‑Report anfordern
 ```bash
 # Wochenreport generieren
-python3 skills/imker‑begleiter/scripts/report.py weekly --send
+python3 /data/.openclaw/workspace/skills/imker-begleiter/scripts/report.py weekly --send
 ```
 
 ### Schwarmalarm prüfen (manuell)
 ```bash
-python3 skills/imker‑begleiter/scripts/swarm_alert.py check
+python3 /data/.openclaw/workspace/skills/imker-begleiter/scripts/swarm_alert.py check
 ```
 
 ---
@@ -187,15 +187,15 @@ python3 skills/imker‑begleiter/scripts/swarm_alert.py check
 
 ### Test‑Suite ausführen
 ```bash
-cd /data/.openclaw/workspace/skills/imker‑begleiter
-python3 -m pytest tests/ -v
+# Keine cd-Befehle nutzen!
+python3 -m pytest /data/.openclaw/workspace/skills/imker-begleiter/tests/ -v
 ```
 
 ### Manuelle Tests
-1. **Volks‑Datenbank:** `python3 scripts/volk_db.py test`
-2. **Sprach‑Log:** `python3 scripts/voice_logger.py test --audio beispiel.ogg`
-3. **Wetter‑Client:** `python3 scripts/weather_client.py current`
-4. **Schwarmalarm:** `python3 scripts/swarm_alert.py simulate --date 2026-05-15`
+1. **Volks‑Datenbank:** `python3 /data/.openclaw/workspace/skills/imker-begleiter/scripts/volk_db.py test`
+2. **Sprach‑Log:** `python3 /data/.openclaw/workspace/skills/imker-begleiter/scripts/voice_logger.py test --audio beispiel.ogg`
+3. **Wetter‑Client:** `python3 /data/.openclaw/workspace/skills/imker-begleiter/scripts/weather_client.py current`
+4. **Schwarmalarm:** `python3 /data/.openclaw/workspace/skills/imker-begleiter/scripts/swarm_alert.py simulate --date 2026-05-15`
 
 ---
 

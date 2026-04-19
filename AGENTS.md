@@ -93,3 +93,8 @@ Wenn leer → `HEARTBEAT_OK`.
 - Git Status prüfen, eigene Commits pushen
 - Dokumentation aktualisieren
 - MEMORY.md mit Erkenntnissen aus Tagesnotizen pflegen
+
+## WICHTIG: Befehlsausführung
+- **NIE `cd` verwenden:** Führe Python- oder Node-Skripte immer mit absoluten Pfaden aus, ohne das Arbeitsverzeichnis zu wechseln.
+- **Beispiel:** `python3 /data/.openclaw/workspace/script.py` statt `cd ... && python3 script.py`.
+- Dies ist eine Sicherheitsrichtlinie. Verstöße führen zu "exec preflight" Fehlern.

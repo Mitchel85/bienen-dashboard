@@ -5,7 +5,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
-    "letzte_varroa_behandlung": "2026-03-15",
+    "letzte_varroa_behandlung": "2026-04-19",
     "letzte_fütterung": "",
     "besondere_hinweise": "schwärmt leicht",
     "logs": [
@@ -44,6 +44,18 @@
         "aktion": "kontrollieren",
         "menge": "",
         "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      },
+      {
+        "timestamp": "2026-04-19T14:24:03.572952",
+        "aktion": "varroa_diagnose",
+        "menge": "0",
+        "details": "Windelmessung nach 3 Tagen: 0 Milben. Kein Befall."
+      },
+      {
+        "timestamp": "2026-04-19T14:26:02.457921",
+        "aktion": "windel_analyse",
+        "menge": "",
+        "details": "Windel nach Varroa‑Kontrolle: Viele Hinweise auf Polleneintrag (gelbe/rote Krümel) und Bruttätigkeit (helle Wachsreste). Keine Milben, starke Sammelaktivität, Brutnest aktiv."
       }
     ]
   },
@@ -53,7 +65,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
-    "letzte_varroa_behandlung": "2026-03-10",
+    "letzte_varroa_behandlung": "2026-04-19",
     "letzte_fütterung": "",
     "besondere_hinweise": "sanftmütig",
     "logs": [
@@ -92,6 +104,18 @@
         "aktion": "kontrollieren",
         "menge": "",
         "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      },
+      {
+        "timestamp": "2026-04-19T14:24:03.572952",
+        "aktion": "varroa_diagnose",
+        "menge": "0",
+        "details": "Windelmessung nach 3 Tagen: 0 Milben. Kein Befall."
+      },
+      {
+        "timestamp": "2026-04-19T14:27:04.698974",
+        "aktion": "windel_analyse",
+        "menge": "",
+        "details": "Windel nach Varroa‑Kontrolle: Viel Polleneintrag (gelbe/rote Krümel) und Bruttätigkeit (helle Wachsreste). Keine Milben, starke Sammelaktivität, Brutnest aktiv trotz vorheriger Schwächeanzeichen."
       }
     ]
   },
@@ -115,6 +139,6 @@
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-04-17"
+    "letzte_aktualisierung": "2026-04-19"
   }
 }

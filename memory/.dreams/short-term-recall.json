@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-19T07:01:43.367Z",
+  "updatedAt": "2026-04-19T07:08:54.773Z",
   "entries": {
     "memory:memory/2026-04-16.md:37:61": {
       "key": "memory:memory/2026-04-16.md:37:61",
@@ -108,15 +108,16 @@
       "endLine": 20,
       "source": "memory",
       "snippet": "# 2026-04-17 – Bienen‑Updates & Cron‑Job‑Anpassungen ## Sprach‑Log verarbeitet (Mitch, 09:18) - **Transkript:** „Jetzt geht es um die Bienen. Die Bienenstöcke müssen nicht gefüttert werden, weil direkt neben uns jetzt die ganzen Kirschbäume blühen. Also die Fütterung ist nicht notwendig. In zwei Tagen die Varroa-Kontrolle. Und jetzt noch ein wichtiger Hinweis. Ich brauche keine Benachrichtigung darüber, dass ein Cronjob richtig läuft. Ich brauche lediglich dann direkt den Schwarmalarm, wenn es soweit ist.“ - **Aktionen:** 1. **Log‑Einträge** für alle drei Völker hinzugefügt (Aktion `kontrollieren`, Details: „Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.).“)",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4633861021149751,
-      "maxScore": 0.4633861021149751,
+      "totalScore": 1.463386102114975,
+      "maxScore": 1,
       "firstRecalledAt": "2026-04-19T07:01:43.367Z",
-      "lastRecalledAt": "2026-04-19T07:01:43.367Z",
+      "lastRecalledAt": "2026-04-19T07:08:54.773Z",
       "queryHashes": [
-        "ac2fb9f8b898"
+        "ac2fb9f8b898",
+        "433d68850940"
       ],
       "recallDays": [
         "2026-04-19"
@@ -161,6 +162,130 @@
         "imker",
         "wochenreport",
         "erstellen"
+      ]
+    },
+    "memory:memory/2026-04-19.md:1:20": {
+      "key": "memory:memory/2026-04-19.md:1:20",
+      "path": "memory/2026-04-19.md",
+      "startLine": 1,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "# 2026-04-19 - Boot-Check & Systemstatus ## 00:01 - Boot-Check abgeschlossen - **User:** Boot-Check-Anfrage via TUI - **Prüfung:** `hooks.internal.enabled` ist aktiv (true) - **Konfiguration:** Berechtigungen für `/data/.openclaw/openclaw.json` korrigiert (Besitzer: node) - **Pairing:** Code `AEWMR2GD` abgelaufen/bereits verwendet; keine ausstehenden Pairing-Requests - **Telegram:** Session für Mitch (6882251060) aktiv; Testnachricht gesendet (messageId 15108) - **Cron-Jobs:** 8 Jobs aktiv, darunter `dashboard-auto-publish` läuft gerade - **Memory:** Tagesdatei angelegt ## 09:00 - Imker-Frühling Cron ausgeführt - **Cron:** `imker-fruehling` (f2117baf-30cf-440f-9243-2fe89a42f9d2) - **Aktion",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-19T07:08:54.773Z",
+      "lastRecalledAt": "2026-04-19T07:08:54.773Z",
+      "queryHashes": [
+        "433d68850940"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "konfiguration",
+        "boot-check",
+        "boot-check-anfrage",
+        "hooks.internal.enabled",
+        "openclaw/openclaw.json",
+        "abgelaufen/bereits",
+        "pairing-requests",
+        "cron-jobs"
+      ]
+    },
+    "memory:memory/2026-04-14.md:1:35": {
+      "key": "memory:memory/2026-04-14.md:1:35",
+      "path": "memory/2026-04-14.md",
+      "startLine": 1,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "# 2026-04-14 - Tagesprotokoll ## 17:04 – Session-Start - Mitch (Telegram 6882251060) begrüßt mich. - Memory-Dateien für 13. und 14. April noch nicht vorhanden – neu erstellt. - MEMORY.md gelesen (letzte Aktualisierung 2026-04-10). - Bereit für Aufgaben. ## 17:39 – Nexos Modelle UI-Problem - Mitch beklagt unlesbare UUIDs in Telegram-Modellauswahl. - Aliasse bereits korrekt in Config (`agents.defaults.models`). - UI-Limitation: Telegram zeigt provider/id statt Alias an. - Workaround: `/model Nexos GPT 5 4` etc. funktioniert. ## 18:17 – Imker-Begleiter Cronjobs eingerichtet - Vier Cronjobs mit deepseek/deepseek-chat Modell erstellt: 1. `imker-schwarmalarm` – täglich 8 Uhr (`0 8 * * *`) 2",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-19T07:08:54.773Z",
+      "lastRecalledAt": "2026-04-19T07:08:54.773Z",
+      "queryHashes": [
+        "433d68850940"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "gpt",
+        "session-start",
+        "memory-dateien",
+        "memory.md",
+        "ui-problem",
+        "telegram-modellauswahl",
+        "agents.defaults.models",
+        "ui-limitation"
+      ]
+    },
+    "memory:memory/2026-04-14.md:29:51": {
+      "key": "memory:memory/2026-04-14.md:29:51",
+      "path": "memory/2026-04-14.md",
+      "startLine": 29,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "- `1441108607` (Mario) - `8665383554` (Mara) - Familienmitglieder können nun direkt private Nachrichten senden, ohne Pairing‑Anfrage. - Config‑Änderungen wurden geschrieben, Gateway läuft weiter. ## 19:48 – OpenAI API‑Tests erfolgreich - **Whisper (Speech‑to‑Text):** Funktioniert – Sprachnachrichten werden korrekt transkribiert. - **TTS (Text‑to‑Speech):** Funktioniert – MP3 via OpenAI `tts‑1` API erzeugt und versendet. - Beide Skills nutzen denselben `OPENAI_API_KEY` (korrekt gesetzt). - MP3‑Testdatei im Workspace: `/data/.openclaw/workspace/test_tts.mp3`. ## 19:34 – Mara begrüßt mich - Mara (8665383554) schickt erste Nachricht: \"Hii Clawdia26! 67\" - Verspielte Antwort mit \"Clawdia26?",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-19T07:08:54.773Z",
+      "lastRecalledAt": "2026-04-19T07:08:54.773Z",
+      "queryHashes": [
+        "433d68850940"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "gateway",
+        "openai",
+        "openai-api-key",
+        "openclaw/workspace/test-tts.mp3",
+        "mario",
+        "mara",
+        "familienmitglieder",
+        "können"
+      ]
+    },
+    "memory:memory/2026-04-17.md:14:36": {
+      "key": "memory:memory/2026-04-17.md:14:36",
+      "path": "memory/2026-04-17.md",
+      "startLine": 14,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "- **Mobile‑optimiert** (Telegram‑Formatierung: Code‑Blöcke, ≤32 Zeichen Breite, vertikale Layouts bei vielen Spalten). ## Telegram‑Mobile‑Formatierung (Regel eingeführt) - Nutzer schreibt meist vom Handy → **Mobile‑First**. - **Regeln:** Tabellen in Code‑Blöcken, max. 32 Zeichen Breite, bei vielen Spalten vertikales Key‑Value‑Layout. - Wird ab jetzt für alle Tabellen angewendet. ## KI‑Modell‑Preisvergleich (gestern) - Recherche zu Preisen pro 1 Mio. Tokens für MiniMax M2.7, DeepSeek Reasoner, Kimi K2.5, Gemini 3.1 Pro, GPT‑5.4, Claude Opus 4.6/4.7, Claude Sonnet 4.6. - Vergleich an Mario gesendet (vertikales Format, mobiloptimiert). - DeepSeek Reasoner ist bei Cache‑Hit der Preis‑Killer.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-19T07:08:54.773Z",
+      "lastRecalledAt": "2026-04-19T07:08:54.773Z",
+      "queryHashes": [
+        "433d68850940"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "gpt",
+        "m2.7",
+        "k2.5",
+        "3.1",
+        "5.4",
+        "4.6/4.7",
+        "4.6",
+        "mobile"
       ]
     }
   }

@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 
 SKILL_DIR = "/data/.openclaw/workspace/skills/imker-begleiter"
 VOELKER_JSON = os.path.join(SKILL_DIR, "data", "voelker.json")
-OUTPUT_HTML = "/data/.openclaw/workspace/index.html"
+OUTPUT_HTML = "/data/.openclaw/canvas/index.html"
 CRON_CACHE = "/tmp/cronjobs.json"
 
 def load_voelker():
