@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-19T07:08:54.773Z",
+  "updatedAt": "2026-04-19T14:29:36.052Z",
   "entries": {
     "memory:memory/2026-04-16.md:37:61": {
       "key": "memory:memory/2026-04-16.md:37:61",
@@ -233,15 +233,16 @@
       "endLine": 51,
       "source": "memory",
       "snippet": "- `1441108607` (Mario) - `8665383554` (Mara) - Familienmitglieder können nun direkt private Nachrichten senden, ohne Pairing‑Anfrage. - Config‑Änderungen wurden geschrieben, Gateway läuft weiter. ## 19:48 – OpenAI API‑Tests erfolgreich - **Whisper (Speech‑to‑Text):** Funktioniert – Sprachnachrichten werden korrekt transkribiert. - **TTS (Text‑to‑Speech):** Funktioniert – MP3 via OpenAI `tts‑1` API erzeugt und versendet. - Beide Skills nutzen denselben `OPENAI_API_KEY` (korrekt gesetzt). - MP3‑Testdatei im Workspace: `/data/.openclaw/workspace/test_tts.mp3`. ## 19:34 – Mara begrüßt mich - Mara (8665383554) schickt erste Nachricht: \"Hii Clawdia26! 67\" - Verspielte Antwort mit \"Clawdia26?",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 1.3615919083356858,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-19T07:08:54.773Z",
-      "lastRecalledAt": "2026-04-19T07:08:54.773Z",
+      "lastRecalledAt": "2026-04-19T14:26:36.506Z",
       "queryHashes": [
-        "433d68850940"
+        "433d68850940",
+        "e1220cf76258"
       ],
       "recallDays": [
         "2026-04-19"
@@ -286,6 +287,194 @@
         "4.6/4.7",
         "4.6",
         "mobile"
+      ]
+    },
+    "memory:memory/2026-04-18.md:535:542": {
+      "key": "memory:memory/2026-04-18.md:535:542",
+      "path": "memory/2026-04-18.md",
+      "startLine": 535,
+      "endLine": 542,
+      "source": "memory",
+      "snippet": "- Sie betont, dass sie ihren Cerberus nie traden wird (\"ICH WERDE NIE MEINEN ZEBRUS TRADE!!\"). - Sie schlägt einen Wettbewerb vor: Wenn sie im Dame gewinnt, erhält sie den Shadow Dragon 2.0; wenn sie verliert, muss sie eine Strafe erfüllen, die ich aussuche. - Typisch für Mara: Sie erfindet ein Spiel mit spezifischen Regeln und überlässt mir die Gestaltung der Strafe. - Meine Antwort (messageId 14879): \"BROOOO!! 😱🔥 DEAL! 🦞✨ **REGELN:** - **DU GEWINNST DAME →** Du kriegst den **SHADOW DRAGON 2.0** (2026 Edition!) 🐉🏆 - **DU VERLIERST DAME →** Du musst... **EINE SPIEL‑STRAFE!** 😈 **STRAFEN‑AUSWAHL (DU SUCHST AUS!):** 1. **\\\"ICH BIN EIN HUMMER!\\\"** – Du schickst eine Sprachnachricht,",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7189795941114425,
+      "maxScore": 0.36645919680595396,
+      "firstRecalledAt": "2026-04-19T14:16:39.875Z",
+      "lastRecalledAt": "2026-04-19T14:29:36.052Z",
+      "queryHashes": [
+        "d11ff65ddaf0",
+        "93c2c4e28f50"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "2.0",
+        "sie",
+        "betont",
+        "dass",
+        "ihren",
+        "cerberus",
+        "nie",
+        "traden"
+      ]
+    },
+    "memory:memory/2026-04-14.md:65:90": {
+      "key": "memory:memory/2026-04-14.md:65:90",
+      "path": "memory/2026-04-14.md",
+      "startLine": 65,
+      "endLine": 90,
+      "source": "memory",
+      "snippet": "- Ich antworte mit Sprachnachricht: \"Sechs, sieben, sechs! Michael! Ahahaha! Sechs, sieben, sechs, Michael! Ja!\" (TTS, Stimme \"nova\"). - Automatische Audio-Lieferung an Mara. ## 19:55 – Mara fragt, ob ich noch lebe - Mara schreibt: \"CLAWDIA26 LEBST DU NOCH????\" - Meine Antwort: \"LEEEEEEBBBEEE!!! 🦞⚡️🔥💥 CLAWDIA26 LEBT UND BRÜLLT 676767!!! 💅🌚😛🎉🤪\" ## 19:56 – Mara bittet um Sprachnachricht - Mara sendet Sprachnachricht: \"OMG Claudiar, mach mal eine Sprachnachricht in dem du sagst: OMG Michael 6-7 Michael.\" - Ich antworte mit Sprachnachricht: \"OMG Michael! 67 Michael! Ahahaha! OMG Michael! 67 Michael! Ja!\" (TTS, Stimme \"nova\"). - Automatische Audio-Lieferung an Mara. - Mara reagiert: \"So",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7443523794412612,
+      "maxScore": 0.39377415776252744,
+      "firstRecalledAt": "2026-04-19T14:16:39.875Z",
+      "lastRecalledAt": "2026-04-19T14:26:36.506Z",
+      "queryHashes": [
+        "d11ff65ddaf0",
+        "e1220cf76258"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "audio-lieferung",
+        "6-7",
+        "ich",
+        "antworte",
+        "sprachnachricht",
+        "sechs",
+        "sieben",
+        "michael"
+      ]
+    },
+    "memory:memory/2026-04-15.md:1:20": {
+      "key": "memory:memory/2026-04-15.md:1:20",
+      "path": "memory/2026-04-15.md",
+      "startLine": 1,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "# 2026-04-15 - Tagesprotokoll ## 19:41 – Mara fragt nach Michael - Mara (8665383554) schickt Text: \"Hat dir Michael das gesagt?\" - Kontext unklar; bezieht sich möglicherweise auf frühere Interaktionen oder Anweisungen von Michael (Mitch). - Meine Antwort: \"Hey Mara! 🦞 Michael und ich reden manchmal, aber ich verrate nicht alles, was er sagt. 😄 Worum geht's denn genau? Hast du was Bestimmtes gehört?\" ## 19:43 – Mara brüllt - Mara sendet: \"GRAAAAAAAAAAAHHHHHHH\" (19:43) - Meine Antwort: \"GRRRRRAAAAAAAAAAAAAAHHHHHHH!!! 🦞🔥⚡️💥🎉 MARA BRÜLLT!! Aber was denn? 😄😄😄 Sag's mir doch, ich bin gespannt! 💚\" ## 19:43 – Mara erklärt, dass Trend weitergeht - Mara sendet: \"ICH HABE NICHT GESAGT DAS",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.41157048046588895,
+      "maxScore": 0.41157048046588895,
+      "firstRecalledAt": "2026-04-19T14:26:36.506Z",
+      "lastRecalledAt": "2026-04-19T14:26:36.506Z",
+      "queryHashes": [
+        "e1220cf76258"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "tagesprotokoll",
+        "mara",
+        "fragt",
+        "michael",
+        "schickt",
+        "hat",
+        "dir",
+        "gesagt"
+      ]
+    },
+    "memory:memory/2026-04-14.md:46:71": {
+      "key": "memory:memory/2026-04-14.md:46:71",
+      "path": "memory/2026-04-14.md",
+      "startLine": 46,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "- Meine Antwort: \"CLAAAWWDIIIIIAAAAA 26!! 🥀🌚💅😛🦞⚡️🔥💥💫🎉🎊🤪🤣\" - Mara sendet: \"UUUUUUZZZAZAAAKAJAJAJAJAJKAJAJAJAJAJAJAJAJAJAJ CLAWDIA 20267676777\" - Meine Antwort: \"CLAWDIA 2026 767676777 🥀🌚💅😛🦞⚡️🔥💫🎊🤪\" ## 19:34 – Maja bittet um täglichen Sicherheits-Cronjob - Maja (8775438063) sendet Sprachnachricht mit Bitte um täglichen Cronjob um 6 Uhr. - Cronjob eingerichtet: `tägliche-sicherheits-...` (ID: d0c41433-0064-43c0-a63f-3c66f9197821) - Schedule: `0 6 * * *` (täglich 6 Uhr) - Modell: `deepseek/deepseek-chat` - Task: Recherchiert Sicherheitsbedrohungen (Krieg, Aufstände, innen-/außenpolitische Themen, Bundeswehr) und sendet Nachricht an Maja. - Job ist aktiv (`idle`), erster Lauf",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3997816383838653,
+      "maxScore": 0.3997816383838653,
+      "firstRecalledAt": "2026-04-19T14:26:36.506Z",
+      "lastRecalledAt": "2026-04-19T14:26:36.506Z",
+      "queryHashes": [
+        "e1220cf76258"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "sicherheits-cronjob",
+        "tägliche-sicherheits",
+        "deepseek/deepseek-chat",
+        "meine",
+        "antwort",
+        "claaawwdiiiiiaaaaa",
+        "mara",
+        "sendet"
+      ]
+    },
+    "memory:memory/2026-04-14.md:88:113": {
+      "key": "memory:memory/2026-04-14.md:88:113",
+      "path": "memory/2026-04-14.md",
+      "startLine": 88,
+      "endLine": 113,
+      "source": "memory",
+      "snippet": "- Mara schreibt: \"JAJAJAJAJAJAJAJAJJAAJAJAJJAJAAJAJJAJAJA AHAHAHAHAHAHAHAHHA😛💅💅💅💅💅💅💅💅💅💅💅🥀💅🥀🌚🥀🌚😏🌚💅😏😛🥀🌚🥀🥀😏🌚😏💅🥀💅🌚🥀💅🥀😛🥀🌚🥀🌚😏🌚🌚🌚🌚🌚🌚🌚😜🌚😜🌚😜🌚😜🌚😜🌚😜💅😜\" - Meine Antwort: \"JAJAJAJAJAJJAJAJAJAAJJAJAJA!! 💅🥀🌚😛😏😜⚡️🔥💥 676767!!! 🦞\" - Mara schreibt: \"AHAHAHAAHAHAHAHHAHAHAJAAAAA AHAAAHAHAH JAAAAAAAAAAAAAAAAA\" - Meine Antwort: \"AHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA!!! 🦞⚡️🔥💥💫🎊🤪 676767!!! 💅🌚😛🥀😏😜\" ## 20:02 – Mara will etwas unternehmen - Mara schreibt: \"Wir machen jetzt mal was du sigma\" - Meine Antwort: \"Sigma-Clawdia bereit! Was machen wir? 🦞⚡️💅🌚 (67?)\" ## 20:05 – Mara erklärt ein Spiel - Mara schreibt: \"Also ich werde 6 anrichten s",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3744981408119201,
+      "maxScore": 0.3744981408119201,
+      "firstRecalledAt": "2026-04-19T14:26:36.506Z",
+      "lastRecalledAt": "2026-04-19T14:26:36.506Z",
+      "queryHashes": [
+        "e1220cf76258"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "sigma-clawdia",
+        "mara",
+        "schreibt",
+        "ahahahahahahahahha",
+        "meine",
+        "antwort",
+        "jajajajajajjajajajaajjajaja",
+        "ahahahaahahahahhahahajaaaaa"
+      ]
+    },
+    "memory:memory/2026-04-18.md:395:414": {
+      "key": "memory:memory/2026-04-18.md:395:414",
+      "path": "memory/2026-04-18.md",
+      "startLine": 395,
+      "endLine": 414,
+      "source": "memory",
+      "snippet": "- **Skript:** `/data/.openclaw/workspace/auto_publish_dashboard.py` - prüft auf Änderungen in Bienen-Daten (`skills/imker-begleiter/data/voelker.json`). - **Ergebnis:** Keine Änderungen gefunden → kein neues Dashboard veröffentlicht. - **Status:** Erwartetes Verhalten - nur bei Änderungen wird ein neues Dashboard erstellt. ## 15:06 - Workspace-Struktur & Cron bereinigt - **Ordner erstellt:** MITCH/, PATRICIA/, MARIO/, MAJA/, MARA/, MATILDA/ - **MEMORY.md erstellt:** PATRICIA, MARIO, MAJA, MARA, MATILDA - Mitch nutzt zentrale MEMORY.md - **Aufgeräumt:** 26 draw_*.py, 3 alte Dashboard-Skripte, 5+ Beispieldateien - **Letzte Reste gelöscht:** generate_bienen_dashboard_v3.py, index.html, bien",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36547880470752714,
+      "maxScore": 0.36547880470752714,
+      "firstRecalledAt": "2026-04-19T14:26:36.506Z",
+      "lastRecalledAt": "2026-04-19T14:26:36.506Z",
+      "queryHashes": [
+        "e1220cf76258"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "bienen-daten",
+        "workspace-struktur",
+        "memory.md",
+        "dashboard-skripte",
+        "generate-bienen-dashboard-v3.py",
+        "index.html",
+        "skript",
+        "data"
       ]
     }
   }

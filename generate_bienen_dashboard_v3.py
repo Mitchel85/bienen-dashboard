@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 SKILL_DIR = "/data/.openclaw/workspace/skills/imker-begleiter"
 VOELKER_JSON = os.path.join(SKILL_DIR, "data", "voelker.json")
 OUTPUT_HTML = "/data/.openclaw/canvas/index.html"
+WORKSPACE_HTML = "/data/.openclaw/workspace/index.html"
 CRON_CACHE = "/tmp/cronjobs.json"
 
 def load_voelker():
@@ -338,7 +339,9 @@ def main():
     html_content = generate_html(voelker, cronjobs)
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
         f.write(html_content)
-    print(f"✅ Dashboard erstellt: {OUTPUT_HTML}")
+    with open(WORKSPACE_HTML, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"✅ Dashboard erstellt: {OUTPUT_HTML} & {WORKSPACE_HTML}")
     print(f"   Enthält {len(voelker)} Völker und {len(cronjobs)} Termine.")
 
 if __name__ == "__main__":

@@ -56,6 +56,12 @@
         "aktion": "windel_analyse",
         "menge": "",
         "details": "Windel nach Varroa‑Kontrolle: Viele Hinweise auf Polleneintrag (gelbe/rote Krümel) und Bruttätigkeit (helle Wachsreste). Keine Milben, starke Sammelaktivität, Brutnest aktiv."
+      },
+      {
+        "timestamp": "2026-04-20T07:11:32.668Z",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 20.04.2026: Beute (rechter Stapel) rot‑rot‑grün, drei Zargen, auf Paletten auf Dach. Volk aktiv? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt."
       }
     ]
   },
@@ -116,6 +122,12 @@
         "aktion": "windel_analyse",
         "menge": "",
         "details": "Windel nach Varroa‑Kontrolle: Viel Polleneintrag (gelbe/rote Krümel) und Bruttätigkeit (helle Wachsreste). Keine Milben, starke Sammelaktivität, Brutnest aktiv trotz vorheriger Schwächeanzeichen."
+      },
+      {
+        "timestamp": "2026-04-20T07:11:32.668Z",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 20.04.2026: Beute (mittlerer Stapel) grün‑rot‑grün, drei Zargen, auf Paletten auf Dach. Volk aktiv? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt."
       }
     ]
   },
@@ -134,11 +146,17 @@
         "aktion": "kontrollieren",
         "menge": "",
         "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      },
+      {
+        "timestamp": "2026-04-20T07:11:32.668Z",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 20.04.2026: Beute (linker Stapel) gelb‑gelb, zwei Zargen, auf Paletten auf Dach. Leere Beute? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt."
       }
     ]
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-04-19"
+    "letzte_aktualisierung": "2026-04-20"
   }
 }
