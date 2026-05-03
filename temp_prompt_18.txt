@@ -1,0 +1,92 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 19 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Der Prompt:
+
+Extrahiere die Kernwerte aus diesem Dokumenten-Text. Antworte ausschließlich im JSON-Format mit den Schlüsseln: rechnungsbetrag, datum, lieferant. Fehlt ein Wert, gib null aus.
+
+2. Die automatische Triage (Der intelligente Filter)
+
+Das Problem: Allgemeine Postfächer laufen über. Freitext-Meldungen müssen manuell gelesen, bewertet und einsortiert werden.
+
+Die API-Lösung: Eingehender Text wird an die API übergeben, die Dringlichkeit und Kategorie bewertet.
+
+Das Resultat: Das Dashboard aktualisiert live die Ticket-Übersicht und setzt bei dringenden Themen sofort ein Warnsignal.
+
+Der Prompt:
+
+Analysiere diesen Text. Weise eine Dringlichkeit (Hoch/Mittel/Niedrig) und eine Kategorie (Vertrieb/Support/Buchhaltung) zu. Gib das Ergebnis als striktes JSON-Objekt zurück.
+
+3. Das Firmen-Orakel (Chat mit dem eigenen System)
+
+Das Problem: Niemand liest gerne lange Handbücher oder Betriebsvereinbarungen. Bei Zeitdruck wird oft geraten.
+
+Die API-Lösung: Wissensdokumente sind im Hintergrund angebunden. Über einen simplen Chat-Schlitz können gezielte Fragen gestellt werden.
+
+Das Resultat: Die KI durchsucht ausschließlich deine Dokumente und liefert die exakte Handlungsanweisung ohne langes Blättern.
+
+Der Prompt:
+
+Du bist der interne Wissensassistent. Beantworte die Frage des Nutzers in maximal drei kurzen Stichpunkten und nutze dafür ausschließlich den bereitgestellten Kontext. Wenn die Antwort dort nicht steht, antworte mit: 'Information nicht im Handbuch gefunden'.
+
+5.2 Praxisbeispiel: Christian rüstet auf.
+
+Christian, den du bereits aus Kapitel 4 kennst, hat sein statisches Fundament erfolgreich aufgebaut. Nun möchte er sein Cockpit auf die nächste Stufe heben und es wirklich „smart“ machen. 
+
+Sein Ziel: Er möchte nicht mehr nur Daten ablesen, sondern das System interaktiv nutzen und die Grundlagen für eine weitergehende Digitalisierung schaffen. Wenn beispielsweise Mieter Reparaturmeldungen per E-Mail einreichen, soll das Cockpit diese per KI sofort dem richtigen Gewerk zuordnen und auswerten. Das Unternehmenswissen wird so zentriert, dass sich auch neue Mitarbeiter über einen Chat direkt im System schnell einarbeiten können. Er möchte nicht nur starre KPIs sehen, sondern seine gesamten Prozesse, seine IT-Architektur und seine Fixkosten in einer einzigen, intelligenten Datei vereinen, die aktiv mitdenkt. Jede Ansicht soll über ein eigenes Eingabefeld verfügen, in das er Dokumente ziehen kann, woraufhin sich das jeweilige Diagramm live neu aufbaut. Außerdem wünscht er sich weitere Zusatzfunktionen: Einen Chat, den „Verbrauchs-Normalisierer“ sowie ein Ticketsystem (siehe Prompt ganz unten).
+
+Erstelle eine einzige HTML-Datei 'master-cockpit.html' für eine Immobilienverwaltung.
+
+Nutze ein dunkles, modernes Design (Playfair Display und DM Mono mit Gold- und Salbei-Akzenten). Baue eine Sidebar-Navigation für verschiedene Reiter, die ohne Seiten-Reload wechseln: Dashboard, Prozesse (BPMN mit mermaid.js), IT-Architektur (C4 mit mermaid.js), Fixkosten, Portfolio (Chart.js Tortendiagramme), Wissensgraph (vis.js) und Chat.
+
+Die KI-Architektur:
+
+Implementiere eine globale API-Konfiguration für verschiedene KI-Provider (Ollama, Gemini, OpenAI, OpenRouter) mit einer dynamischen Kombinationsliste für die Modelle und einem Button für einen API-Verbindungstest (Ping-Test).
+
+Schreibe eine intelligente buildRequest- und eine extractResponse-Funktion (als Simultanübersetzer für die verschiedenen API-Formate) sowie eine extractJSON()-Hilfsfunktion, um Markdown-Reste vor dem Parsen zu entfernen.
+
+Verwende für Feedback ausschließlich ein modernes Toast-Notification-System, niemals alert().
+
+Funktionalität:
+
+Integriere in JEDEM Reiter ein individuelles 'Smart-Input'-Feld (Drag-and-Drop-Zone + Textarea). Unterstütze TXT, CSV, EML und nutze pdf.js für PDFs.
+
+Wenn Daten eingegeben werden, sende diese per fetch() an die gewählte API. Zwinge die KI über System-Prompts dazu, rein strukturiertes JSON (oder Mermaid-Code) zurückzugeben, um das jeweilige Diagramm im aktuellen Reiter live per DOM-Manipulation anzupassen.
+
+Füge in den Karten Export-Buttons hinzu, um die Ansichten als hochauflösendes PNG (via html2canvas) und die Daten als CSV herunterladen zu können.
+
+Zusatzfunktionen:
+
+Fülle das gesamte Cockpit initial mit realistischen Beispieldaten einer Immobilienverwaltung, damit sofort Ergebnisse sichtbar sind. Bereite diese drei Use-Cases vor:
+
+Eine Kachel "Normalisierter Verbrauch" (zur Normalisierung von Heizkostenabrechnungen bei jahresübergreifenden, ungeraden Abrechnungszeiträumen).
+
+Eine Kachel "Offene Tickets" gekoppelt an ein Chart.js-Tortendiagramm (für automatisierte Mieter-Meldungen wie "Sanitär").
+
+Optimiere den Reiter "Chat" optisch und funktional für Dokumenten-Q&A (als "Mietvertrags-Röntgenblick").
+
+Liefere ausschließlich den lauffähigen Code.
+
+Auszug: Christians smartes Cockpit: Im oberen Bereich sieht man die API-Sektion
+
+5.3 Der schnelle Weg: Die KI-Vorlage
+
+Wenn du nicht bei null anfangen willst, habe ich eine Abkürzung für dich. Du findest den kompletten Code des "Smart Cockpits" hier: github.com/the-zero-cost-ai-cockpit/Demo_Cockpit_smart bzw. die entsprechende Demo-Seite zum Ausprobieren hier: the-zero-cost-ai-cockpit.github.io/Demo_Cockpit_smart.
+
+Wenn du ein anderes Cockpit bauen willst (z. B. für einen Friseursalon oder eine Anwaltskanzlei), kopiere den Link zum GitHub-Repository und gib ihn deiner KI mit folgendem Prompt:
+
+Nutze den Code aus diesem GitHub-Repository als Vorbild und verstehe die Logik der DOM-Manipulation und der API-Aufrufe. Baue mir nun auf exakt dieser Basis ein neues Cockpit für: [Dein Anwendungsfall]
+
+So übernimmt die KI die komplexe Architektur und passt nur noch Optik und Inhalte für dich an.
+
+5.4 Die häufigsten Fehler und wie du sie vermeidest
+
+Wenn der Bildschirm weiß bleibt oder keine Antwort kommt, liegt es meist an einem dieser fünf Punkte. So löst du sie in Sekunden:
+
+1. CORS-Blockaden (Der Browser-Türsteher)
+
+Das Problem: Deine lokale HTML-Datei (file://) darf aus Sicherheitsgründen oft nicht direkt mit Cloud-APIs kommunizieren. Die F12-Konsole meldet einen „CORS policy“-Fehler.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

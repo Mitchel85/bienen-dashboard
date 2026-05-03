@@ -1,0 +1,86 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 20 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Das Problem: Deine lokale HTML-Datei (file://) darf aus Sicherheitsgründen oft nicht direkt mit Cloud-APIs kommunizieren. Die F12-Konsole meldet einen „CORS policy“-Fehler.
+
+Die Lösung: Lokale Modelle (Ollama) blockieren dich standardmäßig ebenfalls, aber hier bist du der Chef: Mit dem Sternchen-Befehl aus Kapitel 5.1.1 kannst du den Türsteher einfach selbst anweisen, dein Cockpit durchzulassen. Willst du Cloud-Power, greife auf Vermittler wie OpenRouter zurück.
+
+2. Das JSON-Chaos
+
+Das Problem: Dein Skript erwartet reine Daten (JSON). Wenn die KI höflich antwortet („Gerne, hier ist dein Code: {...“), stürzt das Cockpit sofort ab, weil es den menschlichen Text nicht versteht.
+
+Die Lösung: Sei knallhart im System-Prompt: 
+
+Antworte AUSSCHLIESSLICH im JSON-Format. Keine Einleitung, kein Schlusssatz.
+
+Erzwinge bei OpenAI oder Gemini zusätzlich den offiziellen „JSON-Modus“.
+
+3. Das falsche Modell für die Aufgabe
+
+Das Problem: Du fütterst ein kompaktes, lokales Modell mit einem 30-seitigen Gewerbemietvertrag. Es „vergisst“ die Hälfte oder halluziniert.
+
+Die Lösung: Wähle das Werkzeug passend zur Aufgabe. Flinke Modelle (Llama 3, Gemini Flash) für simple Extraktionen. Schwergewichte (Gemini Pro, Claude Opus) für tiefe, logische Analysen.
+
+4. Veralteter API-Code
+
+Das Problem: Die Schnittstelle funktioniert nicht, weil die KI auf veraltetes Trainingswissen zurückgreift und alten Code schreibt.
+
+Die Lösung: Nutze den Doku-Trick. Kopiere die aktuelle API-Dokumentation des Anbieters in den Chat und weise die KI an: 
+
+Korrigiere meinen Code exakt auf Basis dieser aktuellen Dokumentation [Link zur Dokumentation oder dein Inhalt davon]
+
+5. PDF Upload streikt („pdf.js“-Fehler)
+
+Das Problem: Du ziehst eine PDF-Rechnung in die Dropzone und es passiert nichts.
+
+Die Lösung: PDFs lokal im Browser auszulesen, ist für KIs im ersten Versuch extrem schwer. Hake im Chat nach:
+
+Die PDF-Extraktion wirft Fehler. Korrigiere den pdf.js-Code für eine lokale Datei ohne Webworker
+
+5.5 Fazit
+
+Mit der API-Integration hast du deinem Cockpit den entscheidenden Sprung verliehen. Was als einfache HTML-Datei begann, ist nun zu einem aktiven System geworden, das Daten selbstständig verarbeitet und analysiert.
+
+Du hast gelernt, wie dein Cockpit sicher mit externen Diensten kommuniziert – flexibel und ohne dich an einen einzigen KI-Anbieter zu binden. Ob lokale Modelle oder Cloud-Dienste: Du entscheidest, was am besten passt. Unstrukturierte Texte verwandelst du nun mühelos in brauchbare Dashboard-Daten. Drei bewährte Blaupausen stehen dir dabei als Vorlage für fast jede Branche zur Verfügung.
+
+Der wichtigste Schritt ist geschafft: Dein Cockpit ist nicht länger nur eine passive Anzeige – es arbeitet mit dir zusammen, erkennt Muster und bereitet Entscheidungen vor.
+
+Doch damit ist die Reise noch nicht beendet. Bisher liegt dein System sicher auf deiner Festplatte und wartet auf deine Eingaben. Im nächsten Kapitel schauen wir, was noch möglich ist: Wie du dein System im Netzwerk verfügbar machst, übersichtlicher gestaltest und Automatisierungen einbaust, die dein Cockpit fast von allein aktualisieren.
+
+Kapitel 6: Mit dem Cockpit durchstarten
+
+Dein lokal funktionierendes Cockpit ist ein starkes Fundament, doch jetzt zünden wir die nächste Stufe und machen es bereit für echtes Wachstum. In diesem Kapitel bringen wir deine Zentrale ins Netz, verpassen ihr eine professionelle Architektur und werfen einen Blick auf die grenzenlose Welt der KI-Automatisierung und -Agenten.
+
+6.1 Architektur-Update
+
+Die aktuelle cockpit.html bündelt alles in einer einzigen Datei. Das ist für den Start technisch notwendig: Öffnest du das Cockpit lokal per Doppelklick, würde der Browser mehrere separate HTML-Dateien aus Sicherheitsgründen blockieren. Doch dieser monolithische Block wird mit der Zeit unübersichtlich. Willst du nur eine kleine Änderung vornehmen, musst du durch tausende Zeilen Code scrollen – das kostet Nerven und birgt Fehlerquellen.
+
+Die Lösung ist das Prinzip „Teile und herrsche". Hier gibt es zwei Ansätze, die sich nach deinem Einsatzort richten.
+
+6.1.1 Code modularisieren (für lokale Nutzung)
+
+Da wir bei lokaler Nutzung nicht in echte Dateien zerschneiden können, weisen wir die KI an, den Code innerhalb der einen Datei in isolierte Module zu sortieren – wie Schubladen in einem Schrank. Dabei wird strikt nach drei Ebenen getrennt:
+
+Layout (HTML): Oben liegt das Grundgerüst – Header, Navigation, Inhaltsbereich und Footer. Dieser „Bilderrahmen" bleibt unverändert.
+
+Design (CSS): Im <style>-Bereich sind alle Formatierungen zentral gebündelt. Willst du das Farbschema ändern, suchst du nicht im ganzen Dokument, sondern passt nur diesen einen Block an.
+
+Funktion (JavaScript): Im <script>-Bereich liegt die Logik – Navigation, API-Aufrufe, Interaktionen. Diese ist klar vom Inhalt getrennt.
+
+Daten-Blöcke: Am Ende der Datei wandern alle Inhalte in klar kommentierte Abschnitte. Jeder Bereich ist mit Hinweisen wie <!-- HIER DEINE DATEN EINFÜGEN --> markiert.
+
+Am Beispiel der cockpit.html würden die Blöcke wie folgt aussehen:
+
+HTML: Definiert das Layout und die grundlegende Struktur der Seite.
+
+CSS: Steuert das Design, die Farben und die visuelle Gestaltung.
+
+JavaScript: Enthält die interaktiven Funktionen und die Anwendungslogik.
+
+Daten-Blöcke: Beinhaltet die eigentlichen Inhalte, die klar kommentiert sind.
+
+Der Vorteil: Du hast weiterhin nur eine einzige Datei. Du kannst sie auf einen USB-Stick ziehen, per Mail verschicken oder lokal öffnen – sie funktioniert auf jedem Rechner sofort per Doppelklick. Keine Browser-Blockaden, keine Server-Konfiguration.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

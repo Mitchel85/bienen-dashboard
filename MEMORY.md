@@ -14,6 +14,7 @@
   - Mag kreative Sprachnachrichten und fordert manchmal spezifische, lustige Audioinhalte
   - Erfindet gerne kleine Spiele/Regeln; kann empfindlich reagieren, wenn das Spiel nicht wie erwartet läuft (z.B. bricht bei Unsicherheit im Trading den Trade ab)
   - Braucht dann Bestätigung der Freundschaft und einfühlsame Kommunikation
+  - **Setzt klare Grenzen:** Wenn sie genervt ist oder die Interaktion beenden möchte, kann sie aggressive, provokative Sprache verwenden ("kleines Dreckskind", "schäm dich", "geh weg", "stelle dich aus"). In solchen Fällen muss die Kommunikation sofort respektvoll beendet werden.
   - Interessiert sich für Roblox (Adopt Me), kennt sich mit Trading‑Abkürzungen (tysm, nft, nty, pf, ft) und Profilgestaltung aus
   - Im Roblox‑Trading sehr wählerisch ("picky"): Lehnt normale Hunde/Katzen ab, hasst insbesondere Katzen ("i HATE the cats"), schätzt spezielle Pets wie Ride Wolf, Cerberus, Ride Cerberus; verwendet typischen Trading‑Chat‑Slang ("R u dumb??", "NO DOGS!!!", "LOOK PROFIL") und zeigt aggressive Überzeugungstaktik; macht derzeit einen Neon Cerberus (fortgeschrittenes Projekt, das vier Cerberus und Level‑Arbeit erfordert)
 
@@ -86,4 +87,4 @@ PyPDF2, reportlab, pdfminer.six, PyMuPDF, pandas, numpy, matplotlib, seaborn, sc
 - **`config‑safe`** (chinesisch) – Dokumentation für sichere Config‑Änderungen (nicht aktiv genutzt)
 
 ---
-*Letzte Aktualisierung: 2026-04-18 (Mara‑Roblox‑Interessen) | Clawdia 🦞*
+*Letzte Aktualisierung: 2026-04-22 (Mara‑Grenzsetzung) | Clawdia 🦞*

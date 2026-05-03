@@ -1,0 +1,63 @@
+model.run via local
+provider: google
+model: gemini-3.1-pro-preview
+outputs: 1
+The 0-Euro Cockpit
+
+How to build an interactive company cockpit with AI – without programming skills
+
+A Practical Guide
+
+Michael Estel
+
+Imprint
+
+Author and Publisher: Michael Estel, Französische Allee 30, 14974 Ludwigsfelde 
+
+Email: michael@estel.email
+
+ISBN: 9798258156495
+
+Copyright: 2026
+
+Trademark Notice:
+
+Disclaimer: The contents of this book have been researched with the greatest care and tested in practice. Nevertheless, errors cannot be completely ruled out. The author assumes no legal responsibility or any liability for damages, data loss, or other consequences arising from the use of the codes, software tools, and prompts described herein. The implementation of the presented methods, especially when handling sensitive corporate, financial, and customer data, is expressly at the reader's own risk and responsibility.
+
+Note on external links: This book contains references (links) to external third-party websites. At the time of linking, no legal violations were apparent on these pages. The author has no influence on the current and future design of the linked platforms and assumes no responsibility for them.
+
+Image and source credits: Unless otherwise stated, the illustrations, diagrams, and code snippets in this book are by the author. Some of the illustrations used in the book were generated using Artificial Intelligence systems. Screenshots of software interfaces serve exclusively for illustrative purposes and are subject to the copyright of the respective software providers (e.g., JSFiddle, Mermaid.js, BPMN.io).
+
+About the Author	
+
+As an innovation-driven low-coder with a professional focus on Enterprise Architecture Management (EAM), Michael Estel makes digital transformation tangible for companies with this book.
+
+His dual academic qualifications (Master of Business Administration and Master in Educational Sciences) allow him to view things from different perspectives. Thus, he knows how to translate corporate strategies into operational key performance indicators and make these complex issues understandable and practically accessible for everyone.
+
+He consistently drives the testing and application of his passion – Artificial Intelligence – both privately and professionally. In this book, he bundles his practical experience from the IT and architecture environment, demonstrating how immediate added value – quick wins – can be generated through the targeted use of AI and open-source tools.
+
+Michael Estel is convinced that true digital sovereignty does not come from large budgets, but rather where methodological know-how meets the right tools. His goal is to empower knowledge workers, project managers, managers, and consultants to shape the digital transformation in their projects actively, single-handedly, and in a resource-saving manner.
+
+Why this Book?
+
+In a world flooded with data, rapid understanding is the decisive competitive advantage. Large corporations invest millions in Enterprise Architecture Management (EAM) and real-time dashboards to document their IT landscapes, manage processes, and make well-founded decisions.
+
+However, for small and medium-sized enterprises (SMEs), project managers, or specialized consultants, the established tools are often a massive obstacle. In their search for structure, they usually end up in one of two dead ends:
+
+Financial overkill: Classic EAM solutions like SAP LeanIX, Bizzdesign, or Ardoq, as well as high-end dashboards like Abacum, Agicap, or Fathom, are powerful but rigid. They require months of onboarding, a dedicated IT department, and blow any budget with high monthly license costs. A customized dashboard from an IT consultant quickly costs five figures.
+
+The "Doc Rot" chaos: Those who rely on standard office software instead quickly lose track. Microsoft Excel mutates into an error-prone battlefield of colorful cells that no one but the creator understands anymore. The result is "doc rot" (decay of documentation) – outdated files gathering dust, unused in digital drawers.
+
+This book breaks this paradigm and shows you a pragmatic way out. The "0-Euro Cockpit" is not a mere software tutorial, but a new strategic blueprint for your business. We leverage the logic of large enterprises and combine strategic planning (process and architecture visualization) with the operational real-time transparency of a dashboard.
+
+The special thing about it: You don't have to pay a "software toll" for this, you don't need a computer science degree, and you don't need a huge IT budget. The technical hurdle is much lower than you might suspect: Anyone capable of logically structuring a PowerPoint presentation or using a simple SUM function in Excel can master this project without any problems. If you are ready to step out of the role of a passive software consumer, you will become the "lead developer" here.
+
+Everything you need to build your cockpit can be ready in no time: Your system already comes with a web browser, a text editor, and the command line out of the box. The only new tool we will add is the Ollama app for your local AI. Don't worry: We work almost exclusively with simple copy-and-paste in the command line. The actual magic is handled by language models (LLMs). They act as your personal translators. You simply describe your requirements precisely, and the AI builds the complex structures for you. 
+
+The result is a tailor-made command center that:
+
+Is cost-neutral: You use highly efficient open-source methods without monthly licensing fees.
+
+Remains absolutely data-secure: You will learn how to run the AI locally on your own computer using tools like Ollama. Sensitive financial data or strategy papers never leave your system.
+
+Offers enterprise-level quality: We use professional standards like BPMN 2.0 for processes and the C4 model for IT architectures. We save ourselves the tedious, manual modeling work required for this: It is automatically generated by AI in seconds.

@@ -1,0 +1,114 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 26 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Swimlanes: Ein grafisches Element im BPMN-Modell ("Schwimmbahnen"). Sie unterteilen einen Prozess visuell nach den zuständigen Personen, Abteilungen oder Systemen.
+
+V
+
+Vis.js: Eine mächtige JavaScript-Bibliothek, um interaktive Netzwerke und Wissensgraphen direkt im Browser darzustellen, in die man hineinzoomen und Knotenpunkte per Drag-and-Drop verschieben kann.
+
+W
+
+Wissensgraph (Knowledge Graph): Ein interaktives, visuelles Spinnennetz. Es macht die unsichtbaren Fäden deines Unternehmens (Wer kommuniziert mit wem? Welches Tool hat welche Abhängigkeiten?) greifbar und deckt versteckte Risiken auf.
+
+X
+
+XML (Extensible Markup Language): Eine Auszeichnungssprache, die Daten hierarchisch strukturiert. Wird in diesem Buch vor allem als Export-Format für Diagramm-Tools (wie draw.io) verwendet.
+
+Spickzettel: Das 0-Euro-Cockpit
+
+Der universelle Master-Prompt:
+
+Ich möchte [Ziel einfügen, z. B. ein digitales Firmen-Cockpit bauen]. Schreib mir dafür den professionellen Prompt, den ich einer Programmier-KI geben kann, damit sie mir das perfekt umsetzt.
+
+Datenschutz-Entscheidungsbaum
+
+Frage: Wäre es schlimm, wenn diese Daten morgen in der Zeitung stehen?
+
+JA (Bankdaten, Verträge, Personal): Lösung: Lokale KI nutzen.
+
+Tool: Ollama (ollama.com) starten (ollama run qwen3.5:4b).
+
+Möglichkeit 1: Anonymisieren mit Ollama, dann mit Cloud-Modellen weiterarbeiten.
+
+Möglichkeit 2: Ausschließlich lokal arbeiten (leistungsfähige Hardware nötig).
+
+NEIN (Marketing, allgemeine Prozesse): Lösung: Cloud-KI nutzen.
+
+Tools: ChatGPT (chatgpt.com) oder Gemini (gemini.google.com).
+
+Wichtig: KI-Training in den Einstellungen zwingend deaktivieren!
+
+Diagram-as-Code: Welches Tool für was?
+
+Anstatt zu zeichnen, beschreibst du die Struktur als Text. Die KI generiert den Code, der Browser malt das Bild.
+
+Tipp für Design-Anpassungen: Generierten Code in diagrams.net (app.diagrams.net) importieren und per Drag-and-Drop verfeinern.
+
+Das Cockpit-Fundament 
+
+Dein Cockpit ist eine einzige, lokale HTML-Datei. Du bearbeitest sie ganz einfach in einem Texteditor.
+
+Testen ohne Speichern: Nutze JSFiddle (jsfiddle.net), um Code-Änderungen in Echtzeit und absolut gefahrlos (Strg+Z rettet alles) zu testen.
+
+Lokale Updates (Dropzone): Nutze Bibliotheken wie SheetJS und PapaParse per CDN, um CSV- und Excel-Dateien lokal im Browser einzulesen, ohne dass Daten dein System verlassen.
+
+API-Schnittstellen (Der "Kellner"): Nutze die JavaScript fetch() Funktion, um Daten von einer KI in dein Cockpit zu holen.
+
+JSON-Zwang: Nutze im Prompt immer den Zusatz: "Antworte AUSSCHLIESSLICH im JSON-Format, keine Einleitung."
+
+Hosting & Teilen : 
+
+Variante A (Sicherer Tresor): Lade dein Cockpit in ein privates GitHub-Repository hoch. Teile es nur über die „Collaborators“-Funktion mit deinem Team. Die Kollegen laden die Datei herunter und öffnen sie lokal.
+
+Variante B (Live-Link mit Cloudflare): Für einen echten Weblink nutze Cloudflare Pages in Kombination mit Cloudflare Zero Trust.
+
+Achtung GitHub Pages: Aktiviere GitHub Pages nur, wenn dein Cockpit absolut keine sensiblen Daten enthält (z. B. nur öffentliches Marketing). Bei kostenlosen GitHub-Accounts sind Pages-Webseiten oft öffentlich einsehbar, auch wenn das Repository privat ist!
+
+API-Konfiguration (Base-URLs & Modelle)
+
+Hier die wichtigsten Standard-Werte, um dein Cockpit mit dem Gehirn der KIs zu verbinden:
+
+Ollama (Lokal - 100% Datenschutz):
+
+Base-URL: http://localhost:11434/api/chat
+
+Modelle (Beispiele): llama3, mistral (bzw. das lokal geladene Modell)
+
+OpenAI (ChatGPT):
+
+Base-URL: https://api.openai.com/v1/chat/completions
+
+Modelle (Beispiele): gpt-5.4, gpt-5.4-mini
+
+Google Gemini (via OpenAI Kompatibilitäts-API):
+
+Base-URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+
+Modelle (Beispiele): gemini-3.1-pro-preview, gemini-3-flash-preview
+
+Quick-Troubleshooting (Die 4 Retter)
+
+Fehlermeldungen im Diagramm: Nicht selbst debuggen! Fehlermeldung kopieren, in die KI einfügen und sagen: "Hier gab es einen Fehler, korrigieren."
+
+Browser zeigt Code statt Dashboard: Deine Datei heißt unbemerkt cockpit.html.txt. Dateiendungen im Betriebssystem einblenden und das .txt löschen!
+
+CORS-Blockade (Console zeigt Fehler): Dein Browser blockiert die Cloud-API aus Sicherheitsgründen. Nutze entweder eine lokale KI (Ollama) oder OpenRouter (openrouter.ai), die CORS-freundliche Endpunkte anbieten.
+
+Layout zerbricht bei Mermaid: Die KI hat sich bei Sonderzeichen verschluckt. Textpassagen im Code einfach in doppelte Anführungszeichen "..." setzen.
+
+Live-Demos & Linksammlung
+
+Hier findest du alle fertigen Beispiele, Vorlagen und Tools aus dem Buch zum direkten Ausprobieren im Browser:
+
+Linksammlung & Showcase (zentrale Anlaufstelle): the-zero-cost-ai-cockpit.github.io/Links
+
+Showcase (Diagramm-Sammlung): the-zero-cost-ai-cockpit.github.io/Showcase
+
+Demo-Cockpit (Basis Cockpit): the-zero-cost-ai-cockpit.github.io/Demo-Cockpit
+
+Smartes Demo-Cockpit (API-Anbindung): the-zero-cost-ai-cockpit.github.io/Demo_Cockpit_smart
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

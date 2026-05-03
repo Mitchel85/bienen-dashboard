@@ -1,0 +1,100 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 17 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Um dein Cockpit smart zu machen, nutzen wir sogenannte APIs (Application Programming Interfaces). Stell dir eine API wie einen Kellner im Restaurant vor: Dein Cockpit (der Gast) gibt eine Bestellung auf – zum Beispiel "Hier ist ein Text, analysiere ihn" oder "Gib mir den aktuellen Kontostand". Der Kellner (die API) trägt diese Anfrage zur Küche (die KI oder eine Datenbank) und bringt dir das fertige Ergebnis zurück.
+
+Dein Browser nutzt dafür eine eingebaute JavaScript-Funktion namens „fetch“ (mehr dazu auf developer.mozilla.org/de/docs/Web/API/Fetch_API). Damit kann dein Cockpit im Hintergrund völlig lautlos mit der Außenwelt kommunizieren, ohne dass sich die Seite jemals neu laden muss.
+
+5.1.1 Wo finde ich meinen API-Schlüssel?
+
+Um deinen digitalen „Kellner“ loszuschicken, musst du dir bei dem jeweiligen Cloud-Anbieter einmalig einen kostenlosen Schlüssel (eine lange Zeichenkette) generieren. Hier findest du ihn:
+
+Google Gemini: Gehe ins Google AI Studio (aistudio.google.com) und klicke links auf „Get API key“, wähle dann „Schlüssel erstellen“ und kopiere ihn.
+
+OpenAI (ChatGPT): Logge dich auf der OpenAI Platform (platform.openai.com) ein, klicke auf „Create new secret key“ und kopiere diesen.
+
+OpenRouter: Registriere dich unter openrouter.ai/keys und klicke auf „Create Key“.
+
+Achtung: API-Nutzung ist grundsätzlich kostenpflichtig. Einige Anbieter stellen jedoch ein kostenloses Kontingent zur Verfügung – etwa Google über das AI-Studio-Free-Tier oder OpenRouter mit ausgewählten Gratis-Modellen. Für den Aufbau deines Cockpits sollte das reichen. Bei regelmäßiger Dauernutzung mit günstigen Modellen musst du erfahrungsgemäß mit Kosten im niedrigen einstelligen Euro-Bereich pro Monat rechnen.
+
+Lokal (Ollama): Hier brauchst du keinen klassischen Schlüssel, da die KI ohnehin sicher auf deinem eigenen Rechner wohnt. Damit dein lokales Browser-Cockpit aber überhaupt mit Ollama sprechen darf (ohne von den internen Sicherheitsregeln des Browsers blockiert zu werden), nutzen wir den universellen Startbefehl mit dem Sternchen (*):
+
+Windows: Öffne die PowerShell und gib diesen Befehl ein: 
+
+$env:OLLAMA_ORIGINS="*"; ollama serve
+
+macOS: Öffne das Terminal und gib diesen Befehl ein: 
+
+OLLAMA_ORIGINS="*" ollama serve
+
+Sicherheits-Tipp: Die „Zündschlüssel“-Regel. Der Stern (*) in diesem Befehl ist extrem bequem, bedeutet aber auch, dass theoretisch jede Webseite mit bösartigen Absichten, die du gerade in deinem Browser geöffnet hast, auf deine lokale KI zugreifen könnte. Mach es dir deshalb zur Gewohnheit, wie beim Autofahren: Wenn du in deinem Cockpit arbeitest, steckst du den Schlüssel ins Zündschloss (du startest den Befehl im Terminal). Wenn du Feierabend machst, ziehst du den Schlüssel wieder ab – du drückst einfach Strg + C in deinem schwarzen Fenster und schließt es. Sobald Ollama beendet ist, ist dein Rechner wieder zu 100 % „verriegelt“.
+
+Der Offline-Trick: Wenn dir das zu heikel ist, gibt es einen sicheren Weg: Trenne deinen Rechner für die Zeit, in der du an deinem Cockpit arbeitest, kurz vom WLAN oder zieh das Netzwerkkabel. Wo kein Internet ist, gibt es auch keine Gefahr von außen.
+
+Exkurs für Mutige: Der eigene Mini-Server Wer Lust hat, noch etwas tiefer in die Entwicklersphäre einzusteigen und das Sicherheitsproblem absolut professionell zu lösen, nutzt einen Trick: Du startest dein Cockpit nicht per Doppelklick, sondern machst eine „echte“ kleine Webseite daraus. Falls du Python noch nicht auf deinem Rechner hast, lade es dir einfach kostenlos unter python.org/downloads herunter. Wichtiger Tipp für Windows-Nutzer: Setze bei der Installation ganz am Anfang unbedingt das kleine Häkchen bei „Add Python to PATH“! 
+
+1. Starte Ollama mit dem sicheren Befehl, der nur deinen Rechner zulässt:
+
+Windows: 
+
+$env:OLLAMA_ORIGINS="http://localhost:*"; ollama serve
+
+macOS: 
+
+OLLAMA_ORIGINS="http://localhost*" ollama serve
+
+2. Öffne ein zweites schwarzes Fenster genau in dem Ordner, in dem deine HTML-Datei liegt:
+
+Windows: Halte die Shift-Taste gedrückt, klicke mit der rechten Maustaste in den leeren Bereich des Ordners und wähle „In Terminal öffnen“ (oder PowerShell).
+
+macOS: Öffne ein neues Terminal. Tippe cd (wichtig: mit einem Leerzeichen am Ende!) und ziehe deinen Cockpit-Ordner einfach mit der Maus direkt in das Fenster. Drücke dann Enter.
+
+3. Starte den Server (tippe den Befehl ein und drücke Enter):
+
+Windows: 
+
+python -m http.server 8000
+
+macOS: 
+
+python3 -m http.server 8000 (Macs benötigen immer die "3" im Befehl)
+
+4. Öffne deinen Webbrowser und tippe oben in die Adresszeile: 
+
+http://localhost:8000/cockpit.html
+
+Das war's! Dein Browser erkennt das Cockpit nun als reguläre Webseite, und der Türsteher von Ollama winkt dich durch – weil nur noch dein eigener Rechner (localhost) zugelassen ist, nicht mehr die ganze Welt. Aber keine Sorge: Dein Cockpit aus Kapitel 5 funktioniert auch ohne diesen Python-Server!
+
+5.1.2 Base-URLs und Modellnamen
+
+Damit dein Cockpit weiß, wohin es die Daten schicken soll und welches Gehirn antworten soll, brauchst du neben dem API-Schlüssel noch zwei weitere Informationen: Die Base-URL (die Web-Adresse der API) und den Modellnamen (die genaue Bezeichnung der KI).
+
+Hier sind die Standard-Werte für die beliebtesten Anbieter:
+
+OpenAI (ChatGPT)
+
+Base-URL: https://api.openai.com/v1/chat/completions
+
+Modelle (Beispiele): gpt-5.4, gpt-5.4-mini
+
+Google Gemini 
+
+Base-URL: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+
+Modelle (Beispiele): gemini-3.1-pro-preview, gemini-3-flash-preview
+
+Ollama (Lokal)
+
+Base-URL: http://localhost:11434/api/chat
+
+Modelle (Beispiele): llama3, mistral (je nachdem, was du heruntergeladen hast, siehe Kapitel 1)
+
+OpenRouter
+
+Base-URL: https://openrouter.ai/api/v1/chat/completions
+
+Modelle (Beispiele): anthropic/claude-3-opus, google/gemini-pro
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

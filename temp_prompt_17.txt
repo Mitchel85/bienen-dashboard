@@ -1,0 +1,82 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 18 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Modelle (Beispiele): anthropic/claude-3-opus, google/gemini-pro
+
+Profi-Tipp: Wo finde ich immer die aktuellsten Modellnamen? Die KI-Welt entwickelt sich schnell weiter, und ständig kommen neue Modelle heraus. Die exakten und aktuellsten Bezeichnungen findest du immer direkt in den offiziellen Dokumentationen der Anbieter und natürlich im Linkverzeichnis.
+
+OpenAI Modelle: platform.openai.com/docs/models
+
+Google Gemini Modelle: ai.google.dev/models/gemini
+
+OpenRouter Modelle: openrouter.ai/models
+
+Ollama Bibliothek: ollama.com/library
+
+5.1.3 Der Prompt für das API-Upgrade
+
+Damit du das selbst in deine cockpit.html einbauen kannst, brauchst du keine tiefgehenden Programmierkenntnisse. Du musst der KI nur sagen, dass sie dir diesen flexiblen "Kellner" programmieren soll. Hierzu benötigst du einen Basis-Prompt wie diesen:
+
+Erweitere meine bestehende cockpit.html um eine professionelle, lokale KI-Integration (Smart Input). Integriere ein Drag-and-Drop-Feld für Dateien (Text, CSV, EML), PDFs (nutze pdf.js zur lokalen Textextraktion) und Bilder (als Base64 encodiert für Vision-Modelle).
+
+Der generierte HTML/JS-Code muss absolut robust sein und zwingend die folgenden Architektur-Vorgaben einhalten:
+
+Zentrale Provider-Konfiguration: Erstelle ein globales JavaScript-Objekt für die Anbieter (OpenAI, Google Gemini, OpenRouter, Ollama) inkl. der jeweiligen Standard-Base-URLs. Baue in die Benutzeroberfläche Dropdown-Menüs für Anbieter und Modelle, ein Feld für den API-Schlüssel sowie einen Button für einen API-Verbindungstest.
+
+Der Simultanübersetzer: Schreibe eine intelligente buildRequest- und eine extractResponse-Funktion. Diese müssen den Fetch-Payload und das Auslesen der JSON-Antwort dynamisch an das Format des jeweils gewählten Anbieters anpassen (z. B. Ollamas data.response vs. OpenAIs data.choices[0].message.content).
+
+Robuster JSON-Extraktor: KIs antworten oft mit Markdown-Blöcken (z. B. json ... ). Schreibe zwingend eine Regex-Hilfsfunktion extractJSON(), die den reinen JSON-String vor dem JSON.parse() zuverlässig aus dem Text extrahiert.
+
+Datei-Handling im Browser: Lies gedroppte Dateien rein lokal per FileReader API aus. Sende diesen Inhalt mit einem System-Prompt asynchron per fetch an die API.
+
+UI & Fehlerhandling: Nutze für das Feedback (Erfolg/Fehler) kein alert(), sondern programmiere ein modernes, visuelles Toast-Notification-System. Zeige während des Requests zudem einen Lade-Indikator.
+
+DOM-Update: Formuliere den System-Prompt so, dass die API ausschließlich strukturiertes JSON antwortet. Nutze das extrahierte JSON, um die KPI-Kacheln im Cockpit live per DOM-Manipulation zu aktualisieren.
+
+Liefere ausschließlich den fertigen, sauberen und funktionierenden HTML/JS-Code ohne zusätzliche Markdown-Erklärungen.
+
+Warum ist dieser Prompt so lang und technisch? Keine Sorge, du musst Fachbegriffe wie Regex oder JSON-Extraktor nicht selbst beherrschen. Dieser Prompt ist im Grunde dein digitaler Bauleiter. Er verbietet der KI das laienhafte „Hobby-Basteln“ und zwingt sie stattdessen, dein System auf Profi-Niveau zu programmieren.
+
+Kurz gesagt sorgt dieses Sicherheitsnetz für drei Dinge:
+
+Kein Code-Salat: Die KI wird gezwungen, ihre Antworten so sauber zu formatieren, dass dein Cockpit beim Einlesen von Daten nicht abstürzt (das macht der Extraktor).
+
+Grenzenlose Flexibilität: Egal ob du Google, OpenAI oder lokale Modelle nutzt, dein Cockpit übersetzt im Hintergrund alles automatisch, sodass jede KI sofort andocken kann (der Simultanübersetzer).
+
+Echte Profi-Optik: Statt nerviger grauer Pop-ups bekommst du moderne Ladebalken und dezente Info-Meldungen (das Toast-System).
+
+5.1.4 Den API-Schlüssel fest im Code verbauen?
+
+Wenn du dein Cockpit baust, kommt dir vielleicht schnell dieser Gedanke: „Es ist ganz schön nervig, den langen API-Schlüssel immer wieder einzugeben. Kann ich der KI nicht einfach sagen, sie soll den Schlüssel fest in den Code einbauen?“
+
+Die kurze Antwort lautet: Ja, theoretisch könntest du deinen Prompt so anpassen, dass das Cockpit sofort 'Out of the Box' funktioniert.
+
+Aber ich rate dir aus Sicherheitsgründen dringend davon ab!
+
+ Die „Postkarten“-Regel: HTML-Dateien sind wie offene Bücher. Ein API-Schlüssel direkt im Code deines Cockpits ist für den normalen Nutzer zwar auf den ersten Blick nicht sichtbar, aber er ist niemals wirklich versteckt.
+
+Jeder, der diese Datei in die Finger bekommt (sei es ein Kollege, dem du dein Cockpit stolz zeigst, oder jemand, dem du die Datei aus Versehen schickst), kann deinen Schlüssel mit einem simplen Druck auf die F12-Taste über die Browser-Entwicklertools auslesen. Das ist, als würdest du deine EC-Karten-PIN auf eine Postkarte schreiben.
+
+Die Konsequenz: Jeder, der die Datei hat, kann deinen API-Schlüssel klauen und auf deine Kosten (oder dein Kontingent) munter mit der KI chatten.
+
+Die goldene Regel: Bleibe bei der Version mit dem Eingabefeld in deinem Cockpit. Das ist der sichere Weg – besonders, wenn du nicht der Einzige bist, der das Cockpit nutzen wird.
+
+5.1.5 Die API-Magie: Blaupausen für dein intelligentes Cockpit
+
+Dein statisches Dashboard steht. Die API-Verbindung funkt. Ab diesem Moment ist dein Cockpit nicht mehr nur ein dummer Monitor, der bunte Bildchen anzeigt. Es wird zu einem aktiven digitalen Mitarbeiter.
+
+Wenn du das Prinzip einmal verstanden hast (Daten reinschieben 🡪 KI verarbeiten lassen 🡪 strukturiertes JSON ausgeben 🡪 Dashboard aktualisieren), sind die Möglichkeiten endlos. Hier sind drei generische Blaupausen, die du für fast jeden Anwendungsfall adaptieren kannst:
+
+1. Der Daten-Extraktor
+
+Das Problem: Rechnungen und Lieferscheine kommen in verschiedenen Formaten (PDF, Foto). Zahlen müssen manuell abgetippt werden.
+
+Die API-Lösung: Dokument in eine Drag-and-drop-Zone ziehen. Die KI liest autonom Kernwerte wie Betrag, Datum und Lieferant aus.
+
+Das Resultat: KPI-Kacheln (z. B. Ausgaben) aktualisieren sich automatisch. Keine manuelle Eingabe, keine Tippfehler.
+
+Der Prompt:
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

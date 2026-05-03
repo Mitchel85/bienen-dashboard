@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 SKILL_DIR = "/data/.openclaw/workspace/skills/imker-begleiter"
 VOELKER_JSON = os.path.join(SKILL_DIR, "data", "voelker.json")
 OUTPUT_HTML = "/data/.openclaw/canvas/index.html"
-WORKSPACE_HTML = "/data/.openclaw/workspace/index.html"
+WORKSPACE_HTML = "/data/.openclaw/workspace/MITCH/Github/bienen-dashboard/index.html"
 CRON_CACHE = "/tmp/cronjobs.json"
 
 def load_voelker():
@@ -127,6 +127,14 @@ def format_task_description(job):
     
     if name in name_map:
         return name_map[name]
+        
+    if payload.get("text"):
+        import re
+        txt = payload["text"]
+        txt = re.sub(r"^Erinnerung \(Imker-Begleiter\):\s*", "", txt).strip()
+        first_sentence = txt.split(". ")[0]
+        if first_sentence:
+            return first_sentence
     
     # Falls Name unbekannt, versuche aus der message einen Dateinamen zu extrahieren
     if "Führe" in message and ".py" in message:
@@ -164,8 +172,13 @@ def extract_latest_logs(logs, limit=3):
 
 def generate_html(voelker, cronjobs):
     now = datetime.now().strftime("%d.%m.%Y %H:%M")
-    active_volks = sum(1 for v in voelker.values() if v.get("logs"))
-    total_logs = sum(len(v.get("logs", [])) for v in voelker.values())
+    
+    # "meta" ignorieren und Beuten/Völker korrekt zählen
+    real_voelker = {k: v for k, v in voelker.items() if k != "meta"}
+    beuten_count = len(real_voelker)
+    # Aktiv = Hat Königin oder ist nicht als "Leerer Stock" markiert
+    active_volks = sum(1 for v in real_voelker.values() if "Leerer Stock" not in str(v.get("besondere_hinweise", "")))
+    total_logs = sum(len(v.get("logs", [])) for v in real_voelker.values())
     
     html = f"""<!DOCTYPE html>
 <html lang="de">
@@ -197,6 +210,10 @@ def generate_html(voelker, cronjobs):
         .log-section h3, .termine-section h3 {{ margin-top: 0; color: #047857; }}
         .termine-section h3 {{ color: #7c3aed; }}
         .log-entry, .termin {{ background: white; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }}
+        .scrollable-logs::-webkit-scrollbar {{ width: 8px; }}
+        .scrollable-logs::-webkit-scrollbar-track {{ background: #f1f1f1; border-radius: 4px; }}
+        .scrollable-logs::-webkit-scrollbar-thumb {{ background: #cbd5e1; border-radius: 4px; }}
+        .scrollable-logs::-webkit-scrollbar-thumb:hover {{ background: #9ca3af; }}
         .termin {{ border-left-color: #8b5cf6; }}
         .log-time, .termin-time {{ font-size: 0.9rem; color: #6b7280; margin-bottom: 4px; }}
         .log-action, .termin-name {{ font-weight: bold; color: #1e40af; }}
@@ -215,7 +232,7 @@ def generate_html(voelker, cronjobs):
         </header>
         
         <div class="stats">
-            <div class="stat-card"><h3>Anzahl Völker</h3><div class="stat-value">{len(voelker)}</div></div>
+            <div class="stat-card"><h3>Anzahl Beuten</h3><div class="stat-value">{beuten_count}</div></div>
             <div class="stat-card"><h3>Aktive Völker</h3><div class="stat-value">{active_volks}</div></div>
             <div class="stat-card"><h3>Protokolleinträge</h3><div class="stat-value">{total_logs}</div></div>
             <div class="stat-card"><h3>Geplante Termine</h3><div class="stat-value">{len(cronjobs)}</div></div>
@@ -227,11 +244,20 @@ def generate_html(voelker, cronjobs):
                 <thead><tr><th>ID</th><th>Name</th><th>Gewicht (aktuell)</th><th>Letzte Fütterung</th><th>Letzte Varroa‑Behandlung</th><th>Besondere Hinweise</th></tr></thead>
                 <tbody>
 """
-    for volk_id, volk in voelker.items():
+    for volk_id, volk in real_voelker.items():
         weight, weight_date = extract_latest_weight(volk.get("logs", []))
-        weight_str = f"{weight} kg" if weight else "–"
-        if weight_date:
-            weight_str += f" ({weight_date})"
+        netto_str = ""
+        if weight is not None:
+            # Tara berechnen. Volk 1 und 2 haben 3 Zargen (25.4 kg), Volk 3 hat 1 Zarge (12 kg)
+            tara = 25.4 if volk_id in ["1", "2"] else 12.0
+            netto = round(weight - tara, 1)
+            weight_str = f"{weight} kg"
+            netto_str = f"<br><small style='color:#b45309;'><b>Netto (Inhalt):</b> {netto} kg</small>"
+            if weight_date:
+                weight_str += f" <small style='color:#888;'>({weight_date})</small>"
+        else:
+            weight_str = "–"
+
         last_feed = volk.get("letzte_fütterung", "") or "–"
         last_varroa = volk.get("letzte_varroa_behandlung", "–")
         notes = volk.get("besondere_hinweise", "")
@@ -239,7 +265,7 @@ def generate_html(voelker, cronjobs):
                     <tr>
                         <td><span class="volk-id">{volk_id}</span></td>
                         <td><span class="volk-name">{volk.get('name', '')}</span><br><small>{volk.get('standort', '')}</small></td>
-                        <td>{weight_str}</td>
+                        <td>{weight_str}{netto_str}</td>
                         <td>{last_feed}</td>
                         <td>{last_varroa}</td>
                         <td>{notes}</td>
@@ -330,7 +356,7 @@ def main():
             name = job.get("name", "")
             delivery = job.get("delivery", {})
             to = delivery.get("to", "")
-            if to == "6882251060" or name.startswith("imker-") or "varroa" in name:
+            if to == "6882251060" or name.startswith("imker:") or name.startswith("imker-") or "varroa" in name.lower():
                 cronjobs.append(job)
         print(f"✅ {len(cronjobs)} relevante Termine aus Cache geladen.")
     else:

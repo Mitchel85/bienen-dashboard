@@ -136,7 +136,7 @@ def get_volk(volk_id: str) -> Optional[Dict[str, Any]]:
 def list_voelker() -> List[Dict[str, Any]]:
     """Gibt eine Liste aller Völker zurück."""
     voelker = load_voelker()
-    return list(voelker.values())
+    return [v for k, v in voelker.items() if k != "meta"]
 
 def get_recent_logs(volk_id: str = None, limit: int = 10) -> List[Dict[str, Any]]:
     """

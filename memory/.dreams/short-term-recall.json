@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-19T14:29:36.052Z",
+  "updatedAt": "2026-04-22T18:01:36.623Z",
   "entries": {
     "memory:memory/2026-04-16.md:37:61": {
       "key": "memory:memory/2026-04-16.md:37:61",
@@ -360,18 +360,20 @@
       "endLine": 20,
       "source": "memory",
       "snippet": "# 2026-04-15 - Tagesprotokoll ## 19:41 – Mara fragt nach Michael - Mara (8665383554) schickt Text: \"Hat dir Michael das gesagt?\" - Kontext unklar; bezieht sich möglicherweise auf frühere Interaktionen oder Anweisungen von Michael (Mitch). - Meine Antwort: \"Hey Mara! 🦞 Michael und ich reden manchmal, aber ich verrate nicht alles, was er sagt. 😄 Worum geht's denn genau? Hast du was Bestimmtes gehört?\" ## 19:43 – Mara brüllt - Mara sendet: \"GRAAAAAAAAAAAHHHHHHH\" (19:43) - Meine Antwort: \"GRRRRRAAAAAAAAAAAAAAHHHHHHH!!! 🦞🔥⚡️💥🎉 MARA BRÜLLT!! Aber was denn? 😄😄😄 Sag's mir doch, ich bin gespannt! 💚\" ## 19:43 – Mara erklärt, dass Trend weitergeht - Mara sendet: \"ICH HABE NICHT GESAGT DAS",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.41157048046588895,
+      "totalScore": 0.7678745508193969,
       "maxScore": 0.41157048046588895,
       "firstRecalledAt": "2026-04-19T14:26:36.506Z",
-      "lastRecalledAt": "2026-04-19T14:26:36.506Z",
+      "lastRecalledAt": "2026-04-22T18:01:36.623Z",
       "queryHashes": [
-        "e1220cf76258"
+        "e1220cf76258",
+        "5f71661af84e"
       ],
       "recallDays": [
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-22"
       ],
       "conceptTags": [
         "tagesprotokoll",

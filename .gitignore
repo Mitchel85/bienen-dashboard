@@ -1,0 +1,46 @@
+# Exclude all private data and internal configuration
+
+# Family folders
+MAJA/
+MARA/
+MARIO/
+MATILDA/
+MITCH/
+PATRICIA/
+
+# OpenClaw internal directories
+.openclaw/
+.clawhub/
+memory/
+skills/
+public_3001/
+
+# Node modules and build artifacts
+node_modules/
+*.log
+*.tmp
+*.pyc
+__pycache__/
+
+# Sensitive configuration files
+SOUL.md
+USER.md
+IDENTITY.md
+AGENTS.md
+HEARTBEAT.md
+BOOT.md
+TOOLS.md
+MEMORY.md
+*.env
+*.token
+GITHUB_TOKEN.txt
+
+# Temporary and generated files
+*.jpg
+*.png
+*.mp3
+*.docx
+*.pdf
+
+# Keep only index.html for dashboard (explicitly allow)
+!index.html

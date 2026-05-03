@@ -34,16 +34,41 @@ const server = http.createServer((req, res) => {
 
 const wss = new WebSocket.Server({ server });
 
+// History of draw events
+let drawHistory = [];
+
 wss.on('connection', (ws) => {
   console.log('Client connected');
   ws.send('🦞 Verbunden mit dem Clawdia Spiel-Server');
   
+  // Send history to new client
+  drawHistory.forEach(msg => {
+    ws.send(msg);
+  });
+  
   ws.on('message', (message) => {
-    console.log('Received: %s', message);
-    // Simple echo broadcast for drawing games
+    const msgStr = message.toString();
+    console.log('Received message size:', msgStr.length);
+    
+    try {
+        const parsed = JSON.parse(msgStr);
+        if (parsed.type === 'draw') {
+            if (parsed.data && parsed.data.action === 'clear') {
+                drawHistory = []; // Clear history on clear event
+            } else {
+                drawHistory.push(msgStr);
+                // Limit history size to prevent memory leaks (e.g., 50000 strokes)
+                if (drawHistory.length > 50000) drawHistory.shift();
+            }
+        }
+    } catch (e) {
+        // Not JSON or other error, ignore for history
+    }
+
+    // Broadcast
     wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
-        client.send(message.toString());
+        client.send(msgStr);
       }
     });
   });
@@ -54,5 +79,5 @@ wss.on('connection', (ws) => {
 });
 
 server.listen(3001, '0.0.0.0', () => {
-  console.log('Server läuft auf Port 3001 (HTTP & WebSocket)');
+  console.log('Server läuft auf Port 3001 (HTTP & WebSocket) - mit History-Puffer');
 });

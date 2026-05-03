@@ -1,0 +1,88 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 15 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+DATEN-MAPPING: Die Datei enthält typische Spalten wie "Datum", "Kategorie" und "Betrag". Programmiere eine Logik, die die Beträge automatisch pro Kategorie summiert.
+
+LIVE-UPDATE: Nach erfolgreichem Auslesen sollen sich alle KPI-Kacheln und die Chart.js-Diagramme dynamisch per DOM-Manipulation neu rendern – ohne dass die Seite neu geladen werden muss.
+
+FEHLERBEHANDLUNG: Zeige bei Erfolg oder Formatfehlern eine dezente Toast-Notification (kein alert!) an.
+
+Liefere ausschließlich den finalen, sauberen HTML/JS-Code.
+
+4.4 Praxisbeispiel: Christians Immobilienverwaltung
+
+Christian hat eine Immobilienverwaltung gegründet. Er hat beschlossen, von Anfang an alles im Blick zu behalten. Neue Mitarbeiter oder neue Software sollen ihn nicht vor unlösbare Rätsel stellen, sondern sich nahtlos in sein bereits dokumentiertes System einfügen. Um verschiedene Mietparteien, Handwerkeraufträge und Dokumente zentral zu verwalten, baut er sich zunächst ein solides, statisches Cockpit. Mit diesem selbstgebauten Fundament schafft er die Grundlage dafür, dass sein Unternehmen nicht im manuellen Akten-Chaos versinkt, sondern mit klarer Struktur und digitaler Intelligenz skalierbar wird.
+
+Christians "Zutatenliste"
+
+prozesse.txt – Aus Kapitel 2.1: Enthält den generierten Text-Code (Mermaid oder BPMN) für deine Arbeitsabläufe, wie z. B. den Vermietungsprozess. Hinweis: Die Datei kann auch auf .bpmn oder .xml enden. Der KI ist das egal, Hauptsache der Inhalt stimmt.
+
+it_architektur.txt – Aus Kapitel 2.2.: Enthält den PlantUML-Code für dein C4-Modell, das zeigt, wie deine Software (DATEV, Portale etc.) zusammenhängt.
+
+bank_export.csv (oder .xlsx) – Aus Kapitel 2.4: Enthält deine Kontoumsätze, Ticket-Stände oder Immobilien-Kennzahlen für die KPI-Kacheln und Tortendiagramme.
+
+wissensgraph_daten.txt – Aus Kapitel 3: Enthält die extrahierten Verbindungen zwischen Personen, Objekten und Tools (für die Vis.js Visualisierung).
+
+fixkosten_struktur.xlsx – Zusätzliche Datentabelle: Enthält die Aufschlüsselung deiner Gebäude- und Verwaltungskosten für das Sankey-Diagramm.
+
+4.4.1 Der Prompt für das HTML-Cockpit
+
+Christian hat die oben genannten Textdateien und Excel-Tabellen in den Chat hochgeladen und der KI einen klaren Auftrag gegeben:
+
+Du agierst als Frontend-Entwickler. Baue mir ein vollständiges Firmen-Cockpit als einzige, direkt lauffähige HTML-Datei namens cockpit.html. Nutze die angehängten Textdateien und Excel/CSV-Tabellen als Datenbasis und binde deren Inhalte (Zahlen, Prozess-Codes, Architektur-Codes) direkt in den HTML-Code ein.
+
+Design: Dunkler Hintergrund (#0d0f0e), goldene Akzente (#c9a84c). Nutze moderne, gut lesbare Schriften (wie Playfair Display und DM Mono).
+
+Baue diese Tabs ein (wechselbar ohne Neuladen per JavaScript):
+
+Übersicht: Nutze die bank_export.csv, um 4 KPI-Karten sowie ein einfaches Balken- und Tortendiagramm (Chart.js) zu erstellen. WICHTIG: Baue hier die lokale Dropzone (inkl. SheetJS und PapaParse) ein, damit ich künftige Export-Dateien per Drag-and-Drop einlesen und die Diagramme live aktualisieren kann.
+
+Prozesse: Nutze die prozesse.txt, um die Arbeitsabläufe mit Mermaid.js zu rendern.
+
+IT-Architektur: Nutze die it_architektur.txt, um das System Context Diagramm darzustellen.
+
+Fixkosten: Nutze die fixkosten_struktur.xlsx, um ein Sankey-Diagramm (Mermaid) für den Geldfluss zu bauen.
+
+Wissensgraph: Nutze die wissensgraph_daten.txt, um ein interaktives Netzwerk mit Vis.js zu generieren.
+
+Binde alle nötigen Bibliotheken per CDN ein. Gib mir ausschließlich den finalen Code aus, keine Erklärungen.
+
+Übrigens CDN bedeutet: Content Delivery Network (auf Deutsch etwa: Inhaltsauslieferungs-Netzwerk) erfahre hier mehr: de.wikipedia.org/wiki/Content_Delivery_Network
+
+4.4.2 Das Ergebnis
+
+Einen Screenshot vom Demo-Cockpit kannst du dir im Folgenden anschauen oder du nutzt diesen Link zur Live-Demo: the-zero-cost-ai-cockpit.github.io/Demo-Cockpit. Um dir das Cockpit runterzuladen nutzt du diesen Link: github.com/the-zero-cost-ai-cockpit/Demo-Cockpit. Zum Download einfach die index.html (im sogenannten Repository aus technischen Gründen als index.html benannt) anklicken und dann oben rechts den Download-Button benutzen. Zudem findest du im Repository  auch eine Beispiel-Datei (Beispiel_Portfolio_Update.csv)  um die Dropzone auszuprobieren.
+
+4.4.3 Das Cockpit zum „Leben“ erwecken
+
+Christian hat nun sein maßgeschneidertes Layout. Aber er will mehr als nur eine statische Ansicht. Anstatt bei jeder neuen Handwerkerrechnung oder Monatsabrechnung den HTML-Code anzupassen, nutzt er nun die neu eingebaute Dropzone.
+
+Er zieht einfach seine aktuelle bank_export_november.csv per Drag-and-Drop in den oberen Bereich seines Cockpits. Was dann passiert, fasziniert ihn jedes Mal:
+
+Die KPI-Kacheln für "Instandhaltungskosten" und "Mieteinnahmen" aktualisieren sich sofort.
+
+Das Chart.js-Diagramm verteilt die Kostenanteile der Gewerke (Sanitär, Elektro, Dach) in Echtzeit neu.
+
+Christian hat damit ein System geschaffen, das mit ihm wächst, sich in Millisekunden anpasst und für das er keinen Cent an monatlichen Abo-Gebühren zahlt.
+
+Christians Cockpit, Auszug. Digitale Torten sind ihm lieber als echte.
+
+4.5 Die häufigsten Fehler und wie du sie vermeidest
+
+Auch wenn der Weg simpel ist, tappen viele anfangs in diese Fallen. So umgehst du sie:
+
+Den „Ultimativen Tipp“ vom Anfang des Buches vergessen:
+
+Ich möchte ein HTML-Cockpit bauen. Es soll dunkel und golden sein, 6 Tabs haben, BPMN Diagramme anzeigen und Tortendiagramme nutzen. Schreib mir dafür den professionellen Master-Prompt, den ich einer Programmier-KI geben kann, damit sie mir das perfekt baut.
+
+Alles auf einmal wollen. Neues Layout, andere Farben und fünf zusätzliche Mermaid-Graphen in einem Rutsch? Das zerschießt oft den Code.
+
+Lösung: Gehe Schritt für Schritt vor und lass dein Cockpit langsam wachsen („Salami-Taktik“). Sag der KI z. B.:
+
+Behalte das Design bei und ergänze Funktionen X.
+
+Wenn mehrere Sachen nicht passen, ändere sie ebenfalls einzeln. Teste jede kleine Anpassung sofort in JSFiddle.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

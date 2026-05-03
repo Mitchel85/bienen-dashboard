@@ -206,7 +206,56 @@
 
         function drawRemote(event) {
             if (!event.data) return;
-            const { x, y, color, size, action, isEraser } = event.data;
+            const { x, y, color, size, action, isEraser, type, w, h, r, start, end, text, fill } = event.data;
+            
+            // Structured shapes (rect, circle, line, arc, text)
+            if (type === 'rect') {
+                ctx.fillStyle = color;
+                ctx.strokeStyle = color;
+                if (fill) {
+                    ctx.fillRect(x, y, w, h);
+                } else {
+                    ctx.strokeRect(x, y, w, h);
+                }
+                return;
+            }
+            if (type === 'circle') {
+                ctx.beginPath();
+                ctx.arc(x, y, r, 0, Math.PI * 2);
+                ctx.fillStyle = color;
+                ctx.strokeStyle = color;
+                if (fill) {
+                    ctx.fill();
+                } else {
+                    ctx.stroke();
+                }
+                return;
+            }
+            if (type === 'line') {
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(w, h); // using w,h as x2,y2
+                ctx.strokeStyle = color;
+                ctx.lineWidth = size || 2;
+                ctx.stroke();
+                return;
+            }
+            if (type === 'arc') {
+                ctx.beginPath();
+                ctx.arc(x, y, r, start, end);
+                ctx.strokeStyle = color;
+                ctx.lineWidth = size || 2;
+                ctx.stroke();
+                return;
+            }
+            if (type === 'text') {
+                ctx.font = `${size || 16}px sans-serif`;
+                ctx.fillStyle = color;
+                ctx.fillText(text, x, y);
+                return;
+            }
+            
+            // Legacy freehand strokes (action: start, move, clear)
             ctx.lineWidth = size;
             ctx.lineCap = 'round';
             ctx.strokeStyle = isEraser ? 'white' : color;

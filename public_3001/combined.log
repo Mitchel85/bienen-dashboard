@@ -1,2 +1,5 @@
-Server running on port 3001
-Connected: client_1_8177
+✅ Secure server läuft auf Port 3002 (HTTP & WebSocket)
+🔒 Rate‑Limiting: 50 Nachrichten/Sekunde pro Client
+🌐 CORS erlaubt: https://oc.clawdia26.com, http://localhost:3001, http://localhost:3000
+Client connected from 127.0.0.1
+Client 127.0.0.1 disconnected

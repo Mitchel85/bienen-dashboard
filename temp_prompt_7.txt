@@ -1,0 +1,116 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 8 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Softwarewechsel (Die verdeckten Verbindungen): Ein Verkäufer überzeugt dich, ein neues, schickes Programm für deine Kundendaten (CRM) einzuführen. Was er dir im Verkaufsgespräch nicht sagt: Wenn du das alte System einfach abschaltest, kappst du unbewusst auch die automatische Verbindung zu eurem Support-Postfach. Plötzlich weiß der Kundenservice nicht mehr, welcher Kunde was gekauft hat. Aus einem schnellen Software-Wechsel wird ein wochenlanger Reparatur-Einsatz, weil versteckte Abhängigkeiten zerstört wurden.
+
+Neue Mitarbeiter (Das Erklär-Chaos): Eine neue Projektmanagerin fängt bei euch an. Du verbringst Stunden damit, ihr mühsam zu erklären, wie alles zusammenhängt: Die Kundenanfragen kommen über die Website rein, landen dann in Programm A, die Verträge werden in Programm B geschrieben und das Bezahlsystem funkt seine Daten über einen Umweg in Programm C. Ein einziges, sauberes IT-Schaubild hätte ihr diese ganze Struktur in fünf Sekunden auf einen Blick erklärt.
+
+2.2.2 Das C4-Modell 
+
+Die Rettung aus diesem Chaos ist ein IT-Bebauungsplan. Hier eignet sich das  C4-Modell (c4model.com). C4 steht für: Context, Container, Components, Code. Ein einziger Blick auf ein solches Kontext-Diagramm in deinem Dashboard zeigt dir sofort alle Systeme und ihre Abhängigkeiten. Ich erkläre es dir:
+
+Stell dir einfach eine Google-Maps-Landkarte vor:
+
+1. Context (Die Weltkugel): Dein Hof in der Mitte und alle externen Systeme drumherum, mit denen er funkt.
+
+2. Container (Die Stadtkarte): Du zoomst ins System hinein. Jetzt siehst du die groben Bausteine: die Web-App, die Datenbank und die mobile App. Hier erkennst du, welche Technologien (z. B. Java oder SQL) genutzt werden.
+
+3. Components – Komponenten (Der Gebäudeplan): Du zoomst in einen Container (z. B. die Web-App) hinein. Jetzt siehst du die einzelnen Funktionsblöcke im Inneren, wie zum Beispiel den "Login-Service" oder den "E-Mail-Versand".
+
+4. Code (Der Raumplan): Das ist die Lupe. Hier siehst du die eigentlichen Klassen oder Funktionen. In der Praxis lässt man diese Ebene oft weg, weil sie sich zu schnell ändert.
+
+In der Praxis zeigt sich: Für die meisten kleinen und mittleren Betriebe reicht diese erste Ebene – der Systemkontext – als strategische Basis völlig aus. Die tieferen Ebenen (Container, Components, Code) werden in der Regel erst relevant, wenn du eigene Software entwickeln lässt. 
+
+Was wir hier in wenigen Minuten per Prompt aufbauen, ist ein Baustein des Enterprise Architecture Management (EAM) – und zwar ohne die ansonsten übliche, zähe manuelle System- und Modellierungsarbeit. Du adaptierst damit bewährte Architektur-Standards aus dem Konzernumfeld für deinen Betrieb – pragmatisch und ganz ohne teure Softwarelizenzen.
+
+Zur Umsetzung bedienst du dich folgender Komponenten:
+
+PlantUML: Eine textbasierte Sprache für Diagramme – besonders stark in der IT-Architektur. Den Code kannst du direkt hier rendern (visualisieren): plantuml.com.
+
+diagrams.net (früher draw.io): Ein multifunktionales Zeichentool, das auch PlantUML-Code importieren kann. 
+
+2.2.3 Dein IT-Schaubild erstellen
+
+Schritt 1: Schreibe auf, welche Hardware und Software du nutzt. Ein Foto deiner Notizen reicht der KI später als Input.
+
+Beispiel: Sarah, die smarte Shop-Managerin:
+
+Hardware: Laptop (MacBook), Smartphone (iPhone).
+
+Software/Cloud: Shopify (Onlineshop), Billbee (Lager & Versand), Zendesk (Kundenservice), Zapier (Verbindungstool), Lexoffice (Buchhaltung).
+
+Infrastruktur: Office-WLAN.
+
+Schritt 2: PlantUML-Code per KI erstellen:
+
+Erstelle ein PlantUML-Architekturdiagramm basierend auf dem C4-Modell (Context). Das zentrale System ist 'Sarahs smarter Shop'. Zeige alle externen Systeme und Nutzer als verbundene Elemente. Nutze die korrekte C4-Syntax. Wichtig: Nutze den internen Standard-Include (!include <C4/C4_Context>) und keine externen GitHub-URLs, um Ladefehler zu vermeiden.
+
+Hier sind meine Daten: [dein Text/Foto]
+
+Die KI macht sich an die Arbeit und liefert dir PlantUML-Code, der so aussieht:
+
+@startuml
+
+!include <C4/C4_Context>
+
+' Layout-Einstellungen
+
+LAYOUT_WITH_LEGEND()
+
+' Personen
+
+Person(sarah, "Sarah, die smarte Shop-Managerin", "Steuert das Tagesgeschäft und überwacht die Prozesse.")
+
+' Das zentrale Unternehmen / Das Büro
+
+System_Boundary(office, "E-Commerce Agentur") {
+
+   System(it_infrastruktur, "IT-Infrastruktur", "Laptop (MacBook), Smartphone (iPhone) & Office-WLAN.")
+
+}
+
+' Externe Systeme (Cloud & Partner)
+
+System_Ext(shopify, "Shopify", "Cloud-basierter Onlineshop (Verkauf).")
+
+System_Ext(zapier, "Zapier", "Automatisierungstool (verbindet Systeme im Hintergrund).")
+
+System_Ext(billbee, "Billbee", "Verwaltet Lagerbestand und Versand.")
+
+System_Ext(zendesk, "Zendesk", "Kundenservice und Ticket-System.")
+
+System_Ext(lexoffice, "Lexoffice", "Cloud-Buchhaltung.")
+
+' Beziehungen (Relationships)
+
+Rel(sarah, it_infrastruktur, "Nutzt für Steuerung & Kommunikation")
+
+Rel(it_infrastruktur, shopify, "Verwaltet Produkte & Shop-Design")
+
+Rel(shopify, zapier, "Sendet neue Bestelldaten")
+
+Rel(zapier, billbee, "Leitet Bestellungen ans Lager weiter")
+
+Rel(zapier, zendesk, "Erstellt Kundenprofile bei Neukäufen")
+
+Rel(billbee, lexoffice, "Überträgt fertige Rechnungsdaten")
+
+@enduml
+
+Schritt 3: Aus Code wird ein schickes Bild
+
+Kopiere den Code und öffne plantuml.com. Füge ihn einfach in das Textfeld ein – und dein Architekturdiagramm erscheint. Sollte der PlantUML-Webserver den Code einmal nicht laden wollen (das passiert bei den C4-Bibliotheken gelegentlich), sag der KI einfach: 
+
+Schreibe den Code in reinem PlantUML ohne externe C4-Includes, aber im gleichen visuellen Stil.
+
+ Im unteren Bereich kannst du das Ergebnis direkt als PNG-Bilddatei exportieren. Speichere dir den Text-Code am besten in einer Textdatei ab; so kannst du das Diagramm jederzeit neu generieren oder kleine Anpassungen direkt im Text vornehmen.
+
+Sarah ist stolz auf ihr System Context Diagramm 
+
+Damit bist du - kurz gesagt: Bereit für die Digitalisierung. 
+
+2.3 Maximale Flexibilität mit diagrams.net
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

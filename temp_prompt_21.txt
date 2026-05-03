@@ -1,0 +1,63 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 22 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Eine extrem wichtige Warnung vorab: Wenn du eine KI fragst, wie du eine HTML-Datei kostenlos mit einem Passwort schützt, rät sie dir oft zu einem kleinen JavaScript-Code, der beim Öffnen ein Passwort-Fenster einblendet. Tu das niemals! Das ist ein reiner „Fake-Schutz“. Jeder, der im Browser auf „Rechtsklick -> Seitenquelltext anzeigen“ klickt, sieht sofort alle deine Finanz- und Prozessdaten sowie das Passwort im Klartext.
+
+Um dein Cockpit wirklich sicher und kostenlos für dein Team bereitzustellen, gibt es diese Lösungswege, je nach deinem technischen Komfortbedürfnis:
+
+6.2.1 Der digitale Tresor (GitHub für 0 Euro)
+
+GitHub ist die weltweit größte Plattform für Softwareprojekte. Für No-Coder ist das unsere erste Wahl, wenn es um den reinen Datenaustausch geht.
+Bei kostenlosen GitHub-Accounts kannst du Dateien extrem sicher und privat in der Cloud speichern.
+
+Schritt 1 (Tresor anlegen): Erstelle ein neues Projekt (ein sogenanntes „Repository“) und stelle es zwingend auf „Private“. Damit ist alles vor fremdem Zugriff geschützt.
+
+Schritt 2 (Team einladen): Unter den Einstellungen („Settings > Collaborators“) lädst du deine Kollegen per E-Mail ein. Nur sie erhalten den Schlüssel zum Tresor.
+
+Schritt 3 (Der Workflow): Deine Kollegen loggen sich bei GitHub ein, laden sich die aktuelle Cockpit-Datei herunter und öffnen sie per Doppelklick lokal auf ihrem Rechner.
+
+Wichtiger Hinweis: Nutze bei GitHub niemals die Funktion „GitHub Pages“! Auch bei einem privaten Projekt veröffentlicht diese Funktion deine Seite für jeden sichtbar im offenen Internet. Die Zugangskontrolle für Webseiten ("Access Control for GitHub Pages") ist ausschließlich im Tarif GitHub Enterprise Cloud (ca. 20€ monatlich) verfügbar.
+
+Fazit: 0 Euro, 100 % DSGVO-konform. GitHub dient hier als hochsicherer, digitaler Firmen-USB-Stick.
+
+6.2.2 Cloudflare für 0 Euro – Live im Netz
+
+Wenn das ständige Herunterladen nervt und dein Team einen echten Live-Link (z. B. dein-cockpit.pages.dev) im Browser aufrufen soll, nutzen wir einen Trick: Wir kombinieren zwei kostenlose Dienste des Anbieters Cloudflare (cloudflare.com):
+
+Cloudflare Pages: Hier lädst du deine Dateien einfach per Drag-and-Drop hoch. Cloudflare macht daraus kostenlos eine rasend schnelle Webseite.
+
+Cloudflare Zero Trust: Das ist unser Türsteher. Diese Konzern-Sicherheitsfunktion ist für bis zu 50 Nutzer komplett gratis. Du legst im Menü fest, dass nur bestimmte E-Mail-Adressen (z. B. @deinefirma.de) auf die Seite zugreifen dürfen.
+
+Die Umsetzung
+
+Da Cloudflare eigentlich für IT-Profis gebaut wurde, wirken die Menüs auf den ersten Blick etwas einschüchternd. Aber keine Sorge, folge einfach diesem Rezept:
+
+Das Hosting: Erstelle dir einen kostenlosen Account auf cloudflare.com. Klicke im Menü links auf „Workers & Pages“ und wähle „Upload assets“ (Dateien hochladen). Ziehe deinen Ordner mit der index.html in das Feld. Cloudflare generiert nun deinen Live-Link (z. B. https://cockpit-abc.pages.dev).
+
+Zero Trust aktivieren: Klicke im linken Hauptmenü auf „Zero Trust“. Wichtiger Hinweis: Cloudflare fragt dich hier nach einer Zahlungsmethode (Kreditkarte/PayPal) und du musst den „Free Plan“ wählen. Keine Panik! Das dient nur der Abwehr von Spam-Robotern. Es werden 0 Euro abgebucht.
+
+Den Türsteher aufstellen: Im Zero-Trust-Menü klickst du auf „Access“ und dann auf „Applications“. Klicke auf „Add an Application“ und wähle „Self-Hosted“. Trage hier deinen vorhin erstellten Link (dein-name.pages.dev) ein.
+
+Die Gästeliste schreiben: Im nächsten Fenster scrollst du zu den „Policies“ (den Regeln). Hier legst du fest, wer rein darf. Wähle als Aktion „Allow“ (Erlauben) und füge unter „Include“ die E-Mail-Adressen deiner Mitarbeiter ein (oder gleich eure gesamte Firmenendung, z.B. @deinefirma.de).
+
+Testen: Speichere alles ab. Öffne nun ein „Inkognito-Fenster“ in deinem Browser und rufe deinen Link auf. Wenn du alles richtig gemacht hast, siehst du statt deines Cockpits jetzt die Abfrage: „Bitte E-Mail-Adresse eingeben, um einen Zugangscode zu erhalten.“
+
+Tipp für No-Coder: Wenn sich Menüs bei Cloudflare in der Zwischenzeit geändert haben sollten, mach einfach einen Screenshot von der Cloudflare-Seite, lade ihn in deine KI hoch, sag du gerade nicht weiterkommst und dir wird geholfen!
+
+Der Workflow: Ruft ein Mitarbeiter euren Link auf, ist die Seite blockiert. Er muss seine E-Mail-Adresse eintippen und erhält sofort einen PIN-Code in sein Postfach. Gibt er diesen ein, öffnet sich das Cockpit. Kein Passwort, das man sich merken oder das gehackt werden kann – absolute Sicherheit auf Enterprise-Niveau für 0 Euro!
+
+6.2.3 Webhosting
+
+Vielleicht hast du für deine Firmen-Webseite ohnehin schon einen Server gemietet (bei Anbietern wie IONOS, Strato oder Hostinger). In diesem Fall fallen keine neuen Kosten an.
+
+Hochladen: Du schiebst deine Dateien über ein kostenloses Datei-Übertragungsprogramm (wie FileZilla – dein digitaler Möbelpacker) einfach auf deinen Server in einen Unterordner.
+
+Das Türschloss: Da das Internet für jeden offen ist, musst du diesen Ordner zwingend schützen. Bei Webhostern macht man das zuverlässig mit einer winzigen Textdatei namens .htaccess.
+
+Tipp für No-Coder: Frag einfach deine KI: „Ich habe einen Webspace. Schreibe mir den .htaccess-Code, um meinen Cockpit-Ordner mit dem Passwort 'Geheim123' zu schützen, und erkläre mir Schritt für Schritt, wie und wo ich diese Datei anlegen muss.“
+
+6.2.4 Selbst hosten (Die Nerd-Route)
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

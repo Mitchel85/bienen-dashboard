@@ -1,0 +1,132 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 21 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Der Vorteil: Du hast weiterhin nur eine einzige Datei. Du kannst sie auf einen USB-Stick ziehen, per Mail verschicken oder lokal öffnen – sie funktioniert auf jedem Rechner sofort per Doppelklick. Keine Browser-Blockaden, keine Server-Konfiguration.
+
+Der Nachteil: Bei wachsendem Umfang wird die Datei unübersichtlich. Teamarbeit ist schwierig, da alle am gleichen Dokument arbeiten. Externe Automatisierungstools können nicht auf einzelne Daten zugreifen.
+
+Für wen? Einsteiger, Einzelnutzer und alle, die das Cockpit lokal ohne Server betreiben wollen.
+
+Beispiel-Prompt für Ansatz 1:
+
+„Hier ist der Code meines Cockpits. Bitte strukturiere diese Datei intern neu, um die Übersichtlichkeit zu maximieren:
+
+Trenne das grafische Layout (HTML) strikt von den Inhalten.
+
+Fasse alle CSS-Stile in einem klar markierten <style>-Block zusammen.
+
+Bündele alle JavaScript-Funktionen in einem <script>-Block.
+
+Erstelle für jeden Reiter (z. B. Prozesse, Finanzen, IT) am Ende der Datei einen eigenen, klar kommentierten Daten-Block.
+
+Implementiere eine Logik, die beim Klick auf das Menü nur das jeweilige Daten-Modul in den zentralen Bereich lädt.
+
+Zerlege das System NICHT in mehrere physische HTML-Dateien. Alles muss in der einen cockpit.html bleiben.
+
+Markiere alle Stellen, an denen ich meine eigenen Daten eintragen muss, mit Kommentaren wie ‚HIER DEINE DATEN EINFÜGEN'. Erstelle keine Beispiel-Daten – ich trage meine echten Werte selbst ein.
+
+Hier ist meine bestehende cockpit.html: [CODE EINFÜGEN ODER DATEI HOCHLADEN]
+
+6.1.2 Das Cockpit zerlegen (für Server-Hosting)
+
+Sobald dein Cockpit auf einem Server liegt – sei es bei GitHub Pages, einem klassischen Webhosting-Anbieter oder auf deinem eigenen Raspberry Pi – entfallen die technischen Einschränkungen des Browsers. Über HTTP oder HTTPS kannst du dann problemlos separate CSS-, JavaScript- und HTML-Dateien laden.
+
+Die Vorteile im Überblick:
+
+Wartbarkeit: Änderungen am Design betreffen nur die CSS-Datei, Logik-Änderungen nur die JavaScript-Datei. Du musst nicht mehr in einer riesigen HTML-Datei suchen.
+
+Teamarbeit: Kollegen können an einzelnen Seiten arbeiten, ohne sich gegenseitig den Code zu zerschießen. Jeder kümmert sich um sein Modul.
+
+Ladezeit: Der Browser lädt nur die Dateien, die für die aktuelle Ansicht nötig sind. Das macht dein Cockpit spürbar schneller.
+
+Erweiterbarkeit: Neue Funktionen fügst du als separate Datei hinzu – ohne das Grundgerüst anzufassen. Möchtest du eine Ticket-Seite? Einfach tickets.html erstellen.
+
+Automatisierung: Externe Tools wie n8n oder OpenClaw können CSV-Dateien im gleichen Ordner aktualisieren, ohne die HTML-Struktur zu berühren. Das ist der Schlüssel zur echten Automatisierung.
+
+Die neue Ordnerstruktur (Beispiel):
+
+Hauptseiten & Funktionen:
+
+index.html: Hauptseite mit Navigation
+
+prozesse.html: Prozessdiagramme
+
+it_architektur.html: C4-Modell der IT-Architektur
+
+kpi.html: Finanz-Dashboard
+
+graph.html: Wissensgraph
+
+ki_usecase.html: Smart-Cockpit mit API-Anbindung
+
+Ressourcen:
+
+styles.css: Zentrales Design (CSS) für alle Seiten
+
+app.js: Gemeinsame JavaScript-Funktionen
+
+Datenverzeichnis (data/):
+
+Hinweis: Dieses Verzeichnis enthält sensible Geschäftsdaten und muss geschützt werden.
+
+prozesse.txt: Prozessdaten
+
+kpi_daten.csv: KPI-Datensätze
+
+graph_daten.txt: Daten für den Wissensgraphen
+
+Beispiel-Prompt für Ansatz 2:
+
+Du agierst als Senior Frontend-Architekt. Ich habe eine bestehende cockpit.html, die ich für Server-Hosting modularisieren möchte.
+
+Aufgabe: Zerlege die Datei in folgende separate Dateien:
+
+index.html – Hauptseite mit Header, Sidebar-Navigation und Footer
+
+prozesse.html – Zeigt die Prozessdiagramme (Mermaid/BPMN aus Kapitel 2)
+
+it_architektur.html – Zeigt das C4-Modell (PlantUML aus Kapitel 2.2)
+
+kpi.html – Zeigt das Finanz-Dashboard mit Chart.js-Diagrammen (Kapitel 2.4)
+
+graph.html – Zeigt den interaktiven Wissensgraphen (Vis.js aus Kapitel 3)
+
+ki_usecase.html – Smart-Cockpit mit API-Integration und Drag-and-Drop (Kapitel 5)
+
+styles.css – Zentrales Design für ALLE Seiten (konsistentes Farbschema)
+
+app.js – Gemeinsame Funktionen (Navigation, Toast-Notifications, API-Helper)
+
+Wichtige Vorgaben:
+
+Alle HTML-Seiten müssen styles.css und app.js über relative Pfade laden.
+
+Die Navigation in jeder Seite muss zur index.html und zu allen anderen Seiten verlinken.
+
+Erstelle im Ordner /data Platzhalter-Dateien für prozesse.txt, kpi_daten.csv, graph_daten.txt.
+
+Gib mir den Code für JEDE Datei in einem separaten Code-Block aus.
+
+Erkläre kurz, wie die Dateien sich gegenseitig laden.
+
+Erstelle zudem eine CSV-Vorlage, in die ich meine KPI-Daten eintragen kann.
+
+Design-Vorgaben: 
+
+Dunkler Hintergrund, goldene Akzente, Schriften: Playfair Display (Überschriften) und DM Mono (Text).
+
+Hier ist meine bestehende cockpit.html: [CODE EINFÜGEN ODER DATEI HOCHLADEN]"
+
+6.2 Das Cockpit online bereitstellen
+
+Dein Cockpit funktioniert lokal hervorragend. Doch wenn du im Team arbeitest, wollt ihr alle auf den gleichen, aktuellen Datenstand zugreifen. Die Zentrale muss also ins Netz.
+
+Bevor du beginnst, musst du eine wichtige Grundregel des Internets kennen: Möchtest du dein Cockpit als Website aufrufen, musst du deine Hauptdatei zwingend in index.html umbenennen. Webserver sind so programmiert, dass sie exakt diese Datei als Startseite laden. Heißt deine Datei anders (etwa cockpit.html), erkennt der Server sie nicht und dein Bildschirm bleibt leer.
+
+Nun stehen wir vor einem branchenbekannten Problem: Das reine Hochladen einer Webseite ist heute oft kostenlos – aber sobald man ein sicheres „Türschloss“ (einen Passwortschutz) davorlegen möchte, verlangen fast alle Anbieter plötzlich Geld.
+
+Eine extrem wichtige Warnung vorab: Wenn du eine KI fragst, wie du eine HTML-Datei kostenlos mit einem Passwort schützt, rät sie dir oft zu einem kleinen JavaScript-Code, der beim Öffnen ein Passwort-Fenster einblendet. Tu das niemals! Das ist ein reiner „Fake-Schutz“. Jeder, der im Browser auf „Rechtsklick -> Seitenquelltext anzeigen“ klickt, sieht sofort alle deine Finanz- und Prozessdaten sowie das Passwort im Klartext.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

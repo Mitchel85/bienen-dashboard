@@ -1,0 +1,84 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 5 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Screenshot der Ollama-Anwendung. Hier ist zu sehen, wie das Modell gerade „denkt“ nachdem es ein Bild als Input bekommen hat.
+
+Daten ins Terminal bekommen: Da das Terminal keine Drag-and-Drop-Oberfläche für PDF- oder Word-Dokumente hat, arbeiten wir hier am einfachsten mit der Zwischenablage. Wenn du einen Text analysieren oder in einen Code für dein Cockpit umwandeln lassen willst: 
+
+Öffne dein Dokument, markiere den Text, kopiere ihn (Strg+C / Cmd+C) und füge ihn direkt in dein Terminal ein (Strg+V / Cmd+V). 
+
+Tipp: Nutze bei Windows die Tastenkombination Windows-Taste + V, um die letzten kopierten Inhalte in der Zwischenablage zu sehen. Falls nicht aktiviert: Einstellungen 🡪 System 🡪 Zwischenablage 🡪 Verlauf aktivieren). MacOS-Nutzer benötigen Extrasoftware wie maccy.app.
+
+Je nach Modell kannst du auch Bilder direkt ins Terminal ziehen und analysieren lassen. Das ist vor allem bei der Analyse von Tabellen sinnvoll.
+
+Schritt 3: Modelle einstellen
+
+Da wir nun in der Kommandozeile sind, nutzen wir ihren größten Vorteil: Die Kontrolle über die Modell-Parameter. Wenn die KI für unser Cockpit einfach nur Daten filtern oder streng nach Vorgabe formatieren soll, darf sie nicht "philosophieren". Mit folgenden Befehlen (die du einfach während des Chats in das Terminal tippst) passt du dein System an:
+
+Thinking (engl. für Schlussfolgern oder logisches Denken) bezeichnet die Fähigkeit eines KI-Modells, nicht sofort eine Antwort zu geben, sondern zu „überlegen". Bezogen auf unseren Anwendungsfall – Daten anonymisieren – kannst du es deaktivieren. Das spart viel Zeit und Rechenleistung. 
+
+Nutzung: Tippe einfach /set nothink ein, um das Nachdenken auszuschalten. Mit /set think aktivierst du es wieder.
+
+Temperature (Kreativität): Dieser Wert bestimmt die Vorhersehbarkeit  und den „Mut" der Antworten. Ein hoher Wert (z. B. 1.5) macht die KI kreativ. Ein Wert von 0.2 macht sie extrem sachlich und konstant.
+
+ Nutzung: Tippe z. B. /set temperature 0.5 ein.
+
+Wann welcher Wert?
+
+  Niedrig (0.1–0.3): Für Datenextraktion, Code, Fakten
+
+  Mittel (0.5–0.7): Für allgemeine Texte, E-Mails
+
+  Hoch (1.0–1.5): Für Brainstorming, kreative Aufgaben
+
+Tipp: Wenn du tiefer eintauchen willst, kannst du im Terminal mit dem Befehl /? jederzeit alle Kurzbefehle aufrufen).
+
+1.3.4 Die Hybrid-Strategie
+
+Zum Schluss fügen wir die Puzzleteile zusammen. Warum der Aufwand mit Ollama und dem Terminal? Weil wir im Business-Kontext eine Hybrid-Strategie fahren. Sicherheit trifft Geschwindigkeit – nutze die Stärken beider Welten:
+
+Lokal bereinigen: Du fütterst Ollama lokal auf deinem Rechner (z. B. über die Desktop-App) mit deinen echten Rohdaten und lässt sie datenschutzkonform anonymisieren.
+
+Groß denken: Diese sauberen, "harmlosen" Fakten kopierst du anschließend ohne jegliche Datenschutz-Sorgen in die mächtigen Cloud-Modelle (wie Gemini oder ChatGPT), um daraus die komplexen Inhalte für dein Cockpit generieren zu lassen.
+
+So behältst du jederzeit die volle Kontrolle über sensible Daten, ohne auf die Rechenpower der Tech-Giganten verzichten zu müssen!
+
+1.4 Die häufigsten Fehler und wie du sie vermeidest
+
+Hardware überfordern
+
+Das Problem: Ein riesiges 14B-Modell zwingt einen Standard-Laptop in die Knie. Die Lüfter heulen, das System friert ein und Antworten kommen im Schneckentempo.
+
+Die Lösung: Starte immer mit schlanken Modellen der 3B- bis 4B-Klasse (z. B. qwen3.5:4b). Wechsle erst zu größeren Modellen, wenn die Leistung für die Aufgabe nicht mehr reicht. Modelle findest du in der Ollama Library (ollama.com/library).
+
+Drag-and-Drop im Terminal
+
+Das Problem: Das direkte Hineinziehen von Word- oder PDF-Dateien in das Kommandozeilenfenster funktioniert nicht und erzeugt Fehler.
+
+Die Lösung: Nutze im Terminal Copy-and-Paste für reinen Text, je nach Modell kann du aber auch Bilder reinziehen. Für die Verarbeitung ganzer Dokumente solltest du eine grafische Oberfläche wie Open WebUI (openwebui.com) verwenden.
+
+Daten ohne klare Führung 
+
+Das Problem: Du wirfst der KI Rohdaten hin, ohne zu sagen, was sie tun soll. Die KI rät, verliert den Faden und beginnt zu „halluzinieren“ (Dinge zu erfinden).
+
+Die Lösung: Gib immer zuerst die Rolle und Anweisung vor (z. B. „Du bist ein Datenschutz-Assistent. Anonymisiere folgenden Text:“). Trenne Befehl und Daten optisch, idealerweise durch Striche (---).
+
+Das KI-Gedächtnis sprengen
+
+Das Problem: Du kopierst 50 Seiten Text auf einmal in den Chat. Die KI ignoriert den Anfang oder bricht mittendrin ab, weil ihr „Kurzzeitgedächtnis“ (Context Window) voll ist.
+
+Die Lösung: Füttere das Modell in verdaulichen Häppchen und teile große Datensätze in kleinere Abschnitte auf.
+
+Die Sprachbarriere ignorieren
+
+Das Problem: Du schreibst auf Deutsch, aber die KI antwortet holprig oder wechselt ins Englische. Viele Modelle sind primär auf Englisch trainiert.
+
+Die Lösung: Nutze gezielt mehrsprachige Modelle, die auch in kompakten Varianten exzellentes Deutsch beherrschen.
+
+1.5 Fazit
+
+Datenschutz und KI-Nutzung schließen sich nicht aus – sie erfordern lediglich die richtige Strategie. Mit lokalen Modellen via Ollama als deinem „digitalen Türsteher“ und der Hybrid-Methode für komplexe Aufgaben hast du nun ein sicheres Fundament gegossen. Du behältst die volle Souveränität über deine Daten und umschiffst teure DSGVO-Fallen mühelos.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

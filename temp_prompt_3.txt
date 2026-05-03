@@ -1,0 +1,82 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 4 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Falls JA: Nutze eine lokale KI oder anonymisiere konsequent vor dem Kopieren.
+
+Falls NEIN: Nutze die Cloud, aber stelle sicher, dass das Training deaktiviert ist.
+
+Du gehörst zur Kategorie „Fall JA“ oder bist einfach neugierig? Dann ist die folgende Möglichkeit für dich elementar:
+
+1.3 Lokale KI
+
+Wenn du mit Bankdaten, Kalkulationen oder sensiblen Strategiepapieren arbeitest, ist die Cloud für dich keine Option. Die Lösung für dieses Dilemma heißt Ollama (ollama.com).
+
+Damit installierst du die Künstliche Intelligenz direkt auf deiner eigenen Hardware. Keine einzige Information verlässt dein System. Du behältst die volle Datenhoheit.
+
+1.3.1 Ollama Desktop-App 
+
+Für den ersten Kontakt mit lokaler KI kannst du die Ollama App (ollama.com/download) nutzen. Lade das Paket für macOS oder Windows herunter und installiere es wie gewohnt.
+
+Diese Version bietet dir eine grafische Oberfläche (ähnlich wie ChatGPT) und lässt dich Dokumente bequem per Drag-and-Drop verarbeiten. Das bedeutet, sie versteht nicht nur Text, sondern kann auch PDFs, Tabellen oder Screenshots (abhängig vom Modell) analysieren.
+
+Anwendungsfall Daten anonymisieren: Diese Desktop-App ist unser Werkzeug der Wahl für den Start. Bevor wir später komplexe Cockpit-Strukturen bauen, müssen wir sicherstellen, dass sensible Rohdaten bereinigt werden. Die Nutzung ist einfach:
+
+Öffne die App.
+
+Ziehe deine sensible Datei (z. B. eine Excel-Liste oder PDF) einfach mit der Maus in das Chat-Fenster.
+
+Gib den Befehl: 
+
+Anonymisiere den folgenden Text strikt. Ersetze alle personenbezogenen Daten durch funktionale Platzhalter 
+
+(z. B. [NAME_1], [ADRESSE_1], [DATUM_1], [TITEL_1]). 
+
+Regeln:
+
+Konsistenz: Dieselbe Entität erhält immer denselben Platzhalter.
+
+Lesbarkeit: Erhalte den Satzbau und den Kontext.
+
+Vollständigkeit: Entferne Namen, Orte, Berufe, Kontaktdaten und spezifische IDs.
+
+Text: [DATEN ODER TEXT HIER ANFÜGEN]
+
+Schon übernimmt die KI lokal bei dir die Arbeit – sicher und diskret.
+
+Die Ollama Desktop-Anwendung
+
+1.3.2 Welches Modell ist das Richtige für mich?
+
+Die App allein ist nur eine Karosserie – du brauchst noch den „Motor“, das sogenannte Modell. Die Zahlen hinter den Namen (z. B. 3B, 7B, 14B) beschreiben die Größe dieses Motors (Parameter in Milliarden). Bevor wir loslegen, lass uns kurz das passende Modell für deinen Anwendungsfall finden:
+
+3B bis 4B: Flinke Sprinter. Sie laufen auf fast jedem modernen Laptop flüssig und reichen für die meisten Cockpit-Aufgaben völlig aus (unser Allrounder-Tipp: qwen3.5:4b).
+
+7B bis 9B: Der „Goldstandard“. Spürbar klüger bei komplexen Zusammenhängen, benötigt aber mehr Rechenpower.
+
+14B+: Die Schwergewichte für tiefe Datenanalysen.
+
+Eine Übersicht aller verfügbaren Modelle und ihrer Start-Befehle findest du direkt in der Ollama Model Library (ollama.com/library). Die meisten Modelle gibt es in verschiedenen Größen. Moderne Modelle wie Qwen 3.5 (ollama.com/library/qwen3.5) oder Gemma 4 (ollama.com/library/gemma4) sind sehr effizient, intelligent und multimodal – das heißt, sie können auch Bilder verarbeiten.
+
+Der Hardware-Check: Du brauchst für lokale KI kein Rechenzentrum im Büro. Bereits 16 GB RAM (Arbeitsspeicher) und eine Grafikkarte mit 4 GB VRAM (z. B. GTX 1650) reichen für den stabilen Betrieb der kleinen Modelle (3B bis 4B) aus. Wenn du flüssig mit den größeren Modellen arbeiten willst, sind 8 GB VRAM (z. B. RTX 3060) oder ein aktueller Apple Mac mit M-Chip und Unified Memory genau das Richtige für dich.
+
+1.3.3 Ollama per Kommandozeile 
+
+Die Desktop-App ist wunderbar für den schnellen Start und das Anonymisieren. Für die folgenden Kapitel dieses Buches werden wir Ollama jedoch auf eine etwas tiefere Art benötigen. Um unser Smart-Cockpit später zu automatisieren und die Antworten der KI exakt zu steuern, reicht die Oberfläche der App nicht mehr aus. 
+
+Sobald du die Ollama App installiert hast, ist das System automatisch auch über die Kommandozeile deines Rechners verfügbar. Und genau hier werden wir primär arbeiten, um später unser Cockpit zum Leben zu erwecken!
+
+Ein kurzes Wort zur Kommandozeile - unter Windows und macOS als „Terminal“ zu finden: Du musst dafür keine speziellen IT-Kenntnisse haben. Sieh es wie das Zündschloss beim Auto: Du drehst den Schlüssel (tippst den Startbefehl), damit der Motor anspringt – danach fährst du entspannt los und chattest wie gewohnt. Es ist im Grunde nur „Copy-and-Paste“ und einmal Enter drücken. Einfacher als Excel!
+
+Schritt 1:  Terminal öffnen & Installation prüfen:
+
+Windows: Mache einen Rechtsklick auf das Windows-Logo unten in der Leiste und klicke auf „Terminal“. (Falls du Ollama noch nicht über die Webseite installiert hast, kannst du hier einfach winget install ollama eintippen).
+
+Mac: Drücke Command + Leertaste, tippe „Terminal“ ein und öffne es.
+
+Schritt 2: Modell laden & starten: Tippe nun im Terminal den Startbefehl für unseren kompakten Allrounder ein und drücke Enter: ollama run qwen3.5:4b (hier am Beispiel des Modells 3.5:4b – schau ins vorherige Kapitel, um ein passendes Modell zu finden). Sobald das Modell fertig geladen ist, kannst du direkt in dem Fenster los-chatten.
+
+Screenshot der Ollama-Anwendung. Hier ist zu sehen, wie das Modell gerade „denkt“ nachdem es ein Bild als Input bekommen hat.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

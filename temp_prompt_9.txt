@@ -1,0 +1,110 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 10 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Analysiere die folgenden Kontoumsätze. Kategorisiere jeden Posten als Fixkosten (wiederkehrend) oder variable Kosten (schwankend). Erstelle eine Übersicht mit Gesamtausgaben, Summen sowie den Unterkategorien. Gib mir das Ergebnis als Zusammenfassung und generiere mir daraus den Mermaid-Code für ein Flussdiagramm sowie ein Tortendiagramm.
+
+Das Ergebnis zeigt ihr  die Realität:
+
+Fixkosten: 4.800 €/Monat (Büromiete, Lizenzen, Versicherungen)
+
+Variable Kosten: 2.100 €/Monat (Fahrten, Bewirtung, Werbung)
+
+Hier sind der Code und die dazugehörige visuelle Struktur, die die KI für Marie generiert:
+
+Das Flussdiagramm:
+
+graph LR
+
+   GK[Gesamtkosten: 6.900 EUR] --> FK[Fixkosten: 4.800 EUR]
+
+   GK --> VK[Variable Kosten: 2.100 EUR]
+
+   FK --> M[Büromiete: 2.500 EUR]
+
+   FK --> V[Versicherungen: 1.600 EUR]
+
+   FK --> L[Lizenzen & Abos: 700 EUR]
+
+   VK --> F[Fahrten zum Kunden: 800 EUR]
+
+   VK --> W[Werbeanzeigen: 600 EUR]
+
+   VK --> B[Bewirtung: 400 EUR]
+
+   VK --> D[Druckkosten: 300 EUR]
+
+   style FK fill:#e74c3c,stroke:#333,stroke-width:2px
+
+   style VK fill:#3498db,stroke:#333,stroke-width:2px
+
+Maries Fixkosten per Mermaid Diagramm.
+
+Die Überraschung: Marie zahlt 700 € für Lizenz- und Abokosten. Hier möchte sie genauer reinschauen und sagt der KI:
+
+Erstelle mir ein Tortendiagramm, welches die Kosten für Lizenzen und Abos aufschlüsselt.
+
+Das Tortendiagramm:
+
+Der Code:
+
+pie 
+
+    title Detailanalyse: Lizenzen & Abos (Gesamt: 700 EUR)
+
+    "Immo-Portal Premium-Abo 350 €" : 350
+
+    "Makler-CRM-System 200 €" : 200
+
+    "Unnötiges Analyse-Tool 89 €" : 89
+
+    "Cloud- & Office-Software 61 €" : 61
+
+Das Diagramm:
+
+Oh nein, Marie zahlt jeden Monat 89 € für ein unnötiges Analysetool.
+
+2.5 Die häufigsten Fehler und wie du sie vermeidest
+
+Bevor wir in das nächste Kapitel springen, hier noch ein schnelles Troubleshooting. Wenn du mit generiertem Code hantierst, wird unweigerlich irgendwann mal etwas haken. Das ist völlig normal und gehört zum Prozess. Mit diesen vier Tricks rettest du die Situation in Sekunden:
+
+Fehlermeldungen anstelle von Diagrammen: Du hast den Code eingefügt, und statt eines schicken Diagramms spuckt der Editor nur Fehlermeldungen aus? Keine Panik. Du musst nicht lernen, diesen Code selbst zu debuggen. 
+
+Lösung: Kopiere einfach die komplette Fehlermeldung, wirf sie deiner KI in den Chat und sag: „Hier gab es einen Fehler, bitte korrigieren.“ Die Maschine entschuldigt sich und liefert dir den reparierten Code.
+
+Die Sonderzeichen-Diva: Besonders Mermaid reagiert auf unerwartete Klammern oder exotische Sonderzeichen im Text manchmal extrem zickig. Wenn das Layout plötzlich zerbricht, liegt es oft daran. 
+
+Lösung: Schließe den betroffenen Text im Code einfach in doppelte Anführungszeichen ein. Die KI weiß das zwar theoretisch selbst, vergisst es aber manchmal – hier bist du der Kontrolleur.
+
+Das heimliche Update: Du öffnest dein Cockpit und plötzlich sind die Diagramme weg? Tools wie Mermaid entwickeln sich rasant weiter. Wenn du in deinem HTML-Code stets die neueste Version über das CDN (Content Delivery Network) lädst, kann ein Update des Herstellers deinen Code beeinträchtigen.
+
+Lösung: Bitte die KI in deinem Prompt immer darum, eine fixe Version einzubinden (z. B. 11.x). Recherchiere dazu einfach vorher im Netz.
+
+Das Monster-Diagramm: Versuche gar nicht erst, die gesamten Arbeitsabläufe deines Betriebs der letzten zehn Jahre in ein einziges Schaubild zu pressen. Das Ergebnis ähnelt einem explodierten Schaltplan und ist im Alltag nicht hilfreich. 
+
+Lösung: Fang klein an! Ein Prozess mit 5 bis 7 Einzelschritten ist perfekt. Wenn es komplexer wird, kappe den Prozess und lagere den Rest in ein zweites Diagramm aus.
+
+Der übereifrige Assistent (KI-Halluzinationen): Bei unübersichtlichen Daten füllen KIs Lücken oft kreativ auf, statt Unwissen zuzugeben. Solche erfundenen Werte verfälschen dein Dashboard und führen zu falschen Entscheidungen. 
+
+Die Lösung: Bau einen „Sicherheitsgurt“ in deinen Prompt ein: 
+
+WICHTIG: Wenn du Daten nicht verstehst oder Lücken findest, rate nicht. Fülle nichts eigenmächtig, sondern frag mich gezielt nach.
+
+Das verhindert blindes Raten und sichert deine Datenqualität.
+
+Datenverlust im Browser: Web-Editoren wie der Mermaid Live Editor, der PlantUML Web Server oder BPMN.io speichern nicht verlässlich zwischen. Wenn du aus Versehen den Tab schließt oder die Seite neu lädst, ist dein Meisterwerk oft im digitalen Nirwana verschwunden. 
+
+Lösung: Mache es dir zur Gewohnheit, den generierten Text-Code immer parallel in einer simplen lokalen Textdatei abzuspeichern oder das fertige Diagramm sofort als Bild zu exportieren.
+
+2.6 Fazit
+
+„Diagram-as-Code“ ist dein Werkzeug, um komplexe Abläufe endlich sichtbar zu machen – ohne mühsames Verschieben einzelner Bildelemente. Damit gehört veraltete Dokumentation („Doc-Rot“) der Vergangenheit an: Ändert sich ein Prozess, passt du einfach den Text an und das Diagramm aktualisiert sich von selbst.
+
+Doch so elegant und effizient diese automatisierte Visualisierung auch ist, sie markiert nur den ersten Meilenstein. Ein Diagramm ist letztlich für das menschliche Auge gemacht: Es liefert klare Antworten, aber eben nur für den spezifischen, von dir programmierten Ausschnitt. Die darin enthaltenen Informationen bleiben an dieses eine Schaubild gebunden.
+
+Um das volle Potenzial deines Unternehmenswissens auszuschöpfen, müssen wir diese dokumentarischen Grenzen aufbrechen. Im nächsten Kapitel wechseln wir deshalb die Perspektive: Wir machen den entscheidenden Schritt von der gezeichneten Struktur hin zu einer durchgängigen Datenbasis und betreten die nächste Evolutionsstufe: Den Wissensgraphen.
+
+Kapitel 3: KI versteht (Der Wissensgraph)
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

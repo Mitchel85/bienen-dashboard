@@ -1,0 +1,94 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 25 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Cockpit (vs. Dashboard): Während ein reines Dashboard Daten lediglich anzeigt, ist ein Cockpit darauf ausgelegt, Prozesse aktiv zu steuern (Kommandozentrale). Das Dashboard ist somit ein funktionaler Baustein des Cockpits.
+
+CORS (Cross-Origin Resource Sharing): Ein Sicherheitsmechanismus im Browser. Er kann Fehlermeldungen auslösen, wenn deine lokale HTML-Datei versucht, direkt Daten von einer fremden API (wie einem Cloud-KI-Anbieter) abzugreifen.
+
+CRM (Customer-Relationship-Management): Software zur Verwaltung von Kundenbeziehungen – z. B. für Vertrieb, Kundenservice und Kontaktpflege. Speichert zentral, wer deine Kunden sind, was sie gekauft haben und welche Kommunikation stattgefunden hat.
+
+CSV (Comma-Separated Values): Ein simples, textbasiertes Dateiformat zur Speicherung von Tabellendaten. Ideal, um Exportdaten aus Banken oder CRM-Systemen an eine KI zu übergeben.
+
+D
+
+Diagram-as-Code (DaC): Eine Methode, bei der Flussdiagramme oder IT-Architekturen nicht mühsam per Maus gezeichnet, sondern in simplen Textzeilen beschrieben werden. Die Software generiert und aktualisiert das finale Bild daraus vollautomatisch.
+
+Doc-Rot (Dokumentationsverfall): Das Phänomen, dass manuell erstellte Grafiken und Prozesse extrem schnell veralten, weil der Änderungsaufwand in Programmen wie PowerPoint im Alltag zu hoch ist.
+
+DOM (Document Object Model): Die interne Struktur einer Webseite, wie sie der Browser „sieht". Per DOM-Manipulation kann JavaScript einzelne Elemente (z. B. eine KPI-Kachel) live verändern, ohne die gesamte Seite neu laden zu müssen.
+
+Dropzone: Ein grafischer Bereich in deinem Cockpit, in den du Dateien (wie Excel oder CSV) einfach mit der Maus hineinziehen kannst (Drag-and-Drop), um Daten im Hintergrund zu aktualisieren.
+
+DSGVO (Datenschutz-Grundverordnung): Europäisches Regelwerk zur Datenverarbeitung. Regelt rechtlich, welche personenbezogenen Daten dein lokales System verlassen dürfen und welche zwingend vor einem Cloud-Upload anonymisiert werden müssen.
+
+E
+
+EAM (Enterprise Architecture Management): Die professionelle und strukturierte Verwaltung der gesamten Unternehmensarchitektur – einschließlich Geschäftsprozessen, Datenstrukturen, Applikationslandschaft und technischer Infrastruktur.
+
+ERP-System (Enterprise Resource Planning): Komplexe Standard-Software zur ganzheitlichen Planung von Unternehmensressourcen (Personal, Finanzen, Material). Oft verbunden mit hohen Lizenz- und Einführungskosten.
+
+F
+
+Fetch API: Eine eingebaute JavaScript-Funktion deines Webbrowsers, die lautlos im Hintergrund mit APIs kommuniziert, um Live-Daten abzurufen oder KI-Befehle zu senden.
+
+H
+
+HTML (Hypertext Markup Language): Die grundlegende Text-Auszeichnungssprache, die das Gerüst und die Struktur deines Cockpits im Webbrowser definiert.
+
+html2canvas: Eine Bibliothek, die es ermöglicht, per Code hochauflösende Screenshots (PNGs) direkt aus den Elementen deines HTML-Cockpits zu erzeugen.
+
+J
+
+JSFiddle: Ein kostenloser Online-Sandkasten für Webentwickler. Perfekt für Anfänger, um generierten HTML- und JavaScript-Code direkt im Browser gefahrlos zu testen und in Echtzeit anzupassen.
+
+JSON (JavaScript Object Notation): Ein sauberes, strukturiertes Textformat, in dem APIs und KI-Modelle ihre Datenpakete austauschen, damit dein Skript sie fehlerfrei verarbeiten und als Diagramm darstellen kann.
+
+K
+
+Knoten und Kanten (Nodes & Edges): Die Grundbausteine eines Wissensgraphen. Knoten sind die Akteure (Personen, Firmen, Tools), Kanten sind die Verbindungslinien, die die Beziehung zwischen ihnen darstellen.
+
+KPI (Key Performance Indicator): Eine Kennzahl, die den Erfolg oder Fortschritt in einem bestimmten Bereich misst – z. B. Umsatz, Leerstandsquote oder offene Tickets. Im Cockpit werden KPIs als Kacheln auf dem Dashboard dargestellt.
+
+L
+
+LLM (Large Language Model): Großes Sprachmodell. Es bildet den technologischen Kern moderner generativer KI-Systeme (wie Google Gemini, ChatGPT oder lokal bei Ollama), das menschliche Sprache und Programmcode versteht und generiert.
+
+M
+
+Mermaid.js: Ein Open-Source-Tool, das simplen Text-Code direkt im Webbrowser in dynamische Flussdiagramme, Tortendiagramme oder Prozessabläufe verwandelt.
+
+Meta-Prompting: Die Technik, eine KI darum zu bitten, den perfekten, hochprofessionellen "Master-Prompt" für eine andere Aufgabe (z. B. das Programmieren eines komplexen Dashboards) zu schreiben.
+
+N
+
+n8n: Ein visuelles Automatisierungs-Tool, das wie ein digitaler Fließbandarbeiter im Hintergrund Daten zwischen deinen E-Mails, KI-Modellen und Tabellen verschiebt.
+
+No-Coder / Low-Coder: Anwender, die keine klassischen Programmiersprachen studiert haben, aber mithilfe von KI, visuellen Editoren und klaren Anweisungen komplexe Software-Lösungen bauen.
+
+O
+
+Ollama: Ein Programm, um leistungsstarke KI-Modelle komplett lokal und offline auf dem eigenen Rechner laufen zu lassen. Garantiert 100 % Datensicherheit bei der Verarbeitung hochsensibler Unternehmensdokumente.
+
+OpenClaw: Ein Framework für autonome KI-Agenten, die nicht nur auf Befehle warten, sondern definierte Prozesse (wie das Klassifizieren von Tickets) selbstständig koordinieren und abarbeiten.
+
+P
+
+PapaParse: Eine extrem schnelle und fehlerresistente JavaScript-Bibliothek, die CSV-Dateien direkt im Browser einliest und für dein Cockpit nutzbar macht. 
+
+PlantUML: Eine textbasierte "Diagram-as-Code"-Sprache, die besonders stark darin ist, komplexe IT-Architekturen und C4-Modelle strukturiert darzustellen.
+
+Prompt: Der Befehl oder die genaue Arbeitsanweisung, die du der KI in den Chat tippst, um das gewünschte Ergebnis (Analyse, Code, Diagramm) zu erhalten.
+
+S
+
+Sankey-Diagramm: Eine spezielle Diagrammform, bei der Geld- oder Datenflüsse als unterschiedlich breite Bänder dargestellt werden. Je breiter das Band, desto größer der Betrag – ideal, um auf einen Blick zu sehen, wohin das Geld fließt.
+
+SheetJS: Eine leistungsstarke Open-Source-Bibliothek, die es deinem Browser ermöglicht, Excel-Dateien (.xlsx) lokal zu lesen und zu verarbeiten, ohne sie auf einen Server hochzuladen
+
+Single Source of Truth (SSOT): Ein System oder Ort (in diesem Fall das Cockpit), an dem alle gültigen Daten, Prozesse und das gesamte Firmenwissen zentral, fehlerfrei und bindend zusammenlaufen.
+
+Swimlanes: Ein grafisches Element im BPMN-Modell ("Schwimmbahnen"). Sie unterteilen einen Prozess visuell nach den zuständigen Personen, Abteilungen oder Systemen.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

@@ -1,0 +1,84 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 7 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+2.1.2 Prozesse mit BPMN darstellen 
+
+BPMN 2.0 (Business Process Model and Notation, Version 2.0) ist eine Art „Weltsprache“ für Geschäftsprozesse. Sie nutzt standardisierte Symbole, um Arbeitsabläufe grafisch darzustellen, damit sowohl Fachabteilungen als auch die IT sie gleichermaßen verstehen. Falls du Geschäftsprozesse dokumentieren willst (z. B. in Vorbereitung auf die Einführung von Software oder die Durchführung von Audits), die so professionell aussehen, als hättest du gerade eine teure Unternehmensberatung im Haus gehabt, nutze bpmn.io.
+
+Sag der KI folgendes:
+
+Erstelle BPMN 2.0 XML für folgenden Prozess. 
+
+Nutze Lanes für die Akteure. 
+
+WICHTIG: Generiere zwingend den <bpmndi:BPMNDiagram>
+
+Teil mit Koordinaten für die visuelle Darstellung. 
+
+Gib nur den reinen XML-Code aus. 
+
+Prozess: [HIER DEINE DATEN EINFÜGEN]
+
+Als Ergebnis bekommst du sogenannten XML-Code. Kopiere ihn einfach in eine neue Textdatei und speichere die Datei ab. Öffne demo.bpmn.io, gehe auf „open“ und wähle die Datei. Schon siehst du ein professionelles Diagramm. 
+
+Versicherungsmaklerin Vickys BPMN 2.0-konformes Flussdiagramm
+
+Wenn dir nicht gefällt, was du siehst, dann hast du diese beiden Möglichkeiten:
+
+Nimm Änderungen direkt im Editor vor.
+
+Sag der KI wie du es haben willst.
+
+Export: Unten links hast du verschiedene Export-Möglichkeiten: Für deinen Softwaredienstleister kannst du das Modell als BPMN-Datei herunterladen oder wahlweise als Bild für dein Dashboard (oder als Poster im Pausenraum).  
+
+2.1.3 Baue dir deinen eigenen BPMN-Editor
+
+Du hast jetzt gesehen, wie du generierte Prozess-Codes auf der Seite bpmn.io ansehen und anpassen kannst. Aber warum solltest du für Anpassungen eigentlich auf eine externe Webseite ausweichen, wenn du doch mittlerweile der angehende „Chefentwickler“ deines eigenen Systems bist?
+
+Die Technologie hinter dieser Demo-Seite ist komplett Open Source. Das bedeutet: Die Entwickler von bpmn.io stellen ihre Bibliothek (bpmn-js) frei zur Verfügung. Du kannst dir damit in Sekundenschnelle deinen komplett eigenen, lokal laufenden Prozess-Editor bauen.
+
+Anstatt nur fertige Bilder zu betrachten, erhältst du ein mächtiges Werkzeug, in das du deine XML-Dateien laden, per Drag-and-Drop verändern und wieder speichern kannst – und das zu 100 % lokal auf deiner Festplatte, ohne dass auch nur ein einziges Datenpaket ans Internet gesendet wird.
+
+Schritt 1: Der Prompt für deinen eigenen Editor Öffne den KI-Chat deiner Wahl und gib ihr diesen Auftrag:
+
+Du agierst als Frontend-Entwickler. Schreibe mir eine eigenständige, sofort lauffähige HTML-Datei, die einen voll funktionsfähigen BPMN-Editor (Modeler) enthält. Nutze dafür die offizielle Bibliothek von bpmn.io (bpmn-js) über ein CDN.
+
+Die Seite soll Folgendes beinhalten:
+
+Einen großen, bildschirmfüllenden Zeichenbereich für das Diagramm.
+
+Die Standard-Werkzeugleiste (Palette) an der linken Seite, um neue Elemente per Drag-and-Drop hinzuzufügen.
+
+Einen Button "Neues Diagramm", um mit einer leeren Vorlage zu starten.
+
+Einen Button "BPMN speichern", um den fertigen XML-Code lokal herunterzuladen.
+
+Ein ansprechendes, minimalistisches Design.
+
+Gib mir ausschließlich den finalen, sauberen HTML-Code aus.
+
+Schritt 2: Speichern und Loslegen Wie du es bereits kennst: Kopiere den HTML-Code, den die KI dir gibt, in deinen Texteditor und speichere die Datei unter dem Namen prozess_editor.html ab.
+
+Mach einen Doppelklick darauf und dein Browser öffnet sich. Du blickst auf dein eigenes, professionelles Modellierungswerkzeug. 
+
+Dein Do-It-Yourself BPMN Editor mit Exportfunktion. 
+
+Du kannst neue "Swimlanes" (Zuständigkeiten) aufziehen, Ereignisse verknüpfen und deine Geschäftsprozesse bis ins kleinste Detail feintunen. Schau dir den Editor im Detail hier an: the-zero-cost-ai-cockpit.github.io/Showcase
+
+Der Clou für dein Cockpit: Die Dateien, die du mit deinem neuen Editor lokal speicherst, sind exakt die prozesse.txt- bzw. XML-Dateien, die du später im großen Master-Prompt (Kapitel 4) an die KI verfütterst, um sie in dein zentrales Cockpit zu integrieren. Du schließt damit den Kreis: Du hast nun nicht nur ein Dashboard zur Anzeige, sondern auch die eigene Werkbank erschaffen, um es zu befüllen!
+
+2.2 Von Architekturen und IT-Landschaften 
+
+Schluss mit dem Rätselraten bei Systemausfällen: Wir erstellen einen digitalen Bebauungsplan deines Betriebs. Du visualisierst die Abhängigkeiten zwischen Hardware, Software und Cloud-Diensten so präzise wie ein Großkonzern. Damit behältst du bei jedem Softwarewechsel oder Onboarding die volle Kontrolle über deine Datenflüsse.
+
+Sarah hat beschlossen, ihr Diagramm einfach mal per Hand zu malen.
+
+2.2.1 Wozu ein IT-Schaubild?
+
+Systemausfall (Der unsichtbare Fehler): Ein Verbindungstool (wie z. B. Zapier) fällt im Hintergrund aus. Was passiert? Ohne ein klares IT-Schaubild stocherst du im Nebel. Dein Onlineshop (z. B. Shopify) läuft nämlich ungestört weiter und die Kunden kaufen fleißig ein. Du ahnst im ersten Moment nicht, dass die Bestellungen aber gar nicht mehr an dein Lager weitergeleitet werden und die Buchhaltung keine Rechnungen mehr schreibt. Vorn klingelt die Kasse, während hinten deine Abläufe zusammenbrechen – und du merkst es erst, wenn die ersten Kunden sich beschweren.
+
+Softwarewechsel (Die verdeckten Verbindungen): Ein Verkäufer überzeugt dich, ein neues, schickes Programm für deine Kundendaten (CRM) einzuführen. Was er dir im Verkaufsgespräch nicht sagt: Wenn du das alte System einfach abschaltest, kappst du unbewusst auch die automatische Verbindung zu eurem Support-Postfach. Plötzlich weiß der Kundenservice nicht mehr, welcher Kunde was gekauft hat. Aus einem schnellen Software-Wechsel wird ein wochenlanger Reparatur-Einsatz, weil versteckte Abhängigkeiten zerstört wurden.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.

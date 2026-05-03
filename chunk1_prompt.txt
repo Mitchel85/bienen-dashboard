@@ -1,0 +1,66 @@
+Du bist ein professioneller Buchübersetzer. Übersetze den folgenden Buch-Auszug (Chunk 1 von 26) aus dem Buch "Das 0-Euro-Cockpit" vom Deutschen ins Englische. 
+Behalte eventuelle Zeilenumbrüche und Formatierungen exakt bei.
+Achte auf einen flüssigen, professionellen, aber praxisnahen Stil (wie ein modernes IT-Fachbuch).
+
+TEXT ZUR ÜBERSETZUNG:
+Das 0-Euro-Cockpit
+
+Wie du mit KI ein interaktives Firmen-Cockpit baust – ohne Programmierkenntnisse
+
+Ein Praxisleitfaden
+
+Michael Estel
+
+Impressum
+
+Autor und Herausgeber: Michael Estel, Französische Allee 30, 14974 Ludwigsfelde 
+
+E-Mail: michael@estel.email
+
+ISBN: 9798258156495
+
+Copyright: 2026
+
+Markenrechtlicher Hinweis:
+
+Haftungsausschluss: Die Inhalte dieses Buches wurden mit größter Sorgfalt recherchiert und in der Praxis erprobt. Dennoch können Fehler nicht vollständig ausgeschlossen werden. Der Autor übernimmt keine juristische Verantwortung oder irgendeine Haftung für Schäden, Datenverluste oder sonstige Konsequenzen, die auf die Anwendung der beschriebenen Codes, Software-Tools und Prompts zurückzuführen sind. Die Umsetzung der vorgestellten Methoden, insbesondere im Umgang mit sensiblen Unternehmens-, Finanz- und Kundendaten, erfolgt ausdrücklich auf eigene Gefahr und Verantwortung der Leserschaft.
+
+Hinweis zu externen Links: Dieses Buch enthält Verweise (Links) zu externen Webseiten Dritter. Zum Zeitpunkt der Verlinkung waren auf diesen Seiten keine Rechtsverstöße erkennbar. Auf die aktuelle und zukünftige Gestaltung der verlinkten Plattformen hat der Autor keinen Einfluss und übernimmt dafür keine Verantwortung.
+
+Bild- und Quellennachweis: Sofern nicht anders angegeben, stammen die Abbildungen, Diagramme und Codesnippets in diesem Buch vom Autor. Einige der im Buch verwendeten Illustrationen wurden mithilfe von Systemen der Künstlichen Intelligenz generiert. Screenshots von Software-Oberflächen dienen ausschließlich der Veranschaulichung und unterliegen dem Urheberrecht der jeweiligen Software-Anbieter (z. B. JSFiddle, Mermaid.js, BPMN.io).
+
+Über den Autor	
+
+Als innovationsgetriebener Low-Coder mit beruflichem Fokus auf das Enterprise Architecture Management (EAM) macht Michael Estel mit diesem Buch den digitalen Wandel für Unternehmen greifbar.
+
+Seine akademische Doppelqualifikation (Master of Business Administration und Master in Erziehungswissenschaften) erlaubt ihm den Blick aus unterschiedlichen Perspektiven. So versteht er es, unternehmerische Strategien in operative Kennzahlen zu gießen und diese komplexen Sachverhalte für jedermann verständlich und praxisnah zugänglich zu machen.
+
+Die Erprobung und Anwendung seines Herzensthemas – der Künstlichen Intelligenz – treibt er sowohl privat als auch beruflich konsequent voran. In diesem Buch bündelt er seine Praxiserfahrung aus dem IT- und Architektur-Umfeld und demonstriert, wie sich durch den gezielten Einsatz von KI und Open-Source-Tools unmittelbare Mehrwerte – Quick Wins – generieren lassen.
+
+Michael Estel ist überzeugt, dass wahre digitale Souveränität nicht durch hohe Budgets entsteht, sondern dort, wo methodisches Know-how auf die richtigen Werkzeuge trifft. Sein Ziel ist es, Wissensarbeiter, Projektleiter, Manager und Consultants dazu zu befähigen, die digitale Transformation in ihren Projekten aktiv, eigenhändig und ressourcenschonend zu gestalten.
+
+Warum dieses Buch?
+
+In einer Welt, die von Daten überflutet wird, ist schnelles Verständnis der entscheidende Wettbewerbsvorteil. Große Konzerne investieren Millionen in Enterprise Architecture Management (EAM) und Echtzeit-Dashboards, um ihre IT-Landschaften zu dokumentieren, Prozesse zu steuern und fundierte Entscheidungen zu treffen.
+
+Doch für kleine und mittlere Unternehmen (KMU), Projektleiter oder spezialisierte Berater sind die etablierten Werkzeuge oft ein massives Hindernis. Auf der Suche nach Struktur landen sie meist in einer von zwei Sackgassen:
+
+Der finanzielle Overkill: Klassische EAM-Lösungen wie SAP LeanIX, Bizzdesign oder Ardoq sowie High-End-Dashboards wie Abacum, Agicap oder Fathom sind mächtig, aber starr. Sie erfordern monatelange Einarbeitung, eine eigene IT-Abteilung und sprengen mit hohen monatlichen Lizenzkosten jedes Budget. Ein individuelles Dashboard vom IT-Berater kostet schnell fünfstellig.
+
+Das „Doc-Rot“-Chaos: Wer stattdessen auf Standard-Bürosoftware setzt, verliert schnell den Überblick. Microsoft Excel mutiert zum fehleranfälligen Schlachtfeld aus bunten Zellen, das außer dem Ersteller niemand mehr versteht. Das Ergebnis ist „Doc-Rot“ (Verfall von Dokumentationen) – veraltete Dateien, die ungenutzt in digitalen Schubladen verstauben.
+
+Dieses Buch bricht dieses Paradigma und zeigt dir einen pragmatischen Ausweg. Das „0-Euro-Cockpit“ ist kein bloßes Software-Tutorial, sondern eine neue strategische Blaupause für dein Business. Wir bedienen uns der Logik großer Unternehmen und kombinieren die strategische Planung (Prozess- und Architekturvisualisierung) mit der operativen Echtzeit-Transparenz eines Dashboards.
+
+Das Besondere daran: Du musst dafür keinen „Software-Zoll“ bezahlen, brauchst kein Informatik-Studium und kein riesiges IT-Budget. Die technische Hürde ist dabei weit niedriger, als du vielleicht vermutest: Wer in der Lage ist, eine PowerPoint-Präsentation logisch aufzubauen oder eine einfache Summenfunktion in Excel zu nutzen, bewältigt dieses Projekt problemlos. Wenn du bereit bist, die Rolle des passiven Software-Konsumenten zu verlassen, wirst du hier zum „Chefentwickler“.
+
+Alles, was du für den Aufbau deines Cockpits benötigst, hast du im Handumdrehen startklar: Einen Webbrowser, einen Texteditor und die Kommandozeile bringt dein System bereits von Haus aus mit. Als einziges neues Werkzeug holen wir uns die Ollama App für deine lokale KI dazu. Keine Sorge: In der Kommandozeile arbeiten wir fast ausschließlich mit einfachem Copy-and-Paste. Die eigentliche Magie übernehmen Sprachmodelle (LLMs). Sie fungieren als deine persönlichen Übersetzer. Du beschreibst lediglich präzise deine Anforderungen, und die KI baut die komplexen Strukturen für dich auf. 
+
+Das Ergebnis ist eine maßgeschneiderte Kommandozentrale, die:
+
+Kostenneutral ist: Du nutzt hocheffiziente Open-Source-Methoden ohne monatliche Lizenzgebühren.
+
+Absolut datensicher bleibt: Du lernst, wie du die KI mit Tools wie Ollama lokal auf deinem eigenen Rechner betreibst. Sensible Finanzdaten oder Strategiepapiere verlassen niemals dein System.
+
+Enterprise-Niveau bietet: Wir nutzen professionelle Standards wie BPMN 2.0 für Prozesse und das C4-Modell für IT-Architekturen. Die aufwendige, manuelle Modellierungsarbeit dafür sparen wir uns: Sie wird in Sekunden automatisiert durch KI generiert.
+
+Antworte AUSSCHLIESSLICH mit der fertigen englischen Übersetzung, ohne weitere Kommentare.

@@ -1,0 +1,70 @@
+You are a professional book translator. Translate the following book excerpt (Chunk 14 of 26) from the book "Das 0-Euro-Cockpit" from German to English. 
+Maintain any line breaks and markdown formatting exactly.
+Ensure a fluent, professional, but practical style (like a modern IT guidebook).
+
+TEXT TO TRANSLATE:
+Größere Änderungen und Aktualisierungen kannst du ganz einfach umsetzen, indem du exakt den Chat nutzt, in dem du das Cockpit erstellt hast. Lade einfach die neuen Dateien (z. B. ein neues Prozessdiagramm) hinein und sag der KI, was sie anpassen soll.
+
+Alternativ bist du nicht einmal an diesen einen Chat gebunden. Du kannst deinen fertigen HTML-Code auch in einen komplett neuen Chat – oder in eine ganz andere KI – werfen und deine Aktualisierungswünsche mitgeben. Je nach Sensibilität deiner Daten (Stichwort Datenschutz) kannst du der KI auch direkt deine neuesten Excel-Dateien füttern, damit sie die Zahlen im Code automatisch für dich austauscht.
+
+Wichtig: Lass dir immer den geänderten und vollständigen HTML-Code ausgeben.
+
+4.3.2 Der Do-it-yourself-Weg für Kleinigkeiten
+
+Du musst allerdings nicht für jede kleine Änderung sofort wieder die KI anwerfen. HTML ist erstaunlich intuitiv und menschenlesbar. Es ist Zeit, dem „Code“ den Schrecken zu nehmen!
+
+Wenn dir eine Kleinigkeit nicht gefällt – zum Beispiel, wenn eine Kachel „Umsatz“ heißt, du aber lieber „Einnahmen“ dort stehen hättest –, dann ändere es einfach selbst.
+
+So geht’s am einfachsten:
+
+Nutze wieder JSFiddle als deinen Sandkasten. Füge deinen HTML-Code dort ein. Drücke in dem Code-Feld einfach Strg + F (oder Cmd + F beim Mac) und suche nach dem Wort „Umsatz“. Du wirst die Zeile sofort finden. Lösche das Wort, tippe „Einnahmen“ ein, klicke oben auf Run – und zack, es steht im Cockpit.
+
+Willst du, dass eine Karte nicht mehr blau, sondern rot ist? Such das englische Wort („blue“/“red“) und tausche es gegen die andere Farbe aus. In JSFiddle kannst du problemlos experimentieren, ohne etwas zu beschädigen. Wenn es schiefgeht, drückst du einfach Strg + Z (Rückgängig) oder lädst die Seite neu.
+
+Probiere es aus! So überwinden No-Coder ihre Unsicherheiten im Umgang mit Code und entwickeln sich von reinen Anwendern zu System-Eigentümern.
+
+4.3.3 Der Dropzone-Weg: Daten per Drag-and-Drop aktualisieren
+
+Du hast jetzt zwei Wege kennengelernt, um dein Cockpit auf dem neuesten Stand zu halten: den KI-Weg für größere Umbauten (Kapitel 4.3.1) und den Do-it-yourself-Weg für kleine Textänderungen (Kapitel 4.3.2). Beide haben ihre Berechtigung – aber für den Klassiker schlechthin, nämlich das regelmäßige Einspielen frischer Zahlen, gibt es eine noch elegantere Lösung.
+
+Folgende Situation: Du exportierst am Monatsende deine neuesten Kontoumsätze aus dem Online-Banking. Du willst die neuen Zahlen weder mühsam per KI neu einbauen lassen (und dabei womöglich sensible Bankdaten in die Cloud schicken), noch möchtest du 80 neue Werte händisch im HTML-Code austauschen.
+
+Genau für diese Situation bauen wir jetzt eine Dropzone (eine Ablagezone für Dateien) direkt in dein Cockpit.
+
+Die Tankdeckel-Analogie Stell dir dein Cockpit wie ein Auto vor: Die Karosserie, das Lenkrad, die Instrumente – alles steht fest. Aber wenn der Tank leer ist, baust du nicht das ganze Auto neu. Du öffnest einfach den Tankdeckel und füllst frischen Sprit nach. Genau das machen wir: Du ziehst deine aktuelle Excel- oder CSV-Datei per Drag-and-Drop in dein Cockpit, und die KPI-Kacheln sowie Diagramme rechnen sich selbständig neu. Keine KI im Hintergrund, keine Cloud, kein API-Schlüssel – alles passiert zu 100 % lokal in deinem Browser.
+
+Das Funktionsprinzip in 4 Schritten: Hinter diesem scheinbaren Zauber steckt eine simple Kette:
+
+Der Drop: Du ziehst die Datei in die Dropzone. Der Browser registriert die Datei.
+
+Der FileReader: Das ist eine eingebaute Funktion deines Browsers, die Dateien lokal ausliest – ohne sie irgendwohin hochzuladen.
+
+Das Parsing: Eine kleine JavaScript-Bibliothek verwandelt die Rohdaten deiner Excel-Tabelle in ein sauberes, maschinenlesbares Datenpaket.
+
+Das Neu-Rendern: Deine Diagramme (z. B. Chart.js) zeichnen sich mit den frischen Zahlen automatisch neu.
+
+Das Entscheidende: Zwischen Schritt 1 und 4 vergehen nur Millisekunden – und kein einziges Datenpaket verlässt deinen Rechner.
+
+Deine neuen Werkzeuge Damit der Browser die Tabellen versteht, brauchen wir zwei kleine, kostenlose Code-Bibliotheken, die wir wie gewohnt per CDN (Content Delivery Network) direkt in deine HTML-Datei einbinden:
+
+SheetJS (xlsx): Liest Excel-Dateien (.xlsx, .xls) zuverlässig aus.
+
+PapaParse: Der Goldstandard, um CSV-Dateien fehlerfrei zu verarbeiten.
+
+Wichtiger Hinweis: Denk an den Tipp aus Kapitel 2.4 – weise die KI an, immer eine fixe Version der Bibliotheken einzubinden. Sonst kann ein stilles Update der Hersteller dein Cockpit lahmlegen.
+
+Der Prompt für dein Drag-and-Drop-Upgrade Öffne einfach den KI-Chat, in dem du dein Cockpit gebaut hast, lade deine aktuelle cockpit.html hoch und gib der KI diesen Master-Auftrag:
+
+Erweitere meine bestehende cockpit.html um eine lokale Drag-and-Drop-Funktion zur Datenaktualisierung – komplett ohne API-Anbindung.
+
+Technische Anforderungen:
+
+DROPZONE: Baue oberhalb der KPI-Kacheln eine gut sichtbare Dropzone ein (gestrichelter Rahmen, passend zum Design). Sie soll visuelles Feedback geben, wenn eine Datei darüber schwebt.
+
+DATEI-FORMATE: Unterstütze .xlsx, .xls und .csv. Binde dafür SheetJS und PapaParse per CDN mit fixer Versionsnummer ein.
+
+LOKALES PARSING: Lies die Datei ausschließlich per FileReader im Browser aus. Kein Upload auf einen Server. Keine API-Aufrufe.
+
+DATEN-MAPPING: Die Datei enthält typische Spalten wie "Datum", "Kategorie" und "Betrag". Programmiere eine Logik, die die Beträge automatisch pro Kategorie summiert.
+
+REPLY EXCLUSIVELY with the final English translation, no other comments.
