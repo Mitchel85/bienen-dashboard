@@ -1,0 +1,336 @@
+{
+  "1": {
+    "volk_id": "1",
+    "name": "Roter Stock",
+    "standort": "Garagen-Dach, Ludwigsfelde",
+    "rasse": "Carnica",
+    "königin_gezeichnet": "2025-05",
+    "letzte_varroa_behandlung": "2026-04-19",
+    "letzte_fütterung": "2026-04-30",
+    "besondere_hinweise": "schwärmt leicht",
+    "logs": [
+      {
+        "timestamp": "2026-04-16T15:31:40.055766+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Visuelle Kontrolle Dach‑Beuten: Volk besetzt (unten rot?), Flugaktivität mäßig, Hitzeschutz prüfen."
+      },
+      {
+        "timestamp": "2026-04-16T15:34:00.166823+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "Windel sauber gemacht, beginne 3‑tägige Messung des Varroabefalls."
+      },
+      {
+        "timestamp": "2026-04-16T15:37:07.902660+00:00",
+        "aktion": "wiegen",
+        "menge": "40 kg",
+        "details": "Gewichtsmessung roter Stock"
+      },
+      {
+        "timestamp": "2026-04-16T15:43:27.563741+00:00",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto‑Analyse: Volksstärke mittel, Brutbild lückenhaft (königinbedingt?), Brut gesund, keine Krankheitszeichen, Varroa‑Diagnose fortsetzen."
+      },
+      {
+        "timestamp": "2026-04-16T15:44:19.751312+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Brutraum zu 2/3 mit Wabengängen besetzt (ca. 8 von 12)"
+      },
+      {
+        "timestamp": "2026-04-17T07:25:26.516570+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      },
+      {
+        "timestamp": "2026-04-19T14:24:03.572952",
+        "aktion": "varroa_diagnose",
+        "menge": "0",
+        "details": "Windelmessung nach 3 Tagen: 0 Milben. Kein Befall."
+      },
+      {
+        "timestamp": "2026-04-19T14:26:02.457921",
+        "aktion": "windel_analyse",
+        "menge": "",
+        "details": "Windel nach Varroa‑Kontrolle: Viele Hinweise auf Polleneintrag (gelbe/rote Krümel) und Bruttätigkeit (helle Wachsreste). Keine Milben, starke Sammelaktivität, Brutnest aktiv."
+      },
+      {
+        "timestamp": "2026-04-20T07:11:32.668Z",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 20.04.2026: Beute (rechter Stapel) rot‑rot‑grün, drei Zargen, auf Paletten auf Dach. Volk aktiv? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt."
+      },
+      {
+        "timestamp": "2026-04-26T12:00:00+02:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Weiselrichtig (Königin stiftet). 2 Rähmchen (1x Futter, 1x Brut) für Ablegerbildung in Volk 3 entnommen. Zudem auf Schwarmtrieb geprüft: 2-3 Schwarmzellen gefunden. Schwarmtrieb sollte durch Ablegerbildung nun nachlassen."
+      },
+      {
+        "timestamp": "2026-04-30T09:59:00+02:00",
+        "aktion": "wiegen",
+        "menge": "39 kg",
+        "details": "Gewicht pro Stock sehr leicht."
+      },
+      {
+        "timestamp": "2026-04-30T10:00:00+02:00",
+        "aktion": "füttern & kontrollieren",
+        "menge": "2 kg Zuckerteig + zuckerbasierte Pollenergänzung",
+        "details": "Gewicht auf ca. 39 kg gesunken (-1 kg seit letzter Messung). Viele tote Bienen (auch kleine) in der vergangenen Woche, Bienen tragen diese aus. Akute Verhungerungsgefahr! Notfütterung mit 2 kg Zuckerteig und Api-Pollenersatz durchgeführt."
+      },
+      {
+        "timestamp": "2026-04-30T10:05:00+02:00",
+        "aktion": "planung",
+        "menge": "",
+        "details": "Drohnenbrut konnte nicht geschnitten werden (Bienen haben keine Baurahmen genutzt, Drohnenbrut ist in normalen Brutrahmen verteilt). Daher ist Varroa-Kontrolle besonders wichtig! Wahrscheinlich Milchsäurebehandlung in den nächsten 2 Wochen notwendig."
+      },
+      {
+        "timestamp": "2026-04-30T10:05:00+02:00",
+        "aktion": "todo",
+        "menge": "",
+        "details": "Regelmäßiges Wiegen vergessen, muss zwingend morgen nachgeholt werden."
+      },
+      {
+        "timestamp": "2026-05-01T12:45:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "Varroawindel eingeschoben. Auszählen in 3 Tagen."
+      },
+      {
+        "timestamp": "2026-05-01T12:46:00+02:00",
+        "aktion": "wiegen",
+        "menge": "38 kg",
+        "details": "Gewichtsmessung heute."
+      },
+      {
+        "timestamp": "2026-05-01T12:47:00+02:00",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 01.05.: Bienen lagern massiv vor dem Flugloch (auf Palette) vor. An der weißen Hauswand sitzen ebenfalls einige Bienen. Ursache ist NICHT Hitze oder Schwarmstimmung, sondern das absichtlich verengte Flugloch zum Schutz vor Wespen. Das Nadelöhr führt zum Stau, schützt aber vor Räuberei."
+      },
+      {
+        "timestamp": "2026-05-01T13:00:00+02:00",
+        "aktion": "diagnose",
+        "menge": "",
+        "details": "Ursache für tote Bienen mit gestrecktem Rüssel geklärt: Es gab kaum Pollen im Brutraum und die Stöcke waren extrem leicht. Der Totenfall geht sehr wahrscheinlich auf akuten Hunger / Eiweißmangel zurück (keine Vergiftung). Die bereits durchgeführte Notfütterung mit Zuckerteig (Apifonda) und Pollenersatz war die goldrichtige Maßnahme."
+      },
+      {
+        "timestamp": "2026-05-04T06:55:36.597532+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "2. Windelkontrolle nach 3 Tagen: 0 Milben sichtbar. Ca. 10-12 tote Bienen (vermutlich Maikrankheit). Gemüll überwiegend dunkel (ältere Waben). Windel trocken, gute Belüftung. Keine Ameisen/Wachsmotten. Nächster Schritt: Öl-Windel für 3 Tage einlegen zur genaueren Zählung."
+      }
+    ]
+  },
+  "2": {
+    "volk_id": "2",
+    "name": "Grüner Stock",
+    "standort": "Garagen-Dach, Ludwigsfelde",
+    "rasse": "Buckfast",
+    "königin_gezeichnet": "2025-07",
+    "letzte_varroa_behandlung": "2026-04-19",
+    "letzte_fütterung": "2026-04-30",
+    "besondere_hinweise": "sanftmütig",
+    "logs": [
+      {
+        "timestamp": "2026-04-16T15:31:50.868888+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Visuelle Kontrolle Dach‑Beuten: Volk besetzt (unten grün?), Flugaktivität mäßig, Hitzeschutz prüfen."
+      },
+      {
+        "timestamp": "2026-04-16T15:34:09.860278+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "Windel sauber gemacht, beginne 3‑tägige Messung des Varroabefalls."
+      },
+      {
+        "timestamp": "2026-04-16T15:35:52.366522+00:00",
+        "aktion": "wiegen",
+        "menge": "42 kg",
+        "details": "Gewichtsmessung grüner Stock"
+      },
+      {
+        "timestamp": "2026-04-16T15:44:26.776409+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Brutraum zu 2/3 mit Wabengängen besetzt (ca. 8 von 12)"
+      },
+      {
+        "timestamp": "2026-04-16T15:46:46.821622+00:00",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto‑Analyse: Volk schwach‑mittelstark, Brutbild sehr lückenhaft (schrotschüssig), Futtervorräte knapp, Varroa‑Diagnose dringend, Königin beobachten, evtl. einengen."
+      },
+      {
+        "timestamp": "2026-04-17T07:25:26.518729+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      },
+      {
+        "timestamp": "2026-04-19T14:24:03.572952",
+        "aktion": "varroa_diagnose",
+        "menge": "0",
+        "details": "Windelmessung nach 3 Tagen: 0 Milben. Kein Befall."
+      },
+      {
+        "timestamp": "2026-04-19T14:27:04.698974",
+        "aktion": "windel_analyse",
+        "menge": "",
+        "details": "Windel nach Varroa‑Kontrolle: Viel Polleneintrag (gelbe/rote Krümel) und Bruttätigkeit (helle Wachsreste). Keine Milben, starke Sammelaktivität, Brutnest aktiv trotz vorheriger Schwächeanzeichen."
+      },
+      {
+        "timestamp": "2026-04-20T07:11:32.668Z",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 20.04.2026: Beute (mittlerer Stapel) grün‑rot‑grün, drei Zargen, auf Paletten auf Dach. Volk aktiv? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt."
+      },
+      {
+        "timestamp": "2026-04-26T12:00:00+02:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Weiselrichtig (Königin stiftet). 2 Rähmchen (1x Futter, 1x jüngste Brut) für Ablegerbildung in Volk 3 entnommen. Zudem auf Schwarmtrieb geprüft: 2-3 Schwarmzellen gefunden. Schwarmtrieb sollte durch Ablegerbildung nun nachlassen."
+      },
+      {
+        "timestamp": "2026-04-30T09:59:00+02:00",
+        "aktion": "wiegen",
+        "menge": "39 kg",
+        "details": "Gewicht pro Stock sehr leicht."
+      },
+      {
+        "timestamp": "2026-04-30T10:00:00+02:00",
+        "aktion": "füttern & kontrollieren",
+        "menge": "2 kg Zuckerteig + zuckerbasierte Pollenergänzung",
+        "details": "Gewicht auf ca. 39 kg gesunken (-1 kg seit letzter Messung). Viele tote Bienen (auch kleine) in der vergangenen Woche, Bienen tragen diese aus. Akute Verhungerungsgefahr! Notfütterung mit 2 kg Zuckerteig und Api-Pollenersatz durchgeführt."
+      },
+      {
+        "timestamp": "2026-04-30T10:05:00+02:00",
+        "aktion": "planung",
+        "menge": "",
+        "details": "Drohnenbrut konnte nicht geschnitten werden (Bienen haben keine Baurahmen genutzt, Drohnenbrut ist in normalen Brutrahmen verteilt). Daher ist Varroa-Kontrolle besonders wichtig! Wahrscheinlich Milchsäurebehandlung in den nächsten 2 Wochen notwendig."
+      },
+      {
+        "timestamp": "2026-04-30T10:05:00+02:00",
+        "aktion": "todo",
+        "menge": "",
+        "details": "Regelmäßiges Wiegen vergessen, muss zwingend morgen nachgeholt werden."
+      },
+      {
+        "timestamp": "2026-05-01T12:45:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "Varroawindel eingeschoben. Auszählen in 3 Tagen."
+      },
+      {
+        "timestamp": "2026-05-01T12:46:00+02:00",
+        "aktion": "wiegen",
+        "menge": "42 kg",
+        "details": "Gewichtsmessung heute."
+      },
+      {
+        "timestamp": "2026-05-01T12:47:00+02:00",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 01.05.: Bienen lagern massiv vor dem Flugloch (auf Palette) vor. An der weißen Hauswand sitzen ebenfalls einige Bienen. Ursache ist NICHT Hitze oder Schwarmstimmung, sondern das absichtlich verengte Flugloch zum Schutz vor Wespen. Das Nadelöhr führt zum Stau, schützt aber vor Räuberei."
+      },
+      {
+        "timestamp": "2026-05-01T13:00:00+02:00",
+        "aktion": "diagnose",
+        "menge": "",
+        "details": "Ursache für tote Bienen mit gestrecktem Rüssel geklärt: Es gab kaum Pollen im Brutraum und die Stöcke waren extrem leicht. Der Totenfall geht sehr wahrscheinlich auf akuten Hunger / Eiweißmangel zurück (keine Vergiftung). Die bereits durchgeführte Notfütterung mit Zuckerteig (Apifonda) und Pollenersatz war die goldrichtige Maßnahme."
+      },
+      {
+        "timestamp": "2026-05-04T06:55:44.017931+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "2. Windelkontrolle nach 3 Tagen: 5-8 Milben sichtbar. Ca. 25-30 tote Bienen (vermutlich Maikrankheit). Gemüll überwiegend dunkel. Windel trocken, gute Belüftung. Keine Ameisen/Wachsmotten. Nächster Schritt: Öl-Windel für 3 Tage einlegen zur genaueren Zählung."
+      }
+    ]
+  },
+  "3": {
+    "volk_id": "3",
+    "name": "Gelber Stock",
+    "standort": "Garagen-Dach, Ludwigsfelde",
+    "rasse": "unbekannt",
+    "königin_gezeichnet": "",
+    "letzte_varroa_behandlung": "",
+    "letzte_fütterung": "2026-04-30",
+    "besondere_hinweise": "Ableger (gegründet am 26.04.2026 aus Volk 1 & 2).",
+    "logs": [
+      {
+        "timestamp": "2026-04-17T07:25:26.519430+00:00",
+        "aktion": "kontrollieren",
+        "menge": "",
+        "details": "Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.)."
+      },
+      {
+        "timestamp": "2026-04-20T07:11:32.668Z",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 20.04.2026: Beute (linker Stapel) gelb‑gelb, zwei Zargen, auf Paletten auf Dach. Leere Beute? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt."
+      },
+      {
+        "timestamp": "2026-04-26T12:00:00+02:00",
+        "aktion": "ableger_gebildet",
+        "menge": "4 Rähmchen",
+        "details": "Ableger erfolgreich gegründet. Bestückt mit 1x Futter & 1x Brut aus rotem Stock (Volk 1) sowie 1x Futter & 1x jüngste Brut aus grünem Stock (Volk 2). Volk besteht aktuell nur aus einem Brutraum."
+      },
+      {
+        "timestamp": "2026-04-30T10:00:00+02:00",
+        "aktion": "füttern",
+        "menge": "2 kg Zuckerteig + zuckerbasierte Pollenergänzung",
+        "details": "Notfütterung zur Vorbeugung gegen Verhungern: 2 kg Zuckerteig und Api-Pollenersatz."
+      },
+      {
+        "timestamp": "2026-04-30T10:05:00+02:00",
+        "aktion": "planung",
+        "menge": "",
+        "details": "Kontrolle auf Weiselrichtigkeit (Königin) in ca. 2 Wochen erforderlich."
+      },
+      {
+        "timestamp": "2026-04-30T10:05:00+02:00",
+        "aktion": "todo",
+        "menge": "",
+        "details": "Regelmäßiges Wiegen vergessen, muss zwingend morgen nachgeholt werden."
+      },
+      {
+        "timestamp": "2026-05-01T12:45:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "Varroawindel eingeschoben. Auszählen in 3 Tagen."
+      },
+      {
+        "timestamp": "2026-05-01T12:46:00+02:00",
+        "aktion": "wiegen",
+        "menge": "20 kg",
+        "details": "Gewichtsmessung heute."
+      },
+      {
+        "timestamp": "2026-05-01T12:47:00+02:00",
+        "aktion": "foto_analyse",
+        "menge": "",
+        "details": "Foto vom 01.05.: Die kleine gelbe Beute (Ableger) zeigt deutlich weniger Flugbetrieb, keine Bienen vorlagernd, was normal ist für einen kleinen Ableger."
+      },
+      {
+        "timestamp": "2026-05-04T06:55:51.283647+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "",
+        "details": "2. Windelkontrolle nach 3 Tagen: ca. 10 Milben sichtbar. 0-1 tote Bienen. Viel helles Wachs (starke Bruttätigkeit!). Windel trocken. Keine Ameisen/Wachsmotten. Aktivstes Volk der drei. Nächster Schritt: Öl-Windel für 3 Tage einlegen zur genaueren Zählung."
+      }
+    ]
+  },
+  "meta": {
+    "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
+    "letzte_aktualisierung": "2026-05-01",
+    "tara": {
+      "zarge_mit_raehmchen": 6.2,
+      "eine_zarge_mit_boden_deckel": 12.0,
+      "zwei_zargen_mit_boden_deckel": 19.2,
+      "drei_zargen_mit_boden_deckel": 25.4
+    }
+  }
+}

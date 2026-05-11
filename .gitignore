@@ -1,0 +1,13 @@
+# ABSOLUT NICHTS aus dem Workspace
+SOUL.md
+MEMORY.md
+TOOLS.md
+AGENTS.md
+USER.md
+IDENTITY.md
+BOOT.md
+HEARTBEAT.md
+memory/
+skills/
+*.token
+*.env
