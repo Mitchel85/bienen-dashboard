@@ -7,7 +7,7 @@
     "königin_gezeichnet": "2025-05",
     "letzte_varroa_behandlung": "2026-04-19",
     "letzte_fütterung": "2026-04-30",
-    "besondere_hinweise": "schwärmt leicht",
+    "besondere_hinweise": "",
     "logs": [
       {
         "timestamp": "2026-04-16T15:31:40.055766+00:00",
@@ -146,8 +146,15 @@
         "aktion": "wiegen",
         "menge": "48 kg",
         "details": "Gewichtsmessung. Zargen: 3 (2 BR + 1 HR). Netto ca. 22,6 kg."
+      },
+      {
+        "timestamp": "2026-05-30T17:14:56+02:00",
+        "aktion": "königin_vermerkt",
+        "menge": "",
+        "details": "Königin dokumentiert: Königin 2025."
       }
-    ]
+    ],
+    "königin_jahr": "2025"
   },
   "2": {
     "volk_id": "2",
@@ -157,7 +164,7 @@
     "königin_gezeichnet": "2025-07",
     "letzte_varroa_behandlung": "2026-04-19",
     "letzte_fütterung": "2026-04-30",
-    "besondere_hinweise": "sanftmütig",
+    "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
       {
         "timestamp": "2026-04-16T15:31:50.868888+00:00",
@@ -308,8 +315,15 @@
         "aktion": "wiegen",
         "menge": "44 kg",
         "details": "Gewichtsmessung. Zargen: 3 (2 BR + 1 HR). Netto ca. 18,6 kg."
+      },
+      {
+        "timestamp": "2026-05-30T17:14:56+02:00",
+        "aktion": "königin_vermerkt",
+        "menge": "",
+        "details": "Königin dokumentiert: Königin 2026 (nach 2. Schwarm)."
       }
-    ]
+    ],
+    "königin_jahr": "2026 (nach Schwarm)"
   },
   "3": {
     "volk_id": "3",
@@ -319,7 +333,7 @@
     "königin_gezeichnet": "",
     "letzte_varroa_behandlung": "",
     "letzte_fütterung": "2026-04-30",
-    "besondere_hinweise": "Ableger (gegründet am 26.04.2026 aus Volk 1 & 2).",
+    "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
       {
         "timestamp": "2026-04-17T07:25:26.519430+00:00",
@@ -410,8 +424,15 @@
         "aktion": "wiegen",
         "menge": "42 kg",
         "details": "Gewichtsmessung. Zargen: 3 (2 BR + 1 HR). Netto ca. 16,6 kg."
+      },
+      {
+        "timestamp": "2026-05-30T17:14:56+02:00",
+        "aktion": "königin_vermerkt",
+        "menge": "",
+        "details": "Königin dokumentiert: Königin 2026."
       }
-    ]
+    ],
+    "königin_jahr": "2026"
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
