@@ -152,6 +152,12 @@
         "aktion": "königin_vermerkt",
         "menge": "",
         "details": "Königin dokumentiert: Königin 2025."
+      },
+      {
+        "timestamp": "2026-06-11T19:48:03.824116+02:00",
+        "aktion": "wiegen",
+        "menge": "54 kg",
+        "details": "Reguläre Gewichtsmessung"
       }
     ],
     "königin_jahr": "2025"
@@ -321,6 +327,12 @@
         "aktion": "königin_vermerkt",
         "menge": "",
         "details": "Königin dokumentiert: Königin 2026 (nach 2. Schwarm)."
+      },
+      {
+        "timestamp": "2026-06-11T19:48:03.824116+02:00",
+        "aktion": "wiegen",
+        "menge": "46 kg",
+        "details": "Reguläre Gewichtsmessung"
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)"
@@ -430,6 +442,12 @@
         "aktion": "königin_vermerkt",
         "menge": "",
         "details": "Königin dokumentiert: Königin 2026."
+      },
+      {
+        "timestamp": "2026-06-11T19:48:03.824116+02:00",
+        "aktion": "wiegen",
+        "menge": "48 kg",
+        "details": "Reguläre Gewichtsmessung"
       }
     ],
     "königin_jahr": "2026"
