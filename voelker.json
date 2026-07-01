@@ -158,6 +158,12 @@
         "aktion": "wiegen",
         "menge": "54 kg",
         "details": "Reguläre Gewichtsmessung"
+      },
+      {
+        "timestamp": "2026-07-01T17:28:46.685767+02:00",
+        "aktion": "wiegen",
+        "menge": "58 kg",
+        "details": "Wiegen: 58 kg brutto (beide Seiten, je 29 kg pro Seite)"
       }
     ],
     "königin_jahr": "2025"
@@ -333,6 +339,12 @@
         "aktion": "wiegen",
         "menge": "46 kg",
         "details": "Reguläre Gewichtsmessung"
+      },
+      {
+        "timestamp": "2026-07-01T17:28:46.685767+02:00",
+        "aktion": "wiegen",
+        "menge": "56 kg",
+        "details": "Wiegen: 56 kg brutto (beide Seiten, je 28 kg pro Seite)"
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)"
@@ -448,13 +460,19 @@
         "aktion": "wiegen",
         "menge": "48 kg",
         "details": "Reguläre Gewichtsmessung"
+      },
+      {
+        "timestamp": "2026-07-01T17:28:46.685767+02:00",
+        "aktion": "wiegen",
+        "menge": "54 kg",
+        "details": "Wiegen: 54 kg brutto (beide Seiten, je 27 kg pro Seite)"
       }
     ],
     "königin_jahr": "2026"
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-05-30",
+    "letzte_aktualisierung": "2026-07-01",
     "tara": {
       "zarge_mit_raehmchen": 6.2,
       "eine_zarge_mit_boden_deckel": 12.0,
