@@ -5,7 +5,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
-    "letzte_varroa_behandlung": "2026-04-19",
+    "letzte_varroa_behandlung": "2026-07-23",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "",
     "logs": [
@@ -164,9 +164,34 @@
         "aktion": "wiegen",
         "menge": "58 kg",
         "details": "Wiegen: 58 kg brutto (beide Seiten, je 29 kg pro Seite)"
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "honig_ernte",
+        "menge": "18 kg (gesamt aus 3 Völkern)",
+        "details": "Honig geerntet. Volk 1 (Roter Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 22.5 kg."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "konfiguration",
+        "menge": "1 Brutraum",
+        "details": "Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "22.5 kg",
+        "details": "Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 22.5 kg."
+      },
+      {
+        "timestamp": "2026-07-23T16:00:00+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "120 ml Ameisensäure (60%)",
+        "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
       }
     ],
-    "königin_jahr": "2025"
+    "königin_jahr": "2025",
+    "konfiguration": "1 Brutraum"
   },
   "2": {
     "volk_id": "2",
@@ -174,7 +199,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
-    "letzte_varroa_behandlung": "2026-04-19",
+    "letzte_varroa_behandlung": "2026-07-23",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
@@ -345,9 +370,34 @@
         "aktion": "wiegen",
         "menge": "56 kg",
         "details": "Wiegen: 56 kg brutto (beide Seiten, je 28 kg pro Seite)"
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "honig_ernte",
+        "menge": "18 kg (gesamt aus 3 Völkern)",
+        "details": "Honig geerntet. Volk 2 (Grüner Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 26 kg."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "konfiguration",
+        "menge": "1 Brutraum",
+        "details": "Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "26 kg",
+        "details": "Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 26 kg."
+      },
+      {
+        "timestamp": "2026-07-23T16:00:00+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "120 ml Ameisensäure (60%)",
+        "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
       }
     ],
-    "königin_jahr": "2026 (nach Schwarm)"
+    "königin_jahr": "2026 (nach Schwarm)",
+    "konfiguration": "1 Brutraum"
   },
   "3": {
     "volk_id": "3",
@@ -355,7 +405,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "unbekannt",
     "königin_gezeichnet": "",
-    "letzte_varroa_behandlung": "",
+    "letzte_varroa_behandlung": "2026-07-23",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
@@ -466,18 +516,54 @@
         "aktion": "wiegen",
         "menge": "54 kg",
         "details": "Wiegen: 54 kg brutto (beide Seiten, je 27 kg pro Seite)"
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "honig_ernte",
+        "menge": "18 kg (gesamt aus 3 Völkern)",
+        "details": "Honig geerntet. Volk 3 (Gelber Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 23 kg."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "konfiguration",
+        "menge": "1 Brutraum",
+        "details": "Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "23 kg",
+        "details": "Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 23 kg."
+      },
+      {
+        "timestamp": "2026-07-23T16:00:00+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "120 ml Ameisensäure (60%)",
+        "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
       }
     ],
-    "königin_jahr": "2026"
+    "königin_jahr": "2026",
+    "konfiguration": "1 Brutraum"
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-07-01",
+    "letzte_aktualisierung": "2026-07-23",
     "tara": {
       "zarge_mit_raehmchen": 6.2,
       "eine_zarge_mit_boden_deckel": 12.0,
       "zwei_zargen_mit_boden_deckel": 19.2,
       "drei_zargen_mit_boden_deckel": 25.4
+    },
+    "honigernte_2026": "18 kg (19.07.2026)",
+    "varroa_behandlung_1": {
+      "start": "2026-07-23",
+      "mittel": "Ameisensäure 60%",
+      "menge": "120 ml",
+      "verdunster": "Nassenheider",
+      "dauer_empfohlen": "14 Tage",
+      "kontrolle_empfohlen": "2026-07-30",
+      "ende_empfohlen": "2026-08-06",
+      "zweite_behandlung_empfohlen": "2026-08-13"
     }
   }
 }
