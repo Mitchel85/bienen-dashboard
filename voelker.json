@@ -188,6 +188,30 @@
         "aktion": "varroa_behandlung",
         "menge": "120 ml Ameisensäure (60%)",
         "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "25 kg",
+        "details": "Gewicht heute: 25 kg (1 Brutraum). Nach Honigernte eingeengt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "20 Milben",
+        "details": "Einschub während AS-Behandlung eingelegt (suboptimal). Ausgezählt: 20 Milben. Im Kontext der laufenden Behandlung unbedenklich."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "behandlung",
+        "menge": "+125 ml AS nachgefüllt",
+        "details": "125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "beobachtung",
+        "menge": "",
+        "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
       }
     ],
     "königin_jahr": "2025",
@@ -394,6 +418,30 @@
         "aktion": "varroa_behandlung",
         "menge": "120 ml Ameisensäure (60%)",
         "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "28 kg",
+        "details": "Gewicht heute: 28 kg (1 Brutraum). Schwerstes Volk, +3 kg zu Rot/Gelb."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "10 Milben",
+        "details": "Einschub während AS-Behandlung eingelegt. Ausgezählt: 10 Milben. Sehr niedrig, Behandlung wirkt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "behandlung",
+        "menge": "+125 ml AS nachgefüllt",
+        "details": "125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "beobachtung",
+        "menge": "",
+        "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -540,6 +588,30 @@
         "aktion": "varroa_behandlung",
         "menge": "120 ml Ameisensäure (60%)",
         "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "25 kg",
+        "details": "Gewicht heute: 25 kg (1 Brutraum)."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "⏳ ausstehend",
+        "details": "Einschub entnommen. Auszählung noch nicht erfolgt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "behandlung",
+        "menge": "+125 ml AS nachgefüllt",
+        "details": "125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "beobachtung",
+        "menge": "",
+        "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
       }
     ],
     "königin_jahr": "2026",
