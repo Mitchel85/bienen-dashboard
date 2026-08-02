@@ -6,7 +6,7 @@
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
     "letzte_varroa_behandlung": "2026-08-02",
-    "letzte_fütterung": "2026-04-30",
+    "letzte_fütterung": "2026-08-02",
     "besondere_hinweise": "",
     "logs": [
       {
@@ -224,6 +224,12 @@
         "aktion": "wiegen",
         "menge": "20 kg brutto / 8.0 kg netto",
         "details": "Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg."
+      },
+      {
+        "timestamp": "2026-08-02T19:23:43.556127+02:00",
+        "aktion": "fütterung",
+        "menge": "2 kg",
+        "details": "Anfütterung nach Varroa-Behandlung: 2 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge)."
       }
     ],
     "königin_jahr": "2025",
@@ -236,7 +242,7 @@
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
     "letzte_varroa_behandlung": "2026-08-02",
-    "letzte_fütterung": "2026-04-30",
+    "letzte_fütterung": "2026-08-02",
     "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
       {
@@ -466,6 +472,12 @@
         "aktion": "wiegen",
         "menge": "24 kg brutto / 12.0 kg netto",
         "details": "Brutto 24 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 12.0 kg."
+      },
+      {
+        "timestamp": "2026-08-02T19:23:43.556127+02:00",
+        "aktion": "fütterung",
+        "menge": "1 kg",
+        "details": "Anfütterung nach Varroa-Behandlung: 1 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge)."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -478,7 +490,7 @@
     "rasse": "unbekannt",
     "königin_gezeichnet": "",
     "letzte_varroa_behandlung": "2026-08-02",
-    "letzte_fütterung": "2026-04-30",
+    "letzte_fütterung": "2026-08-02",
     "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
       {
@@ -648,6 +660,12 @@
         "aktion": "wiegen",
         "menge": "20 kg brutto / 8.0 kg netto",
         "details": "Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg."
+      },
+      {
+        "timestamp": "2026-08-02T19:23:43.556127+02:00",
+        "aktion": "fütterung",
+        "menge": "2 kg",
+        "details": "Anfütterung nach Varroa-Behandlung: 2 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge)."
       }
     ],
     "königin_jahr": "2026",
