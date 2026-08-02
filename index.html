@@ -62,7 +62,7 @@ footer { text-align: center; margin-top: 30px; color: #9ca3af; font-size: 0.8rem
 <div class="container">
 <header>
     <h1>🐝 Bienenvölker Dashboard</h1>
-    <div class="subtitle">Stand 23.07.2026 — 3 Völker, 84 Protokolle | 🩺 Varroa-Behandlung Tag 1</div>
+    <div class="subtitle">Stand 02.08.2026 — 3 Völker, 102 Protokolle</div>
     <div class="btn-group">
         <button class="btn btn-csv" onclick="downloadCSV()">📥 CSV (Excel)</button>
         <button class="btn btn-txt" onclick="downloadTXT()">📝 Text-Bericht</button>
@@ -71,11 +71,9 @@ footer { text-align: center; margin-top: 30px; color: #9ca3af; font-size: 0.8rem
 
 <div class="stats">
     <div class="stat-card"><h3>Beuten</h3><div class="stat-value">3</div></div>
-<div class="stat-card"><h3>Roter Stock</h3><div class="stat-value">22.5 kg</div><small style="color:#6b7280">Netto 10.5 kg</small></div>
-<div class="stat-card"><h3>Grüner Stock</h3><div class="stat-value">26 kg</div><small style="color:#6b7280">Netto 14.0 kg</small></div>
-<div class="stat-card"><h3>Gelber Stock</h3><div class="stat-value">23 kg</div><small style="color:#6b7280">Netto 11.0 kg</small></div>
-<div class="stat-card"><h3>🍯 Ernte 2026</h3><div class="stat-value">18 kg</div><small style="color:#6b7280">19.07.2026</small></div>
-<div class="stat-card"><h3>🩺 Varroa</h3><div class="stat-value" style="color:#ef4444">Tag 1</div><small style="color:#6b7280">AS 60%, 120ml/V</small></div>
+<div class="stat-card"><h3>Roter Stock</h3><div class="stat-value">20.0 kg</div><small style="color:#6b7280">Netto -5.4 kg</small></div>
+<div class="stat-card"><h3>Grüner Stock</h3><div class="stat-value">24.0 kg</div><small style="color:#6b7280">Netto -1.4 kg</small></div>
+<div class="stat-card"><h3>Gelber Stock</h3><div class="stat-value">20.0 kg</div><small style="color:#6b7280">Netto -5.4 kg</small></div>
 </div>
 
 <div class="card">
@@ -87,29 +85,29 @@ footer { text-align: center; margin-top: 30px; color: #9ca3af; font-size: 0.8rem
 <tr>
             <td><span class="volk-id">1</span></td>
             <td><span class="volk-name">Roter Stock</span><br><small style="color:#9ca3af">Garagen-Dach, Ludwigsfelde</small></td>
-            <td><span class="kg-ok">22.5 kg</span><br><small style="color:#9ca3af">Netto 10.5 kg</small></td>
+            <td><span class="kg-crit">20.0 kg</span><br><small style="color:#9ca3af">Netto -5.4 kg</small></td>
             <td>1 BR</td>
-            <td style="font-weight:600">2026</td>
-            <td><div class="qstats"><span class="qstat" style="background:#ef444420;color:#ef4444">🩺 Varroa 23.07.</span> <span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 Ernte 19.07.</span> <span class="qstat" style="background:#10b98120;color:#10b981">⚖️ 22.5 kg</span></div></td>
-            <td style="max-width:200px">Behandlung läuft</td>
+            <td style="font-weight:600">2025</td>
+            <td><div class="qstats"><span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 2026-05-01</span> <span class="qstat" style="background:#ef444420;color:#ef4444">🩺 2026-08-02</span> <span class="qstat" style="background:#f9731620;color:#f97316">🚫 2026-05-30</span> <span class="qstat" style="background:#6366f120;color:#6366f1">🔍 2026-07-29</span> <span class="qstat" style="background:#8b5cf620;color:#8b5cf6">👑 2026-05-30</span> </div></td>
+            <td style="max-width:200px"></td>
         </tr>
 <tr>
             <td><span class="volk-id">2</span></td>
             <td><span class="volk-name">Grüner Stock</span><br><small style="color:#9ca3af">Garagen-Dach, Ludwigsfelde</small></td>
-            <td><span class="kg-ok">26 kg</span><br><small style="color:#9ca3af">Netto 14.0 kg</small></td>
+            <td><span class="kg-crit">24.0 kg</span><br><small style="color:#9ca3af">Netto -1.4 kg</small></td>
             <td>1 BR</td>
             <td style="font-weight:600">2026 (nach Schwarm)</td>
-            <td><div class="qstats"><span class="qstat" style="background:#ef444420;color:#ef4444">🩺 Varroa 23.07.</span> <span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 Ernte 19.07.</span> <span class="qstat" style="background:#10b98120;color:#10b981">⚖️ 26 kg</span></div></td>
-            <td style="max-width:200px">2x geschwärmt, Beh. läuft</td>
+            <td><div class="qstats"><span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 2026-05-01</span> <span class="qstat" style="background:#ef444420;color:#ef4444">🩺 2026-08-02</span> <span class="qstat" style="background:#f9731620;color:#f97316">🚫 2026-05-30</span> <span class="qstat" style="background:#6366f120;color:#6366f1">🔍 2026-07-29</span> <span class="qstat" style="background:#8b5cf620;color:#8b5cf6">👑 2026-05-30</span> </div></td>
+            <td style="max-width:200px">2x geschwärmt, 1x zurückgekommen</td>
         </tr>
 <tr>
             <td><span class="volk-id">3</span></td>
             <td><span class="volk-name">Gelber Stock</span><br><small style="color:#9ca3af">Garagen-Dach, Ludwigsfelde</small></td>
-            <td><span class="kg-ok">23 kg</span><br><small style="color:#9ca3af">Netto 11.0 kg</small></td>
+            <td><span class="kg-crit">20.0 kg</span><br><small style="color:#9ca3af">Netto -5.4 kg</small></td>
             <td>1 BR</td>
-            <td style="font-weight:600">2025</td>
-            <td><div class="qstats"><span class="qstat" style="background:#ef444420;color:#ef4444">🩺 Varroa 23.07.</span> <span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 Ernte 19.07.</span> <span class="qstat" style="background:#10b98120;color:#10b981">⚖️ 23 kg</span></div></td>
-            <td style="max-width:200px">Behandlung läuft</td>
+            <td style="font-weight:600">2026</td>
+            <td><div class="qstats"><span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 2026-04-30</span> <span class="qstat" style="background:#ef444420;color:#ef4444">🩺 2026-08-02</span> <span class="qstat" style="background:#f9731620;color:#f97316">🚫 2026-05-30</span> <span class="qstat" style="background:#6366f120;color:#6366f1">🔍 2026-07-29</span> <span class="qstat" style="background:#8b5cf620;color:#8b5cf6">👑 2026-05-30</span> </div></td>
+            <td style="max-width:200px">Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt</td>
         </tr>
 </tbody></table></div>
 </div>
@@ -121,11 +119,261 @@ footer { text-align: center; margin-top: 30px; color: #9ca3af; font-size: 0.8rem
 <div class="ch-entry">
     <div class="ch-icon">🩺</div>
     <div class="ch-body">
+        <span class="ch-meta">02.08.26 10:36</span>
+        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa ende</span>
+        
+        <div class="ch-detail">Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge).</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">02.08.26 10:36</span>
+        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
+        <span class="ch-action" style="color:#10b981">– wiegen</span>
+        <span style="font-size:0.8rem;color:#6b7280">(20 kg brutto / 8.0 kg netto)</span>
+        <div class="ch-detail">Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">02.08.26 10:36</span>
+        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa ende</span>
+        
+        <div class="ch-detail">Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge).</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">02.08.26 10:36</span>
+        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#10b981">– wiegen</span>
+        <span style="font-size:0.8rem;color:#6b7280">(24 kg brutto / 12.0 kg netto)</span>
+        <div class="ch-detail">Brutto 24 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 12.0 kg.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">02.08.26 10:36</span>
+        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa ende</span>
+        
+        <div class="ch-detail">Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge).</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">02.08.26 10:36</span>
+        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#10b981">– wiegen</span>
+        <span style="font-size:0.8rem;color:#6b7280">(20 kg brutto / 8.0 kg netto)</span>
+        <div class="ch-detail">Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
+        <span class="ch-action" style="color:#10b981">– wiegen</span>
+        <span style="font-size:0.8rem;color:#6b7280">(25 kg)</span>
+        <div class="ch-detail">Gewicht heute: 25 kg (1 Brutraum). Nach Honigernte eingeengt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
+        <span style="font-size:0.8rem;color:#6b7280">(20 Milben)</span>
+        <div class="ch-detail">Einschub während AS-Behandlung eingelegt (suboptimal). Ausgezählt: 20 Milben. Im Kontext der laufenden Behandlung unbedenklich.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
+        <span class="ch-action" style="color:#ef4444">– behandlung</span>
+        <span style="font-size:0.8rem;color:#6b7280">(+125 ml AS nachgefüllt)</span>
+        <div class="ch-detail">125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🔍</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#6366f1">│ Roter Stock</span>
+        <span class="ch-action" style="color:#6366f1">– beobachtung</span>
+        
+        <div class="ch-detail">Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#10b981">– wiegen</span>
+        <span style="font-size:0.8rem;color:#6b7280">(28 kg)</span>
+        <div class="ch-detail">Gewicht heute: 28 kg (1 Brutraum). Schwerstes Volk, +3 kg zu Rot/Gelb.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
+        <span style="font-size:0.8rem;color:#6b7280">(10 Milben)</span>
+        <div class="ch-detail">Einschub während AS-Behandlung eingelegt. Ausgezählt: 10 Milben. Sehr niedrig, Behandlung wirkt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#ef4444">– behandlung</span>
+        <span style="font-size:0.8rem;color:#6b7280">(+125 ml AS nachgefüllt)</span>
+        <div class="ch-detail">125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🔍</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#6366f1">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#6366f1">– beobachtung</span>
+        
+        <div class="ch-detail">Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#10b981">– wiegen</span>
+        <span style="font-size:0.8rem;color:#6b7280">(25 kg)</span>
+        <div class="ch-detail">Gewicht heute: 25 kg (1 Brutraum).</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
+        <span style="font-size:0.8rem;color:#6b7280">(⏳ ausstehend)</span>
+        <div class="ch-detail">Einschub entnommen. Auszählung noch nicht erfolgt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#ef4444">– behandlung</span>
+        <span style="font-size:0.8rem;color:#6b7280">(+125 ml AS nachgefüllt)</span>
+        <div class="ch-detail">125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🔍</div>
+    <div class="ch-body">
+        <span class="ch-meta">29.07.26 17:00</span>
+        <span class="ch-volk" style="color:#6366f1">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#6366f1">– beobachtung</span>
+        
+        <div class="ch-detail">Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
         <span class="ch-meta">23.07.26 16:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Alle Völker</span>
-        <span class="ch-action" style="color:#ef4444">– varroa_behandlung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(120 ml AS 60%)</span>
-        <div class="ch-detail">Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) pro Volk.</div>
+        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
+        <span style="font-size:0.8rem;color:#6b7280">(120 ml Ameisensäure (60%))</span>
+        <div class="ch-detail">Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">23.07.26 16:00</span>
+        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
+        <span style="font-size:0.8rem;color:#6b7280">(120 ml Ameisensäure (60%))</span>
+        <div class="ch-detail">Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🩺</div>
+    <div class="ch-body">
+        <span class="ch-meta">23.07.26 16:00</span>
+        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
+        <span style="font-size:0.8rem;color:#6b7280">(120 ml Ameisensäure (60%))</span>
+        <div class="ch-detail">Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">19.07.26 15:00</span>
+        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
+        <span class="ch-action" style="color:#10b981">– honig ernte</span>
+        <span style="font-size:0.8rem;color:#6b7280">(18 kg (gesamt aus 3 Völkern))</span>
+        <div class="ch-detail">Honig geerntet. Volk 1 (Roter Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 22.5 kg.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🏗️</div>
+    <div class="ch-body">
+        <span class="ch-meta">19.07.26 15:00</span>
+        <span class="ch-volk" style="color:#3b82f6">│ Roter Stock</span>
+        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
+        <span style="font-size:0.8rem;color:#6b7280">(1 Brutraum)</span>
+        <div class="ch-detail">Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">19.07.26 15:00</span>
+        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
+        <span class="ch-action" style="color:#10b981">– wiegen</span>
+        <span style="font-size:0.8rem;color:#6b7280">(22.5 kg)</span>
+        <div class="ch-detail">Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 22.5 kg.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">⚖️</div>
+    <div class="ch-body">
+        <span class="ch-meta">19.07.26 15:00</span>
+        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#10b981">– honig ernte</span>
+        <span style="font-size:0.8rem;color:#6b7280">(18 kg (gesamt aus 3 Völkern))</span>
+        <div class="ch-detail">Honig geerntet. Volk 2 (Grüner Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 26 kg.</div>
+    </div>
+</div>
+<div class="ch-entry">
+    <div class="ch-icon">🏗️</div>
+    <div class="ch-body">
+        <span class="ch-meta">19.07.26 15:00</span>
+        <span class="ch-volk" style="color:#3b82f6">│ Grüner Stock</span>
+        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
+        <span style="font-size:0.8rem;color:#6b7280">(1 Brutraum)</span>
+        <div class="ch-detail">Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt.</div>
     </div>
 </div>
 <div class="ch-entry">
@@ -143,39 +391,29 @@ footer { text-align: center; margin-top: 30px; color: #9ca3af; font-size: 0.8rem
     <div class="ch-body">
         <span class="ch-meta">19.07.26 15:00</span>
         <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(23 kg)</span>
-        <div class="ch-detail">Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 23 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(22.5 kg)</span>
-        <div class="ch-detail">Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 22.5 kg.</div>
+        <span class="ch-action" style="color:#10b981">– honig ernte</span>
+        <span style="font-size:0.8rem;color:#6b7280">(18 kg (gesamt aus 3 Völkern))</span>
+        <div class="ch-detail">Honig geerntet. Volk 3 (Gelber Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 23 kg.</div>
     </div>
 </div>
 <div class="ch-entry">
     <div class="ch-icon">🏗️</div>
     <div class="ch-body">
         <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Alle Völker</span>
-        <span class="ch-action" style="color:#f59e0b">– konfiguration</span>
+        <span class="ch-volk" style="color:#3b82f6">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
         <span style="font-size:0.8rem;color:#6b7280">(1 Brutraum)</span>
-        <div class="ch-detail">Alle 3 Völker auf 1 Brutraum reduziert (vorher 2 BR + 1 HR). Nach Honigernte eingeengt.</div>
+        <div class="ch-detail">Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt.</div>
     </div>
 </div>
 <div class="ch-entry">
-    <div class="ch-icon">🍯</div>
+    <div class="ch-icon">⚖️</div>
     <div class="ch-body">
         <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Alle Völker</span>
-        <span class="ch-action" style="color:#f59e0b">– honig_ernte</span>
-        <span style="font-size:0.8rem;color:#6b7280">(18 kg gesamt)</span>
-        <div class="ch-detail">Honig geerntet aus 3 Völkern. Alle Völker auf 1 Brutraum reduziert.</div>
+        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
+        <span class="ch-action" style="color:#10b981">– wiegen</span>
+        <span style="font-size:0.8rem;color:#6b7280">(23 kg)</span>
+        <div class="ch-detail">Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 23 kg.</div>
     </div>
 </div>
 <div class="ch-entry">
@@ -678,227 +916,7 @@ footer { text-align: center; margin-top: 30px; color: #9ca3af; font-size: 0.8rem
         <div class="ch-detail">Weiselrichtig (Königin stiftet). 2 Rähmchen (1x Futter, 1x Brut) für Ablegerbildung in Volk 3 entnommen. Zudem auf Schwarmtrieb geprüft: 2-3 Schwarmzellen gefunden. Schwarmtrieb sollte durch Ablegerbildung nun nachlassen.</div>
     </div>
 </div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">26.04.26 12:00</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– kontrollieren</span>
-        
-        <div class="ch-detail">Weiselrichtig (Königin stiftet). 2 Rähmchen (1x Futter, 1x jüngste Brut) für Ablegerbildung in Volk 3 entnommen. Zudem auf Schwarmtrieb geprüft: 2-3 Schwarmzellen gefunden. Schwarmtrieb sollte durch Ablegerbildung nun nachlassen.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">26.04.26 12:00</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– ableger gebildet</span>
-        <span style="font-size:0.8rem;color:#6b7280">(4 Rähmchen)</span>
-        <div class="ch-detail">Ableger erfolgreich gegründet. Bestückt mit 1x Futter & 1x Brut aus rotem Stock (Volk 1) sowie 1x Futter & 1x jüngste Brut aus grünem Stock (Volk 2). Volk besteht aktuell nur aus einem Brutraum.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.04.26 07:11</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Roter Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– foto analyse</span>
-        
-        <div class="ch-detail">Foto vom 20.04.2026: Beute (rechter Stapel) rot‑rot‑grün, drei Zargen, auf Paletten auf Dach. Volk aktiv? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.04.26 07:11</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– foto analyse</span>
-        
-        <div class="ch-detail">Foto vom 20.04.2026: Beute (mittlerer Stapel) grün‑rot‑grün, drei Zargen, auf Paletten auf Dach. Volk aktiv? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.04.26 07:11</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– foto analyse</span>
-        
-        <div class="ch-detail">Foto vom 20.04.2026: Beute (linker Stapel) gelb‑gelb, zwei Zargen, auf Paletten auf Dach. Leere Beute? Flugloch frei, kein Anflug im Bild. Dach nass (Regen). Zustand äußerlich intakt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.04.26 14:27</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– windel analyse</span>
-        
-        <div class="ch-detail">Windel nach Varroa‑Kontrolle: Viel Polleneintrag (gelbe/rote Krümel) und Bruttätigkeit (helle Wachsreste). Keine Milben, starke Sammelaktivität, Brutnest aktiv trotz vorheriger Schwächeanzeichen.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.04.26 14:26</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– windel analyse</span>
-        
-        <div class="ch-detail">Windel nach Varroa‑Kontrolle: Viele Hinweise auf Polleneintrag (gelbe/rote Krümel) und Bruttätigkeit (helle Wachsreste). Keine Milben, starke Sammelaktivität, Brutnest aktiv.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.04.26 14:24</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        <span style="font-size:0.8rem;color:#6b7280">(0)</span>
-        <div class="ch-detail">Windelmessung nach 3 Tagen: 0 Milben. Kein Befall.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.04.26 14:24</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        <span style="font-size:0.8rem;color:#6b7280">(0)</span>
-        <div class="ch-detail">Windelmessung nach 3 Tagen: 0 Milben. Kein Befall.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">17.04.26 07:25</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– kontrollieren</span>
-        
-        <div class="ch-detail">Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">17.04.26 07:25</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– kontrollieren</span>
-        
-        <div class="ch-detail">Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">17.04.26 07:25</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Roter Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– kontrollieren</span>
-        
-        <div class="ch-detail">Keine Fütterung nötig wegen Kirschblüte. Varroa‑Kontrolle in 2 Tagen (19.04.).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:46</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– foto analyse</span>
-        
-        <div class="ch-detail">Foto‑Analyse: Volk schwach‑mittelstark, Brutbild sehr lückenhaft (schrotschüssig), Futtervorräte knapp, Varroa‑Diagnose dringend, Königin beobachten, evtl. einengen.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:44</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– kontrollieren</span>
-        
-        <div class="ch-detail">Brutraum zu 2/3 mit Wabengängen besetzt (ca. 8 von 12)</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:44</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Roter Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– kontrollieren</span>
-        
-        <div class="ch-detail">Brutraum zu 2/3 mit Wabengängen besetzt (ca. 8 von 12)</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:43</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– foto analyse</span>
-        
-        <div class="ch-detail">Foto‑Analyse: Volksstärke mittel, Brutbild lückenhaft (königinbedingt?), Brut gesund, keine Krankheitszeichen, Varroa‑Diagnose fortsetzen.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:37</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(40 kg)</span>
-        <div class="ch-detail">Gewichtsmessung roter Stock</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:35</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(42 kg)</span>
-        <div class="ch-detail">Gewichtsmessung grüner Stock</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:34</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        
-        <div class="ch-detail">Windel sauber gemacht, beginne 3‑tägige Messung des Varroabefalls.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:34</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        
-        <div class="ch-detail">Windel sauber gemacht, beginne 3‑tägige Messung des Varroabefalls.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🔍</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:31</span>
-        <span class="ch-volk" style="color:#6366f1">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#6366f1">– kontrollieren</span>
-        
-        <div class="ch-detail">Visuelle Kontrolle Dach‑Beuten: Volk besetzt (unten grün?), Flugaktivität mäßig, Hitzeschutz prüfen.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🔍</div>
-    <div class="ch-body">
-        <span class="ch-meta">16.04.26 15:31</span>
-        <span class="ch-volk" style="color:#6366f1">│ Roter Stock</span>
-        <span class="ch-action" style="color:#6366f1">– kontrollieren</span>
-        
-        <div class="ch-detail">Visuelle Kontrolle Dach‑Beuten: Volk besetzt (unten rot?), Flugaktivität mäßig, Hitzeschutz prüfen.</div>
-    </div>
-</div>
-    </div>
+<p style="text-align:center;color:#9ca3af">… und 22 weitere Einträge (komplett im CSV-Download)</p>    </div>
     <div class="legend">
 <span class="leg-item" style="background:#6366f115;color:#6366f1">🔍 Kontrolle</span>
 <span class="leg-item" style="background:#f59e0b15;color:#f59e0b">🍯 Fütterung</span>
@@ -917,7 +935,7 @@ footer { text-align: center; margin-top: 30px; color: #9ca3af; font-size: 0.8rem
     </div>
 </div>
 
-<footer>Imker‑Begleiter via Hermes Agent | Daten: voelker.json | Stand 01.07.2026 | 72 Protokolle</footer>
+<footer>Imker‑Begleiter via Hermes Agent | Daten: voelker.json | Stand 02.08.2026 | 102 Protokolle</footer>
 </div>
 
 <script>
@@ -928,7 +946,7 @@ const VOELKER_DATA = {
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
-    "letzte_varroa_behandlung": "2026-04-19",
+    "letzte_varroa_behandlung": "2026-08-02",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "",
     "logs": [
@@ -1087,9 +1105,70 @@ const VOELKER_DATA = {
         "aktion": "wiegen",
         "menge": "58 kg",
         "details": "Wiegen: 58 kg brutto (beide Seiten, je 29 kg pro Seite)"
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "honig_ernte",
+        "menge": "18 kg (gesamt aus 3 Völkern)",
+        "details": "Honig geerntet. Volk 1 (Roter Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 22.5 kg."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "konfiguration",
+        "menge": "1 Brutraum",
+        "details": "Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "22.5 kg",
+        "details": "Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 22.5 kg."
+      },
+      {
+        "timestamp": "2026-07-23T16:00:00+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "120 ml Ameisensäure (60%)",
+        "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "25 kg",
+        "details": "Gewicht heute: 25 kg (1 Brutraum). Nach Honigernte eingeengt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "20 Milben",
+        "details": "Einschub während AS-Behandlung eingelegt (suboptimal). Ausgezählt: 20 Milben. Im Kontext der laufenden Behandlung unbedenklich."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "behandlung",
+        "menge": "+125 ml AS nachgefüllt",
+        "details": "125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "beobachtung",
+        "menge": "",
+        "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "varroa_ende",
+        "menge": "",
+        "details": "Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge)."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "wiegen",
+        "menge": "20 kg brutto / 8.0 kg netto",
+        "details": "Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg."
       }
     ],
-    "königin_jahr": "2025"
+    "königin_jahr": "2025",
+    "konfiguration": "1 Brutraum"
   },
   "2": {
     "volk_id": "2",
@@ -1097,7 +1176,7 @@ const VOELKER_DATA = {
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
-    "letzte_varroa_behandlung": "2026-04-19",
+    "letzte_varroa_behandlung": "2026-08-02",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
@@ -1268,9 +1347,70 @@ const VOELKER_DATA = {
         "aktion": "wiegen",
         "menge": "56 kg",
         "details": "Wiegen: 56 kg brutto (beide Seiten, je 28 kg pro Seite)"
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "honig_ernte",
+        "menge": "18 kg (gesamt aus 3 Völkern)",
+        "details": "Honig geerntet. Volk 2 (Grüner Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 26 kg."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "konfiguration",
+        "menge": "1 Brutraum",
+        "details": "Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "26 kg",
+        "details": "Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 26 kg."
+      },
+      {
+        "timestamp": "2026-07-23T16:00:00+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "120 ml Ameisensäure (60%)",
+        "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "28 kg",
+        "details": "Gewicht heute: 28 kg (1 Brutraum). Schwerstes Volk, +3 kg zu Rot/Gelb."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "10 Milben",
+        "details": "Einschub während AS-Behandlung eingelegt. Ausgezählt: 10 Milben. Sehr niedrig, Behandlung wirkt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "behandlung",
+        "menge": "+125 ml AS nachgefüllt",
+        "details": "125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "beobachtung",
+        "menge": "",
+        "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "varroa_ende",
+        "menge": "",
+        "details": "Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge)."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "wiegen",
+        "menge": "24 kg brutto / 12.0 kg netto",
+        "details": "Brutto 24 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 12.0 kg."
       }
     ],
-    "königin_jahr": "2026 (nach Schwarm)"
+    "königin_jahr": "2026 (nach Schwarm)",
+    "konfiguration": "1 Brutraum"
   },
   "3": {
     "volk_id": "3",
@@ -1278,7 +1418,7 @@ const VOELKER_DATA = {
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "unbekannt",
     "königin_gezeichnet": "",
-    "letzte_varroa_behandlung": "",
+    "letzte_varroa_behandlung": "2026-08-02",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
@@ -1389,18 +1529,91 @@ const VOELKER_DATA = {
         "aktion": "wiegen",
         "menge": "54 kg",
         "details": "Wiegen: 54 kg brutto (beide Seiten, je 27 kg pro Seite)"
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "honig_ernte",
+        "menge": "18 kg (gesamt aus 3 Völkern)",
+        "details": "Honig geerntet. Volk 3 (Gelber Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 23 kg."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "konfiguration",
+        "menge": "1 Brutraum",
+        "details": "Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt."
+      },
+      {
+        "timestamp": "2026-07-19T15:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "23 kg",
+        "details": "Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 23 kg."
+      },
+      {
+        "timestamp": "2026-07-23T16:00:00+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "120 ml Ameisensäure (60%)",
+        "details": "Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "wiegen",
+        "menge": "25 kg",
+        "details": "Gewicht heute: 25 kg (1 Brutraum)."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "varroa_diagnose",
+        "menge": "⏳ ausstehend",
+        "details": "Einschub entnommen. Auszählung noch nicht erfolgt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "behandlung",
+        "menge": "+125 ml AS nachgefüllt",
+        "details": "125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt."
+      },
+      {
+        "timestamp": "2026-07-29T17:00:00+02:00",
+        "aktion": "beobachtung",
+        "menge": "",
+        "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "varroa_ende",
+        "menge": "",
+        "details": "Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge)."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "wiegen",
+        "menge": "20 kg brutto / 8.0 kg netto",
+        "details": "Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg."
       }
     ],
-    "königin_jahr": "2026"
+    "königin_jahr": "2026",
+    "konfiguration": "1 Brutraum"
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-07-01",
+    "letzte_aktualisierung": "2026-08-02",
     "tara": {
       "zarge_mit_raehmchen": 6.2,
       "eine_zarge_mit_boden_deckel": 12.0,
       "zwei_zargen_mit_boden_deckel": 19.2,
       "drei_zargen_mit_boden_deckel": 25.4
+    },
+    "honigernte_2026": "18 kg (19.07.2026)",
+    "varroa_behandlung_1": {
+      "start": "2026-07-23",
+      "mittel": "Ameisensäure 60%",
+      "menge": "120 ml",
+      "verdunster": "Nassenheider",
+      "dauer_empfohlen": "14 Tage",
+      "kontrolle_empfohlen": "2026-07-30",
+      "ende_empfohlen": "2026-08-06",
+      "zweite_behandlung_empfohlen": "2026-08-13",
+      "ende_tatsaechlich": "2026-08-02"
     }
   }
 };
