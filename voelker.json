@@ -5,7 +5,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
-    "letzte_varroa_behandlung": "2026-07-23",
+    "letzte_varroa_behandlung": "2026-08-02",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "",
     "logs": [
@@ -212,6 +212,18 @@
         "aktion": "beobachtung",
         "menge": "",
         "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "varroa_ende",
+        "menge": "",
+        "details": "Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge)."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "wiegen",
+        "menge": "20 kg brutto / 8.0 kg netto",
+        "details": "Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg."
       }
     ],
     "königin_jahr": "2025",
@@ -223,7 +235,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
-    "letzte_varroa_behandlung": "2026-07-23",
+    "letzte_varroa_behandlung": "2026-08-02",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
@@ -442,6 +454,18 @@
         "aktion": "beobachtung",
         "menge": "",
         "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "varroa_ende",
+        "menge": "",
+        "details": "Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge)."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "wiegen",
+        "menge": "24 kg brutto / 12.0 kg netto",
+        "details": "Brutto 24 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 12.0 kg."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -453,7 +477,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "unbekannt",
     "königin_gezeichnet": "",
-    "letzte_varroa_behandlung": "2026-07-23",
+    "letzte_varroa_behandlung": "2026-08-02",
     "letzte_fütterung": "2026-04-30",
     "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
@@ -612,6 +636,18 @@
         "aktion": "beobachtung",
         "menge": "",
         "details": "Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "varroa_ende",
+        "menge": "",
+        "details": "Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge)."
+      },
+      {
+        "timestamp": "2026-08-02T10:36:08.101258+02:00",
+        "aktion": "wiegen",
+        "menge": "20 kg brutto / 8.0 kg netto",
+        "details": "Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg."
       }
     ],
     "königin_jahr": "2026",
@@ -619,7 +655,7 @@
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-07-23",
+    "letzte_aktualisierung": "2026-08-02",
     "tara": {
       "zarge_mit_raehmchen": 6.2,
       "eine_zarge_mit_boden_deckel": 12.0,
@@ -635,7 +671,8 @@
       "dauer_empfohlen": "14 Tage",
       "kontrolle_empfohlen": "2026-07-30",
       "ende_empfohlen": "2026-08-06",
-      "zweite_behandlung_empfohlen": "2026-08-13"
+      "zweite_behandlung_empfohlen": "2026-08-13",
+      "ende_tatsaechlich": "2026-08-02"
     }
   }
 }
