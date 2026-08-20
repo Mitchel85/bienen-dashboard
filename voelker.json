@@ -234,8 +234,8 @@
       {
         "timestamp": "2026-08-20T20:00",
         "aktion": "wiegen",
-        "menge": "10.5 kg",
-        "details": "10.5 kg (Halbseitenmessung ×2, 1 Zarge + Decke). Diskrepanz zu 02.08. (brutto 20/24/20 kg): Rückgang von ~10 kg/Volk in 18 Tagen nicht durch Verbrauch erklärbar — Messung/Methodik prüfen. Bei Tara 12 kg wäre Netto negativ (unplausibel)."
+        "menge": "21 kg brutto / 9 kg netto",
+        "details": "Brutto 21 kg (Hälfte gemessen ×2, Rohwert 10.5 kg). 1 Zarge (Tara 12.0 kg) → Netto 9 kg."
       },
       {
         "timestamp": "2026-08-20T20:15",
@@ -500,8 +500,8 @@
       {
         "timestamp": "2026-08-20T20:00",
         "aktion": "wiegen",
-        "menge": "12.0 kg",
-        "details": "12.0 kg (Halbseitenmessung ×2, 1 Zarge + Decke). Diskrepanz zu 02.08. (brutto 20/24/20 kg): Rückgang von ~10 kg/Volk in 18 Tagen nicht durch Verbrauch erklärbar — Messung/Methodik prüfen. Bei Tara 12 kg wäre Netto negativ (unplausibel)."
+        "menge": "24 kg brutto / 12 kg netto",
+        "details": "Brutto 24 kg (Hälfte gemessen ×2, Rohwert 12 kg). 1 Zarge (Tara 12.0 kg) → Netto 12 kg."
       },
       {
         "timestamp": "2026-08-20T20:15",
@@ -706,8 +706,8 @@
       {
         "timestamp": "2026-08-20T20:00",
         "aktion": "wiegen",
-        "menge": "11.0 kg",
-        "details": "11.0 kg (Halbseitenmessung ×2, 1 Zarge + Decke). Diskrepanz zu 02.08. (brutto 20/24/20 kg): Rückgang von ~10 kg/Volk in 18 Tagen nicht durch Verbrauch erklärbar — Messung/Methodik prüfen. Bei Tara 12 kg wäre Netto negativ (unplausibel)."
+        "menge": "22 kg brutto / 10 kg netto",
+        "details": "Brutto 22 kg (Hälfte gemessen ×2, Rohwert 11 kg). 1 Zarge (Tara 12.0 kg) → Netto 10 kg."
       },
       {
         "timestamp": "2026-08-20T20:15",
