@@ -6,7 +6,7 @@
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
     "letzte_varroa_behandlung": "2026-08-02",
-    "letzte_fütterung": "2026-08-02",
+    "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "",
     "logs": [
       {
@@ -230,6 +230,24 @@
         "aktion": "fütterung",
         "menge": "2 kg",
         "details": "Anfütterung nach Varroa-Behandlung: 2 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge)."
+      },
+      {
+        "timestamp": "2026-08-20T20:00",
+        "aktion": "wiegen",
+        "menge": "10.5 kg",
+        "details": "10.5 kg (Halbseitenmessung ×2, 1 Zarge + Decke). Diskrepanz zu 02.08. (brutto 20/24/20 kg): Rückgang von ~10 kg/Volk in 18 Tagen nicht durch Verbrauch erklärbar — Messung/Methodik prüfen. Bei Tara 12 kg wäre Netto negativ (unplausibel)."
+      },
+      {
+        "timestamp": "2026-08-20T20:15",
+        "aktion": "fütterung",
+        "menge": "1 kg",
+        "details": "1 Tüte Apifonda (1 kg) — mehr war nicht mehr vorrätig."
+      },
+      {
+        "timestamp": "2026-08-20T20:30",
+        "aktion": "doku",
+        "menge": "",
+        "details": "Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk."
       }
     ],
     "königin_jahr": "2025",
@@ -242,7 +260,7 @@
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
     "letzte_varroa_behandlung": "2026-08-02",
-    "letzte_fütterung": "2026-08-02",
+    "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
       {
@@ -478,6 +496,24 @@
         "aktion": "fütterung",
         "menge": "1 kg",
         "details": "Anfütterung nach Varroa-Behandlung: 1 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge)."
+      },
+      {
+        "timestamp": "2026-08-20T20:00",
+        "aktion": "wiegen",
+        "menge": "12.0 kg",
+        "details": "12.0 kg (Halbseitenmessung ×2, 1 Zarge + Decke). Diskrepanz zu 02.08. (brutto 20/24/20 kg): Rückgang von ~10 kg/Volk in 18 Tagen nicht durch Verbrauch erklärbar — Messung/Methodik prüfen. Bei Tara 12 kg wäre Netto negativ (unplausibel)."
+      },
+      {
+        "timestamp": "2026-08-20T20:15",
+        "aktion": "fütterung",
+        "menge": "1 kg",
+        "details": "1 Tüte Apifonda (1 kg) — mehr war nicht mehr vorrätig."
+      },
+      {
+        "timestamp": "2026-08-20T20:30",
+        "aktion": "doku",
+        "menge": "",
+        "details": "Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -490,7 +526,7 @@
     "rasse": "unbekannt",
     "königin_gezeichnet": "",
     "letzte_varroa_behandlung": "2026-08-02",
-    "letzte_fütterung": "2026-08-02",
+    "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
       {
@@ -666,6 +702,24 @@
         "aktion": "fütterung",
         "menge": "2 kg",
         "details": "Anfütterung nach Varroa-Behandlung: 2 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge)."
+      },
+      {
+        "timestamp": "2026-08-20T20:00",
+        "aktion": "wiegen",
+        "menge": "11.0 kg",
+        "details": "11.0 kg (Halbseitenmessung ×2, 1 Zarge + Decke). Diskrepanz zu 02.08. (brutto 20/24/20 kg): Rückgang von ~10 kg/Volk in 18 Tagen nicht durch Verbrauch erklärbar — Messung/Methodik prüfen. Bei Tara 12 kg wäre Netto negativ (unplausibel)."
+      },
+      {
+        "timestamp": "2026-08-20T20:15",
+        "aktion": "fütterung",
+        "menge": "1 kg",
+        "details": "1 Tüte Apifonda (1 kg) — mehr war nicht mehr vorrätig."
+      },
+      {
+        "timestamp": "2026-08-20T20:30",
+        "aktion": "doku",
+        "menge": "",
+        "details": "Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk."
       }
     ],
     "königin_jahr": "2026",
