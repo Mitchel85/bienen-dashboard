@@ -5,7 +5,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
-    "letzte_varroa_behandlung": "2026-08-02",
+    "letzte_varroa_behandlung": "2026-08-22",
     "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "",
     "logs": [
@@ -248,6 +248,30 @@
         "aktion": "doku",
         "menge": "",
         "details": "Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "varroa_kontrolle",
+        "menge": "2-3 Milben/Tag",
+        "details": "Varroa-Einschübe entnommen: pro Volk ca. 2-3 Milben pro Tag (niedriger Befall). Zählbretter entfernt."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "",
+        "details": "2. Varroa-Behandlung gestartet: Nassenheider-Verdunster (Ameisensäure). Aufbau: 1 Brutraum + 1 leere Zarge für den Verdunster."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "fütterung",
+        "menge": "",
+        "details": "Futterteig (weiße Beutel) auf den Waben als Reserve während der Ameisensäure-Behandlung (Volk hat zu wenig eingelagert)."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "wiegen",
+        "menge": "25.2 kg brutto / 8.7 kg netto",
+        "details": "Brutto 25.2 kg (Hälfte gemessen ×2, Rohwert 12.6 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 8.7 kg."
       }
     ],
     "königin_jahr": "2025",
@@ -259,7 +283,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
-    "letzte_varroa_behandlung": "2026-08-02",
+    "letzte_varroa_behandlung": "2026-08-22",
     "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
@@ -514,6 +538,30 @@
         "aktion": "doku",
         "menge": "",
         "details": "Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "varroa_kontrolle",
+        "menge": "2-3 Milben/Tag",
+        "details": "Varroa-Einschübe entnommen: pro Volk ca. 2-3 Milben pro Tag (niedriger Befall). Zählbretter entfernt."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "",
+        "details": "2. Varroa-Behandlung gestartet: Nassenheider-Verdunster (Ameisensäure). Aufbau: 1 Brutraum + 1 leere Zarge für den Verdunster."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "fütterung",
+        "menge": "",
+        "details": "Futterteig (weiße Beutel) auf den Waben als Reserve während der Ameisensäure-Behandlung (Volk hat zu wenig eingelagert)."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "wiegen",
+        "menge": "27.6 kg brutto / 11.1 kg netto",
+        "details": "Brutto 27.6 kg (Hälfte gemessen ×2, Rohwert 13.8 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 11.1 kg."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -525,7 +573,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "unbekannt",
     "königin_gezeichnet": "",
-    "letzte_varroa_behandlung": "2026-08-02",
+    "letzte_varroa_behandlung": "2026-08-22",
     "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
@@ -720,6 +768,30 @@
         "aktion": "doku",
         "menge": "",
         "details": "Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "varroa_kontrolle",
+        "menge": "2-3 Milben/Tag",
+        "details": "Varroa-Einschübe entnommen: pro Volk ca. 2-3 Milben pro Tag (niedriger Befall). Zählbretter entfernt."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "varroa_behandlung",
+        "menge": "",
+        "details": "2. Varroa-Behandlung gestartet: Nassenheider-Verdunster (Ameisensäure). Aufbau: 1 Brutraum + 1 leere Zarge für den Verdunster."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "fütterung",
+        "menge": "",
+        "details": "Futterteig (weiße Beutel) auf den Waben als Reserve während der Ameisensäure-Behandlung (Volk hat zu wenig eingelagert)."
+      },
+      {
+        "timestamp": "2026-08-22T14:49:35+02:00",
+        "aktion": "wiegen",
+        "menge": "25.8 kg brutto / 9.3 kg netto",
+        "details": "Brutto 25.8 kg (Hälfte gemessen ×2, Rohwert 12.9 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 9.3 kg."
       }
     ],
     "königin_jahr": "2026",
@@ -727,7 +799,7 @@
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-08-02",
+    "letzte_aktualisierung": "2026-08-22",
     "tara": {
       "zarge_mit_raehmchen": 6.2,
       "eine_zarge_mit_boden_deckel": 12.0,
@@ -745,6 +817,11 @@
       "ende_empfohlen": "2026-08-06",
       "zweite_behandlung_empfohlen": "2026-08-13",
       "ende_tatsaechlich": "2026-08-02"
+    },
+    "varroa_behandlung_2": {
+      "start": "2026-08-22",
+      "method": "Nassenheider (Ameisensäure)",
+      "hinweise": "Leere Zarge für Verdunster aufgesetzt; Futterteig-Reserven auf Waben"
     }
   }
 }
