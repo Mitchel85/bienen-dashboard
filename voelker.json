@@ -5,7 +5,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
-    "letzte_varroa_behandlung": "2026-08-22",
+    "letzte_varroa_behandlung": "2026-09-08",
     "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "",
     "logs": [
@@ -272,6 +272,12 @@
         "aktion": "wiegen",
         "menge": "25.2 kg brutto / 8.7 kg netto",
         "details": "Brutto 25.2 kg (Hälfte gemessen ×2, Rohwert 12.6 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 8.7 kg."
+      },
+      {
+        "timestamp": "2026-09-08T16:31:31.369256+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "8 Milben",
+        "details": "Varroa-Einschübe entnommen und ausgezählt: 8 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.)."
       }
     ],
     "königin_jahr": "2025",
@@ -283,7 +289,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
-    "letzte_varroa_behandlung": "2026-08-22",
+    "letzte_varroa_behandlung": "2026-09-08",
     "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
@@ -562,6 +568,12 @@
         "aktion": "wiegen",
         "menge": "27.6 kg brutto / 11.1 kg netto",
         "details": "Brutto 27.6 kg (Hälfte gemessen ×2, Rohwert 13.8 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 11.1 kg."
+      },
+      {
+        "timestamp": "2026-09-08T16:31:31.369256+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "7 Milben",
+        "details": "Varroa-Einschübe entnommen und ausgezählt: 7 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.)."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -573,7 +585,7 @@
     "standort": "Garagen-Dach, Ludwigsfelde",
     "rasse": "unbekannt",
     "königin_gezeichnet": "",
-    "letzte_varroa_behandlung": "2026-08-22",
+    "letzte_varroa_behandlung": "2026-09-08",
     "letzte_fütterung": "2026-08-20",
     "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
@@ -792,6 +804,12 @@
         "aktion": "wiegen",
         "menge": "25.8 kg brutto / 9.3 kg netto",
         "details": "Brutto 25.8 kg (Hälfte gemessen ×2, Rohwert 12.9 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 9.3 kg."
+      },
+      {
+        "timestamp": "2026-09-08T16:31:31.369256+00:00",
+        "aktion": "varroa_diagnose",
+        "menge": "4 Milben",
+        "details": "Varroa-Einschübe entnommen und ausgezählt: 4 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.)."
       }
     ],
     "königin_jahr": "2026",
@@ -799,7 +817,7 @@
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-08-22",
+    "letzte_aktualisierung": "2026-09-08",
     "tara": {
       "zarge_mit_raehmchen": 6.2,
       "eine_zarge_mit_boden_deckel": 12.0,
