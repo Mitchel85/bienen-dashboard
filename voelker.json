@@ -278,6 +278,12 @@
         "aktion": "varroa_diagnose",
         "menge": "8 Milben",
         "details": "Varroa-Einschübe entnommen und ausgezählt: 8 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.)."
+      },
+      {
+        "timestamp": "2026-09-08T16:35:11.109873+00:00",
+        "aktion": "wiegen",
+        "menge": "22.4 kg brutto / 10.4 kg netto",
+        "details": "Brutto 22.4 kg (Rohwert 11.2 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.9 kg)."
       }
     ],
     "königin_jahr": "2025",
@@ -574,6 +580,12 @@
         "aktion": "varroa_diagnose",
         "menge": "7 Milben",
         "details": "Varroa-Einschübe entnommen und ausgezählt: 7 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.)."
+      },
+      {
+        "timestamp": "2026-09-08T16:35:11.109873+00:00",
+        "aktion": "wiegen",
+        "menge": "24.8 kg brutto / 12.8 kg netto",
+        "details": "Brutto 24.8 kg (Rohwert 12.4 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 12.8 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 8.3 kg)."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -810,6 +822,12 @@
         "aktion": "varroa_diagnose",
         "menge": "4 Milben",
         "details": "Varroa-Einschübe entnommen und ausgezählt: 4 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.)."
+      },
+      {
+        "timestamp": "2026-09-08T16:35:11.109873+00:00",
+        "aktion": "wiegen",
+        "menge": "22.0 kg brutto / 10.0 kg netto",
+        "details": "Brutto 22.0 kg (Rohwert 11.0 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.0 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.5 kg)."
       }
     ],
     "königin_jahr": "2026",
