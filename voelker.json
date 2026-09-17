@@ -284,6 +284,12 @@
         "aktion": "wiegen",
         "menge": "22.4 kg brutto / 10.4 kg netto",
         "details": "Brutto 22.4 kg (Rohwert 11.2 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.9 kg)."
+      },
+      {
+        "timestamp": "2026-09-17T15:39:25.817933+00:00",
+        "aktion": "wiegen",
+        "menge": "22.0 kg brutto / 10.0 kg netto",
+        "details": "Brutto 22.0 kg (Rohwert 11.0 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.0 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.5 kg). Auffütterung (flüssig) für 17.09. angekündigt."
       }
     ],
     "königin_jahr": "2025",
@@ -586,6 +592,12 @@
         "aktion": "wiegen",
         "menge": "24.8 kg brutto / 12.8 kg netto",
         "details": "Brutto 24.8 kg (Rohwert 12.4 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 12.8 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 8.3 kg)."
+      },
+      {
+        "timestamp": "2026-09-17T15:39:25.817933+00:00",
+        "aktion": "wiegen",
+        "menge": "24.4 kg brutto / 12.4 kg netto",
+        "details": "Brutto 24.4 kg (Rohwert 12.2 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 12.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 7.9 kg). Auffütterung (flüssig) für 17.09. angekündigt."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -828,6 +840,12 @@
         "aktion": "wiegen",
         "menge": "22.0 kg brutto / 10.0 kg netto",
         "details": "Brutto 22.0 kg (Rohwert 11.0 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.0 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.5 kg)."
+      },
+      {
+        "timestamp": "2026-09-17T15:39:25.817933+00:00",
+        "aktion": "wiegen",
+        "menge": "21.4 kg brutto / 9.4 kg netto",
+        "details": "Brutto 21.4 kg (Rohwert 10.7 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 9.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 4.9 kg). Auffütterung (flüssig) für 17.09. angekündigt."
       }
     ],
     "königin_jahr": "2026",
@@ -835,7 +853,7 @@
   },
   "meta": {
     "qualitaetshinweis": "Der Honig wurde von einem deutschen Landwirt geprüft und die Qualität als sehr gut eingestuft.",
-    "letzte_aktualisierung": "2026-09-08",
+    "letzte_aktualisierung": "2026-09-17",
     "tara": {
       "zarge_mit_raehmchen": 6.2,
       "eine_zarge_mit_boden_deckel": 12.0,
