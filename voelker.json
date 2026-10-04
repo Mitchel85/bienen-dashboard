@@ -6,7 +6,7 @@
     "rasse": "Carnica",
     "königin_gezeichnet": "2025-05",
     "letzte_varroa_behandlung": "2026-09-08",
-    "letzte_fütterung": "2026-08-20",
+    "letzte_fütterung": "2026-10-04",
     "besondere_hinweise": "",
     "logs": [
       {
@@ -290,6 +290,24 @@
         "aktion": "wiegen",
         "menge": "22.0 kg brutto / 10.0 kg netto",
         "details": "Brutto 22.0 kg (Rohwert 11.0 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.0 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.5 kg). Auffütterung (flüssig) für 17.09. angekündigt."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "fütterung",
+        "menge": "~9.3 kg",
+        "details": "Futterbehälter leer entnommen. Gesamtmenge von 28 kg Sirup (gleichmäßig auf alle 3 Völker verteilt, ca. 9,3 kg pro Volk) vollständig aufgefressen und abgenommen."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "konfiguration",
+        "menge": "1 BR + 1 leere Zarge",
+        "details": "Aufbau: 1 Brutzarge (unten) + Trenneinschub + 1 leere Zarge (oben). Flugloch zum Schutz gegen aktive Wespen und Räuberei auf Daumenbreite verengt."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "wiegen",
+        "menge": "31.0 kg brutto / 14.5 kg netto",
+        "details": "Brutto 31.0 kg (Rohwert 15.5 kg × 2 an einem Rand gemessen). Tara 16.5 kg (1 BR 12.0 kg + leere Zarge & Trenner 4.5 kg) → Netto 14.5 kg. Reiner Futtervorrat ca. 12.0 kg (optimal eingewintert)."
       }
     ],
     "königin_jahr": "2025",
@@ -302,7 +320,7 @@
     "rasse": "Buckfast",
     "königin_gezeichnet": "2025-07",
     "letzte_varroa_behandlung": "2026-09-08",
-    "letzte_fütterung": "2026-08-20",
+    "letzte_fütterung": "2026-10-04",
     "besondere_hinweise": "2x geschwärmt, 1x zurückgekommen",
     "logs": [
       {
@@ -598,6 +616,24 @@
         "aktion": "wiegen",
         "menge": "24.4 kg brutto / 12.4 kg netto",
         "details": "Brutto 24.4 kg (Rohwert 12.2 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 12.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 7.9 kg). Auffütterung (flüssig) für 17.09. angekündigt."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "fütterung",
+        "menge": "~9.3 kg",
+        "details": "Futterbehälter leer entnommen. Gesamtmenge von 28 kg Sirup (gleichmäßig auf alle 3 Völker verteilt, ca. 9,3 kg pro Volk) vollständig aufgefressen und abgenommen."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "konfiguration",
+        "menge": "1 BR + 1 leere Zarge",
+        "details": "Aufbau: 1 Brutzarge (unten) + Trenneinschub + 1 leere Zarge (oben). Flugloch zum Schutz gegen aktive Wespen und Räuberei auf Daumenbreite verengt."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "wiegen",
+        "menge": "32.6 kg brutto / 16.1 kg netto",
+        "details": "Brutto 32.6 kg (Rohwert 16.3 kg × 2 an einem Rand gemessen). Tara 16.5 kg (1 BR 12.0 kg + leere Zarge & Trenner 4.5 kg) → Netto 16.1 kg. Reiner Futtervorrat ca. 13.5 kg (sehr stark eingewintert)."
       }
     ],
     "königin_jahr": "2026 (nach Schwarm)",
@@ -610,7 +646,7 @@
     "rasse": "unbekannt",
     "königin_gezeichnet": "",
     "letzte_varroa_behandlung": "2026-09-08",
-    "letzte_fütterung": "2026-08-20",
+    "letzte_fütterung": "2026-10-04",
     "besondere_hinweise": "Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt",
     "logs": [
       {
@@ -846,6 +882,24 @@
         "aktion": "wiegen",
         "menge": "21.4 kg brutto / 9.4 kg netto",
         "details": "Brutto 21.4 kg (Rohwert 10.7 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 9.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 4.9 kg). Auffütterung (flüssig) für 17.09. angekündigt."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "fütterung",
+        "menge": "~9.3 kg",
+        "details": "Futterbehälter leer entnommen. Gesamtmenge von 28 kg Sirup (gleichmäßig auf alle 3 Völker verteilt, ca. 9,3 kg pro Volk) vollständig aufgefressen und abgenommen."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "konfiguration",
+        "menge": "1 BR + 1 leere Zarge",
+        "details": "Aufbau: 1 Brutzarge (unten) + Trenneinschub + 1 leere Zarge (oben). Flugloch zum Schutz gegen aktive Wespen und Räuberei auf Daumenbreite verengt."
+      },
+      {
+        "timestamp": "2026-10-04T16:11:59.016384+00:00",
+        "aktion": "wiegen",
+        "menge": "30.0 kg brutto / 13.5 kg netto",
+        "details": "Brutto 30.0 kg (Rohwert 15.0 kg × 2 an einem Rand gemessen). Tara 16.5 kg (1 BR 12.0 kg + leere Zarge & Trenner 4.5 kg) → Netto 13.5 kg. Reiner Futtervorrat ca. 11.0 kg (gut eingewintert)."
       }
     ],
     "königin_jahr": "2026",
