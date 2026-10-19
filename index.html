@@ -13,9 +13,9 @@ h1 { color: #d97706; margin: 0 0 6px; font-size: 2.2rem; }
 .subtitle { color: #6b7280; font-size: 0.95rem; }
 .btn-group { display: flex; gap: 8px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
 .btn { padding: 9px 18px; border: none; border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
-.btn-csv { background: #10b981; color: #fff; } .btn-csv:hover { background: #059669; }
-.btn-txt { background: #f59e0b; color: #fff; } .btn-txt:hover { background: #d97706; }
-.btn-json { background: #6366f1; color: #fff; } .btn-json:hover { background: #4f46e5; }
+.btn-csv { background: #047857; color: #fff; } .btn-csv:hover { background: #065f46; }
+.btn-txt { background: #b45309; color: #fff; } .btn-txt:hover { background: #92400e; }
+.btn-json { background: #4338ca; color: #fff; } .btn-json:hover { background: #3730a3; }
 
 /* Stats Row */
 .stats { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -27,6 +27,7 @@ h1 { color: #d97706; margin: 0 0 6px; font-size: 2.2rem; }
 .card { background: white; border-radius: 14px; padding: 20px 24px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
 .card h2 { margin: 0 0 16px; font-size: 1.2rem; color: #374151; display: flex; align-items: center; gap: 8px; }
 .table-wrap { overflow-x: auto; }
+.table-hint { display: none; }
 table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 900px; }
 th { background: #f8fafc; text-align: left; padding: 12px 14px; font-weight: 600; color: #4b5563; border-bottom: 2px solid #e5e7eb; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.3px; }
 td { padding: 12px 14px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
@@ -34,18 +35,18 @@ tr:hover { background: #fffbeb; }
 .volk-name { font-weight: 700; color: #1f2937; font-size: 1rem; }
 .volk-id { display: inline-block; background: #e0e7ff; color: #3730a3; padding: 2px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
 .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
-.kg-ok { color: #059669; } .kg-warn { color: #d97706; } .kg-crit { color: #dc2626; }
+.kg-ok { color: #047857; } .kg-warn { color: #b45309; } .kg-crit { color: #b91c1c; }
 
 /* Quick-Stats Mini-Badges */
 .qstats { display: flex; gap: 4px; flex-wrap: wrap; }
-.qstat { font-size: 0.7rem; padding: 2px 6px; border-radius: 8px; white-space: nowrap; opacity: 0.85; }
+.qstat { font-size: 0.7rem; padding: 2px 6px; border-radius: 8px; white-space: nowrap; }
 
 /* Chronik */
 .chronicle { max-height: 600px; overflow-y: auto; }
 .ch-entry { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f3f4f6; }
 .ch-icon { font-size: 1.2rem; width: 28px; text-align: center; flex-shrink: 0; }
 .ch-body { flex: 1; }
-.ch-meta { font-size: 0.75rem; color: #9ca3af; }
+.ch-meta { font-size: 0.75rem; color: #6b7280; }
 .ch-volk { font-size: 0.75rem; font-weight: 700; }
 .ch-action { font-size: 0.85rem; font-weight: 600; color: #374151; }
 .ch-detail { font-size: 0.8rem; color: #6b7280; margin-top: 2px; }
@@ -54,888 +55,39 @@ tr:hover { background: #fffbeb; }
 .legend { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
 .leg-item { font-size: 0.75rem; padding: 3px 10px; border-radius: 12px; background: #f3f4f6; display: flex; align-items: center; gap: 4px; }
 
-footer { text-align: center; margin-top: 30px; color: #9ca3af; font-size: 0.8rem; }
-@media (max-width: 768px) { h1 { font-size: 1.5rem; } .stat-card { min-width: 100px; } }
+footer { text-align: center; margin-top: 30px; color: #6b7280; font-size: 0.8rem; }
+@media (max-width: 768px) { h1 { font-size: 1.5rem; } .stat-card { min-width: 100px; } .table-hint { display: block; font-size: 0.75rem; color: #6b7280; text-align: center; margin-top: 6px; } }
 </style>
 </head>
 <body>
 <div class="container">
 <header>
     <h1>🐝 Bienenvölker Dashboard</h1>
-    <div class="subtitle">Stand 04.10.2026 — 3 Völker, 144 Protokolle</div>
+    <div class="subtitle" id="dash-subtitle">Stand wird geladen…</div>
     <div class="btn-group">
         <button class="btn btn-csv" onclick="downloadCSV()">📥 CSV (Excel)</button>
         <button class="btn btn-txt" onclick="downloadTXT()">📝 Text-Bericht</button>
     </div>
 </header>
 
-<div class="stats">
-    <div class="stat-card"><h3>Beuten</h3><div class="stat-value">3</div></div>
-<div class="stat-card"><h3>Roter Stock</h3><div class="stat-value">31.0 kg</div><small style="color:#6b7280">Netto 14.5 kg</small></div>
-<div class="stat-card"><h3>Grüner Stock</h3><div class="stat-value">32.6 kg</div><small style="color:#6b7280">Netto 16.1 kg</small></div>
-<div class="stat-card"><h3>Gelber Stock</h3><div class="stat-value">30.0 kg</div><small style="color:#6b7280">Netto 13.5 kg</small></div>
-</div>
-
+<div class="stats" id="dash-stats"></div>
 <div class="card">
     <h2>📊 Volksübersicht</h2>
     <div class="table-wrap">
     <table>
     <thead><tr><th>ID</th><th>Volk</th><th>Gewicht</th><th>Aufbau</th><th>👑 Königin</th><th>Letzte Aktionen</th><th>Hinweise</th></tr></thead>
-    <tbody>
-<tr>
-            <td><span class="volk-id">1</span></td>
-            <td><span class="volk-name">Roter Stock</span><br><small style="color:#9ca3af">Garagen-Dach, Ludwigsfelde</small></td>
-            <td><span class="kg-ok">31.0 kg</span><br><small style="color:#9ca3af">Netto 14.5 kg</small></td>
-            <td>1 BR</td>
-            <td style="font-weight:600">2025</td>
-            <td><div class="qstats"><span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 2026-10-04</span> <span class="qstat" style="background:#ef444420;color:#ef4444">🩺 2026-09-08</span> <span class="qstat" style="background:#f9731620;color:#f97316">🚫 2026-05-30</span> <span class="qstat" style="background:#6366f120;color:#6366f1">🔍 2026-07-29</span> <span class="qstat" style="background:#8b5cf620;color:#8b5cf6">👑 2026-05-30</span> </div></td>
-            <td style="max-width:200px"></td>
-        </tr>
-<tr>
-            <td><span class="volk-id">2</span></td>
-            <td><span class="volk-name">Grüner Stock</span><br><small style="color:#9ca3af">Garagen-Dach, Ludwigsfelde</small></td>
-            <td><span class="kg-ok">32.6 kg</span><br><small style="color:#9ca3af">Netto 16.1 kg</small></td>
-            <td>1 BR</td>
-            <td style="font-weight:600">2026 (nach Schwarm)</td>
-            <td><div class="qstats"><span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 2026-10-04</span> <span class="qstat" style="background:#ef444420;color:#ef4444">🩺 2026-09-08</span> <span class="qstat" style="background:#f9731620;color:#f97316">🚫 2026-05-30</span> <span class="qstat" style="background:#6366f120;color:#6366f1">🔍 2026-07-29</span> <span class="qstat" style="background:#8b5cf620;color:#8b5cf6">👑 2026-05-30</span> </div></td>
-            <td style="max-width:200px">2x geschwärmt, 1x zurückgekommen</td>
-        </tr>
-<tr>
-            <td><span class="volk-id">3</span></td>
-            <td><span class="volk-name">Gelber Stock</span><br><small style="color:#9ca3af">Garagen-Dach, Ludwigsfelde</small></td>
-            <td><span class="kg-ok">30.0 kg</span><br><small style="color:#9ca3af">Netto 13.5 kg</small></td>
-            <td>1 BR</td>
-            <td style="font-weight:600">2026</td>
-            <td><div class="qstats"><span class="qstat" style="background:#f59e0b20;color:#f59e0b">🍯 2026-10-04</span> <span class="qstat" style="background:#ef444420;color:#ef4444">🩺 2026-09-08</span> <span class="qstat" style="background:#f9731620;color:#f97316">🚫 2026-05-30</span> <span class="qstat" style="background:#6366f120;color:#6366f1">🔍 2026-07-29</span> <span class="qstat" style="background:#8b5cf620;color:#8b5cf6">👑 2026-05-30</span> </div></td>
-            <td style="max-width:200px">Ableger (26.04. aus Volk 1&2), mit Schwarm von Grün verstärkt</td>
-        </tr>
-</tbody></table></div>
+    <tbody id="volk-tbody"></tbody></table></div>
+    <div class="table-hint">↔ Tabelle horizontal scrollbar</div>
 </div>
 
 <!-- Chronik -->
 <div class="card">
-    <h2>📜 Chronik (alle Einträge)</h2>
-    <div class="chronicle">
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Roter Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(~9.3 kg)</span>
-        <div class="ch-detail">Futterbehälter leer entnommen. Gesamtmenge von 28 kg Sirup (gleichmäßig auf alle 3 Völker verteilt, ca. 9,3 kg pro Volk) vollständig aufgefressen und abgenommen.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Roter Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 BR + 1 leere Zarge)</span>
-        <div class="ch-detail">Aufbau: 1 Brutzarge (unten) + Trenneinschub + 1 leere Zarge (oben). Flugloch zum Schutz gegen aktive Wespen und Räuberei auf Daumenbreite verengt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Roter Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(31.0 kg brutto / 14.5 kg netto)</span>
-        <div class="ch-detail">Brutto 31.0 kg (Rohwert 15.5 kg × 2 an einem Rand gemessen). Tara 16.5 kg (1 BR 12.0 kg + leere Zarge & Trenner 4.5 kg) → Netto 14.5 kg. Reiner Futtervorrat ca. 12.0 kg (optimal eingewintert).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(~9.3 kg)</span>
-        <div class="ch-detail">Futterbehälter leer entnommen. Gesamtmenge von 28 kg Sirup (gleichmäßig auf alle 3 Völker verteilt, ca. 9,3 kg pro Volk) vollständig aufgefressen und abgenommen.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 BR + 1 leere Zarge)</span>
-        <div class="ch-detail">Aufbau: 1 Brutzarge (unten) + Trenneinschub + 1 leere Zarge (oben). Flugloch zum Schutz gegen aktive Wespen und Räuberei auf Daumenbreite verengt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(32.6 kg brutto / 16.1 kg netto)</span>
-        <div class="ch-detail">Brutto 32.6 kg (Rohwert 16.3 kg × 2 an einem Rand gemessen). Tara 16.5 kg (1 BR 12.0 kg + leere Zarge & Trenner 4.5 kg) → Netto 16.1 kg. Reiner Futtervorrat ca. 13.5 kg (sehr stark eingewintert).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(~9.3 kg)</span>
-        <div class="ch-detail">Futterbehälter leer entnommen. Gesamtmenge von 28 kg Sirup (gleichmäßig auf alle 3 Völker verteilt, ca. 9,3 kg pro Volk) vollständig aufgefressen und abgenommen.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 BR + 1 leere Zarge)</span>
-        <div class="ch-detail">Aufbau: 1 Brutzarge (unten) + Trenneinschub + 1 leere Zarge (oben). Flugloch zum Schutz gegen aktive Wespen und Räuberei auf Daumenbreite verengt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">04.10.26 16:11</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(30.0 kg brutto / 13.5 kg netto)</span>
-        <div class="ch-detail">Brutto 30.0 kg (Rohwert 15.0 kg × 2 an einem Rand gemessen). Tara 16.5 kg (1 BR 12.0 kg + leere Zarge & Trenner 4.5 kg) → Netto 13.5 kg. Reiner Futtervorrat ca. 11.0 kg (gut eingewintert).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">17.09.26 15:39</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Roter Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(22.0 kg brutto / 10.0 kg netto)</span>
-        <div class="ch-detail">Brutto 22.0 kg (Rohwert 11.0 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.0 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.5 kg). Auffütterung (flüssig) für 17.09. angekündigt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">17.09.26 15:39</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(24.4 kg brutto / 12.4 kg netto)</span>
-        <div class="ch-detail">Brutto 24.4 kg (Rohwert 12.2 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 12.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 7.9 kg). Auffütterung (flüssig) für 17.09. angekündigt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">17.09.26 15:39</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(21.4 kg brutto / 9.4 kg netto)</span>
-        <div class="ch-detail">Brutto 21.4 kg (Rohwert 10.7 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 9.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 4.9 kg). Auffütterung (flüssig) für 17.09. angekündigt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">08.09.26 16:35</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(22.4 kg brutto / 10.4 kg netto)</span>
-        <div class="ch-detail">Brutto 22.4 kg (Rohwert 11.2 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.4 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.9 kg).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">08.09.26 16:35</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(24.8 kg brutto / 12.8 kg netto)</span>
-        <div class="ch-detail">Brutto 24.8 kg (Rohwert 12.4 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 12.8 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 8.3 kg).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">08.09.26 16:35</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(22.0 kg brutto / 10.0 kg netto)</span>
-        <div class="ch-detail">Brutto 22.0 kg (Rohwert 11.0 kg × 2). Bei 1 Zarge (Tara 12.0 kg) → Netto 10.0 kg. (Falls leere Verdunster-Zarge noch aufgesetzt: Tara 16.5 kg → Netto 5.5 kg).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">08.09.26 16:31</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        <span style="font-size:0.8rem;color:#6b7280">(8 Milben)</span>
-        <div class="ch-detail">Varroa-Einschübe entnommen und ausgezählt: 8 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">08.09.26 16:31</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        <span style="font-size:0.8rem;color:#6b7280">(7 Milben)</span>
-        <div class="ch-detail">Varroa-Einschübe entnommen und ausgezählt: 7 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">08.09.26 16:31</span>
-        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        <span style="font-size:0.8rem;color:#6b7280">(4 Milben)</span>
-        <div class="ch-detail">Varroa-Einschübe entnommen und ausgezählt: 4 Milben nach der 2. Ameisensäure-Behandlung (Start 22.08.).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa kontrolle</span>
-        <span style="font-size:0.8rem;color:#6b7280">(2-3 Milben/Tag)</span>
-        <div class="ch-detail">Varroa-Einschübe entnommen: pro Volk ca. 2-3 Milben pro Tag (niedriger Befall). Zählbretter entfernt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
-        
-        <div class="ch-detail">2. Varroa-Behandlung gestartet: Nassenheider-Verdunster (Ameisensäure). Aufbau: 1 Brutraum + 1 leere Zarge für den Verdunster.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Roter Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        
-        <div class="ch-detail">Futterteig (weiße Beutel) auf den Waben als Reserve während der Ameisensäure-Behandlung (Volk hat zu wenig eingelagert).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(25.2 kg brutto / 8.7 kg netto)</span>
-        <div class="ch-detail">Brutto 25.2 kg (Hälfte gemessen ×2, Rohwert 12.6 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 8.7 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa kontrolle</span>
-        <span style="font-size:0.8rem;color:#6b7280">(2-3 Milben/Tag)</span>
-        <div class="ch-detail">Varroa-Einschübe entnommen: pro Volk ca. 2-3 Milben pro Tag (niedriger Befall). Zählbretter entfernt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
-        
-        <div class="ch-detail">2. Varroa-Behandlung gestartet: Nassenheider-Verdunster (Ameisensäure). Aufbau: 1 Brutraum + 1 leere Zarge für den Verdunster.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        
-        <div class="ch-detail">Futterteig (weiße Beutel) auf den Waben als Reserve während der Ameisensäure-Behandlung (Volk hat zu wenig eingelagert).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(27.6 kg brutto / 11.1 kg netto)</span>
-        <div class="ch-detail">Brutto 27.6 kg (Hälfte gemessen ×2, Rohwert 13.8 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 11.1 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa kontrolle</span>
-        <span style="font-size:0.8rem;color:#6b7280">(2-3 Milben/Tag)</span>
-        <div class="ch-detail">Varroa-Einschübe entnommen: pro Volk ca. 2-3 Milben pro Tag (niedriger Befall). Zählbretter entfernt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
-        
-        <div class="ch-detail">2. Varroa-Behandlung gestartet: Nassenheider-Verdunster (Ameisensäure). Aufbau: 1 Brutraum + 1 leere Zarge für den Verdunster.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        
-        <div class="ch-detail">Futterteig (weiße Beutel) auf den Waben als Reserve während der Ameisensäure-Behandlung (Volk hat zu wenig eingelagert).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">22.08.26 14:49</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(25.8 kg brutto / 9.3 kg netto)</span>
-        <div class="ch-detail">Brutto 25.8 kg (Hälfte gemessen ×2, Rohwert 12.9 kg). Aufbau: 1 Brutraum (mit Rähmchen) + 1 LEERE Zarge (ohne Rähmchen, für Nassenheider) + Boden/Deckel. Tara 16,5 kg = 12,0 kg (1 Zarge mit Boden+Deckel) + 4,5 kg (leere Zarge, Schätzung, nicht gewogen). Nassenheider (~0,3 kg) nicht abgezogen. Netto 9.3 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:30</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Roter Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– doku</span>
-        
-        <div class="ch-detail">Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:30</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– doku</span>
-        
-        <div class="ch-detail">Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:30</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– doku</span>
-        
-        <div class="ch-detail">Nachgetragen (Nutzerangabe): Zugefüttert bei Varroa-Entnahme (02.08.) UND bei Behandlung (Start 23.07.) — jeweils 2 Tüten Apifonda (2 kg) pro Volk.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:15</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Roter Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 kg)</span>
-        <div class="ch-detail">1 Tüte Apifonda (1 kg) — mehr war nicht mehr vorrätig.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:15</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 kg)</span>
-        <div class="ch-detail">1 Tüte Apifonda (1 kg) — mehr war nicht mehr vorrätig.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:15</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 kg)</span>
-        <div class="ch-detail">1 Tüte Apifonda (1 kg) — mehr war nicht mehr vorrätig.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(21 kg brutto / 9 kg netto)</span>
-        <div class="ch-detail">Brutto 21 kg (Hälfte gemessen ×2, Rohwert 10.5 kg). 1 Zarge (Tara 12.0 kg) → Netto 9 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(24 kg brutto / 12 kg netto)</span>
-        <div class="ch-detail">Brutto 24 kg (Hälfte gemessen ×2, Rohwert 12 kg). 1 Zarge (Tara 12.0 kg) → Netto 12 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">20.08.26 20:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(22 kg brutto / 10 kg netto)</span>
-        <div class="ch-detail">Brutto 22 kg (Hälfte gemessen ×2, Rohwert 11 kg). 1 Zarge (Tara 12.0 kg) → Netto 10 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 19:23</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Roter Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(2 kg)</span>
-        <div class="ch-detail">Anfütterung nach Varroa-Behandlung: 2 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 19:23</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 kg)</span>
-        <div class="ch-detail">Anfütterung nach Varroa-Behandlung: 1 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🍯</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 19:23</span>
-        <span class="ch-volk" style="color:#f59e0b">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#f59e0b">– fütterung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(2 kg)</span>
-        <div class="ch-detail">Anfütterung nach Varroa-Behandlung: 2 kg Apifonda (unten aufgeschnitten, direkt auf Oberträger unter Deckel, ohne Futterzarge).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 10:36</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa ende</span>
-        
-        <div class="ch-detail">Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 10:36</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(20 kg brutto / 8.0 kg netto)</span>
-        <div class="ch-detail">Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 10:36</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa ende</span>
-        
-        <div class="ch-detail">Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 10:36</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(24 kg brutto / 12.0 kg netto)</span>
-        <div class="ch-detail">Brutto 24 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 12.0 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 10:36</span>
-        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa ende</span>
-        
-        <div class="ch-detail">Varroa-Behandlung (Ameisensäure 60%) beendet. Aufbau: 1 Brutraum mit Deckel (1 Zarge).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">02.08.26 10:36</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(20 kg brutto / 8.0 kg netto)</span>
-        <div class="ch-detail">Brutto 20 kg (Hälfte gemessen ×2). 1 Zarge (Tara 12.0 kg) → Netto 8.0 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(25 kg)</span>
-        <div class="ch-detail">Gewicht heute: 25 kg (1 Brutraum). Nach Honigernte eingeengt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        <span style="font-size:0.8rem;color:#6b7280">(20 Milben)</span>
-        <div class="ch-detail">Einschub während AS-Behandlung eingelegt (suboptimal). Ausgezählt: 20 Milben. Im Kontext der laufenden Behandlung unbedenklich.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– behandlung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(+125 ml AS nachgefüllt)</span>
-        <div class="ch-detail">125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🔍</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#6366f1">│ Roter Stock</span>
-        <span class="ch-action" style="color:#6366f1">– beobachtung</span>
-        
-        <div class="ch-detail">Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(28 kg)</span>
-        <div class="ch-detail">Gewicht heute: 28 kg (1 Brutraum). Schwerstes Volk, +3 kg zu Rot/Gelb.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        <span style="font-size:0.8rem;color:#6b7280">(10 Milben)</span>
-        <div class="ch-detail">Einschub während AS-Behandlung eingelegt. Ausgezählt: 10 Milben. Sehr niedrig, Behandlung wirkt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– behandlung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(+125 ml AS nachgefüllt)</span>
-        <div class="ch-detail">125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🔍</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#6366f1">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#6366f1">– beobachtung</span>
-        
-        <div class="ch-detail">Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(25 kg)</span>
-        <div class="ch-detail">Gewicht heute: 25 kg (1 Brutraum).</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa diagnose</span>
-        <span style="font-size:0.8rem;color:#6b7280">(⏳ ausstehend)</span>
-        <div class="ch-detail">Einschub entnommen. Auszählung noch nicht erfolgt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#ef4444">– behandlung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(+125 ml AS nachgefüllt)</span>
-        <div class="ch-detail">125 ml Ameisensäure waren verdampft. Nachgefüllt. Kleinster Verdampfer aufgesetzt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🔍</div>
-    <div class="ch-body">
-        <span class="ch-meta">29.07.26 17:00</span>
-        <span class="ch-volk" style="color:#6366f1">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#6366f1">– beobachtung</span>
-        
-        <div class="ch-detail">Bienenbart am äußeren Rand (Sammeln tagsüber). Zusätzliche Wassertränke aufgestellt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">23.07.26 16:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Roter Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(120 ml Ameisensäure (60%))</span>
-        <div class="ch-detail">Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">23.07.26 16:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(120 ml Ameisensäure (60%))</span>
-        <div class="ch-detail">Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🩺</div>
-    <div class="ch-body">
-        <span class="ch-meta">23.07.26 16:00</span>
-        <span class="ch-volk" style="color:#ef4444">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#ef4444">– varroa behandlung</span>
-        <span style="font-size:0.8rem;color:#6b7280">(120 ml Ameisensäure (60%))</span>
-        <div class="ch-detail">Varroa-Behandlung mit Nassenheider-Verdunster gestartet. 120 ml Ameisensäure (60%) in den Verdunster gegeben. Behandlung läuft.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– honig ernte</span>
-        <span style="font-size:0.8rem;color:#6b7280">(18 kg (gesamt aus 3 Völkern))</span>
-        <div class="ch-detail">Honig geerntet. Volk 1 (Roter Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 22.5 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Roter Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 Brutraum)</span>
-        <div class="ch-detail">Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(22.5 kg)</span>
-        <div class="ch-detail">Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 22.5 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– honig ernte</span>
-        <span style="font-size:0.8rem;color:#6b7280">(18 kg (gesamt aus 3 Völkern))</span>
-        <div class="ch-detail">Honig geerntet. Volk 2 (Grüner Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 26 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 Brutraum)</span>
-        <div class="ch-detail">Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(26 kg)</span>
-        <div class="ch-detail">Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 26 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– honig ernte</span>
-        <span style="font-size:0.8rem;color:#6b7280">(18 kg (gesamt aus 3 Völkern))</span>
-        <div class="ch-detail">Honig geerntet. Volk 3 (Gelber Stock). Alle 3 Völker auf 1 Brutraum reduziert. Gewicht nach Ernte: 23 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">🏗️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#3b82f6">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#3b82f6">– konfiguration</span>
-        <span style="font-size:0.8rem;color:#6b7280">(1 Brutraum)</span>
-        <div class="ch-detail">Volk auf 1 Brutraum reduziert (vorher 2 Bruträume + Honigraum). Nach Honigernte eingeengt.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">19.07.26 15:00</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(23 kg)</span>
-        <div class="ch-detail">Gewichtsmessung nach Honigernte und Einengung auf 1 Brutraum: 23 kg.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">01.07.26 17:28</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(58 kg)</span>
-        <div class="ch-detail">Wiegen: 58 kg brutto (beide Seiten, je 29 kg pro Seite)</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">01.07.26 17:28</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(56 kg)</span>
-        <div class="ch-detail">Wiegen: 56 kg brutto (beide Seiten, je 28 kg pro Seite)</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">01.07.26 17:28</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(54 kg)</span>
-        <div class="ch-detail">Wiegen: 54 kg brutto (beide Seiten, je 27 kg pro Seite)</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">11.06.26 19:48</span>
-        <span class="ch-volk" style="color:#10b981">│ Roter Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(54 kg)</span>
-        <div class="ch-detail">Reguläre Gewichtsmessung</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">11.06.26 19:48</span>
-        <span class="ch-volk" style="color:#10b981">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(46 kg)</span>
-        <div class="ch-detail">Reguläre Gewichtsmessung</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">⚖️</div>
-    <div class="ch-body">
-        <span class="ch-meta">11.06.26 19:48</span>
-        <span class="ch-volk" style="color:#10b981">│ Gelber Stock</span>
-        <span class="ch-action" style="color:#10b981">– wiegen</span>
-        <span style="font-size:0.8rem;color:#6b7280">(48 kg)</span>
-        <div class="ch-detail">Reguläre Gewichtsmessung</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">👑</div>
-    <div class="ch-body">
-        <span class="ch-meta">30.05.26 17:14</span>
-        <span class="ch-volk" style="color:#8b5cf6">│ Roter Stock</span>
-        <span class="ch-action" style="color:#8b5cf6">– königin vermerkt</span>
-        
-        <div class="ch-detail">Königin dokumentiert: Königin 2025.</div>
-    </div>
-</div>
-<div class="ch-entry">
-    <div class="ch-icon">👑</div>
-    <div class="ch-body">
-        <span class="ch-meta">30.05.26 17:14</span>
-        <span class="ch-volk" style="color:#8b5cf6">│ Grüner Stock</span>
-        <span class="ch-action" style="color:#8b5cf6">– königin vermerkt</span>
-        
-        <div class="ch-detail">Königin dokumentiert: Königin 2026 (nach 2. Schwarm).</div>
-    </div>
-</div>
-<p style="text-align:center;color:#9ca3af">… und 64 weitere Einträge (komplett im CSV-Download)</p>    </div>
-    <div class="legend">
-<span class="leg-item" style="background:#6366f115;color:#6366f1">🔍 Kontrolle</span>
-<span class="leg-item" style="background:#f59e0b15;color:#f59e0b">🍯 Fütterung</span>
-<span class="leg-item" style="background:#ef444415;color:#ef4444">🩺 Varroa</span>
-<span class="leg-item" style="background:#8b5cf615;color:#8b5cf6">👑 Königin</span>
-<span class="leg-item" style="background:#10b98115;color:#10b981">⚖️ Wiegen</span>
-<span class="leg-item" style="background:#3b82f615;color:#3b82f6">🏗️ Aufbau</span>
-<span class="leg-item" style="background:#f9731615;color:#f97316">🚫 Schwarmkontrolle</span>
-<span class="leg-item" style="background:#ec489915;color:#ec4899">✂️ Drohnenbrut</span>
-<span class="leg-item" style="background:#14b8a615;color:#14b8a6">🐝 Ableger</span>
-<span class="leg-item" style="background:#dc262615;color:#dc2626">💊 Gesundheit</span>
-<span class="leg-item" style="background:#ca8a0415;color:#ca8a04">🍯 Ernte</span>
-<span class="leg-item" style="background:#6b728015;color:#6b7280">📸 Dokumentation</span>
-<span class="leg-item" style="background:#9ca3af15;color:#9ca3af">📋 Planung</span>
-<span class="leg-item" style="background:#0ea5e915;color:#0ea5e9">🌤️ Wetter</span>
-    </div>
+    <h2>📜 Chronik (neueste 80)</h2>
+    <div class="chronicle" id="chronicle-list"></div>
+    <div class="legend" id="dash-legend"></div>
 </div>
 
-<footer>Imker‑Begleiter via Hermes Agent | Daten: voelker.json | Stand 04.10.2026 | 144 Protokolle</footer>
+<footer id="dash-footer"></footer>
 </div>
 
 <script>
@@ -1875,11 +1027,50 @@ const VOELKER_DATA = {
   }
 };
 
+let DASH_DATA = VOELKER_DATA; // eingebetteter Fallback (Offline / file://)
+
 const CATEGORY_MAP = {"fütter": "fuetterung", "zucker": "fuetterung", "futter": "fuetterung", "apifonda": "fuetterung", "varroa": "varroa", "milbe": "varroa", "windel": "varroa", "milchsäure": "varroa", "ameisensäure": "varroa", "königin": "koenigin", "gezeichnet": "koenigin", "weisellos": "koenigin", "weiseln": "koenigin", "wiegen": "wiegen", "gewicht": "wiegen", "kg": "wiegen", "zarge": "konfiguration", "brutraum": "konfiguration", "honigraum": "konfiguration", "erweitert": "konfiguration", "schwarm": "schwarm", "schwarmzelle": "schwarm", "ableger": "ableger", "drohnenbrut": "drohnenbrut", "drohn": "drohnenbrut", "foto": "foto", "bild": "foto", "kontrolle": "kontrolle", "durchsicht": "kontrolle", "besetzt": "kontrolle", "diagnose": "gesundheit", "krank": "gesundheit", "tot": "gesundheit", "ernte": "ernte", "honig": "ernte", "geschleudert": "ernte", "planung": "planung", "todo": "planung", "wetter": "wetter", "temperatur": "wetter", "verstärkt": "ableger", "gebildet": "ableger", "zurück": "schwarm"};
 const CAT_NAMES = {"kontrolle": "Kontrolle", "fuetterung": "Fütterung", "varroa": "Varroa", "koenigin": "Königin", "wiegen": "Wiegen", "konfiguration": "Aufbau", "schwarm": "Schwarmkontrolle", "drohnenbrut": "Drohnenbrut", "ableger": "Ableger", "gesundheit": "Gesundheit", "ernte": "Ernte", "foto": "Dokumentation", "planung": "Planung", "wetter": "Wetter"};
 
+// Aktion hat Vorrang: Details dürfen die Kategorie nur ergänzen, nicht überschreiben.
+const ACTION_MAP = {
+    'wiegen': 'wiegen',
+    'kontrollieren': 'kontrolle', 'beobachtung': 'kontrolle',
+    'fütterung': 'fuetterung', 'füttern': 'fuetterung', 'füttern & kontrollieren': 'fuetterung',
+    'varroa_diagnose': 'varroa', 'varroa_behandlung': 'varroa', 'varroa_kontrolle': 'varroa',
+    'varroa_ende': 'varroa', 'windel_analyse': 'varroa',
+    'königin_vermerkt': 'koenigin',
+    'konfiguration': 'konfiguration',
+    'schwarm_abgang': 'schwarm', 'schwarmzellen_brechen': 'schwarm',
+    'ableger_gebildet': 'ableger', 'verstärkt': 'ableger',
+    'drohnenbrut_schneiden': 'drohnenbrut',
+    'foto_analyse': 'foto', 'doku': 'foto',
+    'honig_ernte': 'ernte',
+    'planung': 'planung', 'todo': 'planung'
+};
+
+const CAT_STYLE = {
+    kontrolle:     { icon: '🔍', color: '#4338ca' },
+    fuetterung:    { icon: '🍯', color: '#b45309' },
+    varroa:        { icon: '🩺', color: '#b91c1c' },
+    koenigin:      { icon: '👑', color: '#6d28d9' },
+    wiegen:        { icon: '⚖️', color: '#047857' },
+    konfiguration: { icon: '🏗️', color: '#1d4ed8' },
+    schwarm:       { icon: '🚫', color: '#c2410c' },
+    drohnenbrut:   { icon: '✂️', color: '#be185d' },
+    ableger:       { icon: '🐝', color: '#0f766e' },
+    gesundheit:    { icon: '💊', color: '#b91c1c' },
+    ernte:         { icon: '🍯', color: '#854d0e' },
+    foto:          { icon: '📸', color: '#6b7280' },
+    planung:       { icon: '📋', color: '#4b5563' },
+    wetter:        { icon: '🌤️', color: '#0369a1' }
+};
+
 function getCat(aktion, details) {
-    const text = (aktion + ' ' + (details||'')).toLowerCase();
+    const a = (aktion || '').trim().toLowerCase();
+    if (ACTION_MAP[a]) return ACTION_MAP[a];
+    // Fallback: Stichwortsuche über Aktion + Details (wie bisher)
+    const text = (a + ' ' + (details || '')).toLowerCase();
     for (const [kw, cat] of Object.entries(CATEGORY_MAP)) {
         if (text.includes(kw)) return cat;
     }
@@ -1896,7 +1087,7 @@ function escapeCSV(v) { if(!v) return ''; return '"'+String(v).replace(/"/g,'""'
 
 function flattenLogs() {
     let rows = [];
-    for (const [id, v] of Object.entries(VOELKER_DATA)) {
+    for (const [id, v] of Object.entries(DASH_DATA)) {
         if (id === 'meta') continue;
         for (const log of (v.logs||[])) {
             rows.push({
@@ -1948,6 +1139,197 @@ function downloadTXT() {
     const blob = new Blob([txt], {type:'text/plain;charset=utf-8'});
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
     a.download = 'bienen-protokoll-'+new Date().toISOString().substr(0,10)+'.txt'; a.click(); URL.revokeObjectURL(a.href);
+}
+
+/* ── Rendering (Daten aus DASH_DATA) ─────────────────────────── */
+const CHRONICLE_LIMIT = 80;
+
+function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function allVolks() {
+    return Object.entries(DASH_DATA)
+        .filter(([id]) => id !== 'meta')
+        .sort((a, b) => (parseInt(a[0], 10) || 0) - (parseInt(b[0], 10) || 0));
+}
+
+function parseWeight(menge) {
+    if (!menge) return { brutto: null, netto: null };
+    const m = String(menge);
+    const b = m.match(/(\d[\d.,]*)\s*kg\s+brutto/i);
+    const n = m.match(/(\d[\d.,]*)\s*kg\s+netto/i);
+    if (!b && !n) {
+        const any = m.match(/(\d[\d.,]*)\s*kg/i);
+        return { brutto: any ? any[1] : null, netto: null };
+    }
+    return { brutto: b ? b[1] : null, netto: n ? n[1] : null };
+}
+
+function latestWiegung(v) {
+    const logs = (v.logs || []).filter(l => l.aktion === 'wiegen' && parseWeight(l.menge).brutto);
+    return logs.length ? logs[logs.length - 1] : null;
+}
+
+function lastLogDate(v, aktion) {
+    const logs = (v.logs || []).filter(l => l.aktion === aktion && l.timestamp);
+    return logs.length ? logs[logs.length - 1].timestamp.slice(0, 10) : null;
+}
+
+function lastKonfig(v) {
+    const logs = (v.logs || []).filter(l => l.aktion === 'konfiguration' && l.menge);
+    return logs.length ? logs[logs.length - 1].menge : (v.konfiguration || '—');
+}
+
+function latestTimestamp() {
+    let latest = '';
+    for (const [id, v] of Object.entries(DASH_DATA)) {
+        if (id === 'meta') continue;
+        for (const l of (v.logs || [])) {
+            if (l.timestamp && l.timestamp > latest) latest = l.timestamp;
+        }
+    }
+    return latest;
+}
+
+function fmtShort(ts) { // 04.10.26 16:11
+    if (!ts) return '';
+    try {
+        const d = new Date(ts);
+        if (isNaN(d.getTime())) return String(ts).slice(0, 16).replace('T', ' ');
+        return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: '2-digit' }) + ' ' + d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+    } catch (e) { return String(ts); }
+}
+
+function fmtLong(ts) { // 04.10.2026
+    if (!ts) return '';
+    try {
+        const d = new Date(ts);
+        if (isNaN(d.getTime())) return String(ts).slice(0, 10);
+        return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    } catch (e) { return String(ts).slice(0, 10); }
+}
+
+function renderAll() {
+    const volks = allVolks();
+    const totalLogs = volks.reduce((s, [, v]) => s + (v.logs || []).length, 0);
+    const stand = fmtLong(latestTimestamp());
+
+    document.getElementById('dash-subtitle').textContent = 'Stand ' + stand + ' — ' + volks.length + ' Völker, ' + totalLogs + ' Protokolle';
+    document.getElementById('dash-footer').textContent = 'Imker‑Begleiter via Hermes Agent | Daten: voelker.json | Stand ' + stand + ' | ' + totalLogs + ' Protokolle';
+
+    // Stat-Cards
+    let stats = '<div class="stat-card"><h3>Beuten</h3><div class="stat-value">' + volks.length + '</div></div>';
+    for (const [id, v] of volks) {
+        const w = latestWiegung(v);
+        const p = parseWeight(w ? w.menge : '');
+        stats += '<div class="stat-card"><h3>' + esc(v.name || ('Volk ' + id)) + '</h3>';
+        stats += '<div class="stat-value">' + esc(p.brutto || '—') + ' kg</div>';
+        if (p.netto) stats += '<small style="color:#6b7280">Netto ' + esc(p.netto) + ' kg</small>';
+        stats += '</div>';
+    }
+    document.getElementById('dash-stats').innerHTML = stats;
+
+    // Tabelle
+    const badges = [
+        ['🍯', '#b45309', '#f59e0b20', (v) => v.letzte_fütterung || lastLogDate(v, 'fütterung')],
+        ['🩺', '#b91c1c', '#ef444420', (v) => v.letzte_varroa_behandlung || lastLogDate(v, 'varroa_behandlung')],
+        ['🚫', '#c2410c', '#f9731620', (v) => lastLogDate(v, 'schwarmzellen_brechen')],
+        ['🔍', '#4338ca', '#6366f120', (v) => lastLogDate(v, 'beobachtung')],
+        ['👑', '#6d28d9', '#8b5cf620', (v) => lastLogDate(v, 'königin_vermerkt')]
+    ];
+    let rows = '';
+    for (const [id, v] of volks) {
+        const w = latestWiegung(v);
+        const p = parseWeight(w ? w.menge : '');
+        const nettoNum = p.netto ? parseFloat(String(p.netto).replace(',', '.')) : null;
+        const kgCls = nettoNum === null ? 'kg-ok' : (nettoNum >= 12 ? 'kg-ok' : (nettoNum >= 6 ? 'kg-warn' : 'kg-crit'));
+        rows += '<tr>';
+        rows += '<td><span class="volk-id">' + esc(id) + '</span></td>';
+        rows += '<td><span class="volk-name">' + esc(v.name || ('Volk ' + id)) + '</span><br><small style="color:#6b7280">' + esc(v.standort || '') + '</small></td>';
+        rows += '<td>';
+        if (p.brutto) {
+            rows += '<span class="' + kgCls + '">' + esc(p.brutto) + ' kg</span><br><small style="color:#6b7280">Netto ' + esc(p.netto || '—') + ' kg</small>';
+        } else {
+            rows += '—';
+        }
+        rows += '</td>';
+        rows += '<td>' + esc(lastKonfig(v)) + '</td>';
+        rows += '<td style="font-weight:600">' + esc(v.königin_jahr || '—') + '</td>';
+        rows += '<td><div class="qstats">';
+        for (const [icon, color, bg, fn] of badges) {
+            const d = fn(v);
+            if (d) rows += '<span class="qstat" style="background:' + bg + ';color:' + color + '">' + icon + ' ' + esc(d) + '</span> ';
+        }
+        rows += '</div></td>';
+        rows += '<td style="max-width:200px">' + esc(v.besondere_hinweise || '') + '</td>';
+        rows += '</tr>';
+    }
+    document.getElementById('volk-tbody').innerHTML = rows;
+
+    // Chronik (neueste CHRONICLE_LIMIT)
+    const list = [];
+    for (const [id, v] of volks) {
+        for (const l of (v.logs || [])) {
+            list.push({
+                ts: l.timestamp || '', volk: v.name || ('Volk ' + id),
+                aktion: l.aktion || '', menge: l.menge || '', details: l.details || '',
+                cat: getCat(l.aktion || '', l.details || '')
+            });
+        }
+    }
+    list.sort((a, b) => ((new Date(b.ts)).getTime() || 0) - ((new Date(a.ts)).getTime() || 0));
+    const shown = list.slice(0, CHRONICLE_LIMIT);
+    let chron = '';
+    for (const e of shown) {
+        const st = CAT_STYLE[e.cat] || { icon: '📋', color: '#4b5563' };
+        chron += '<div class="ch-entry"><div class="ch-icon">' + st.icon + '</div><div class="ch-body">';
+        chron += '<span class="ch-meta">' + esc(fmtShort(e.ts)) + '</span> ';
+        chron += '<span class="ch-volk" style="color:' + st.color + '">│ ' + esc(e.volk) + '</span> ';
+        chron += '<span class="ch-action" style="color:' + st.color + '">– ' + esc(e.aktion.replace(/_/g, ' ')) + '</span> ';
+        if (e.menge) chron += '<span style="font-size:0.8rem;color:#6b7280">(' + esc(e.menge) + ')</span>';
+        if (e.details) chron += '<div class="ch-detail">' + esc(e.details) + '</div>';
+        chron += '</div></div>';
+    }
+    const rest = list.length - shown.length;
+    if (rest > 0) chron += '<p style="text-align:center;color:#6b7280">… und ' + rest + ' weitere Einträge (komplett im CSV-Download)</p>';
+    document.getElementById('chronicle-list').innerHTML = chron;
+
+    // Legende
+    const legendOrder = ['kontrolle', 'fuetterung', 'varroa', 'koenigin', 'wiegen', 'konfiguration', 'schwarm', 'drohnenbrut', 'ableger', 'gesundheit', 'ernte', 'foto', 'planung', 'wetter'];
+    const legendNames = {
+        kontrolle: 'Kontrolle', fuetterung: 'Fütterung', varroa: 'Varroa', koenigin: 'Königin',
+        wiegen: 'Wiegen', konfiguration: 'Aufbau', schwarm: 'Schwarmkontrolle', drohnenbrut: 'Drohnenbrut',
+        ableger: 'Ableger', gesundheit: 'Gesundheit', ernte: 'Ernte', foto: 'Dokumentation',
+        planung: 'Planung', wetter: 'Wetter'
+    };
+    let leg = '';
+    for (const c of legendOrder) {
+        const st = CAT_STYLE[c];
+        if (!st) continue;
+        leg += '<span class="leg-item" style="background:' + st.color + '15;color:' + st.color + '">' + st.icon + ' ' + legendNames[c] + '</span>';
+    }
+    document.getElementById('dash-legend').innerHTML = leg;
+}
+
+/* ── Datenquelle: voelker.json zur Laufzeit, eingebetteter Stand als Fallback ── */
+async function initDashboard() {
+    try {
+        const res = await fetch('voelker.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        if (data && typeof data === 'object') DASH_DATA = data;
+    } catch (e) {
+        // Offline oder file:// (fetch nicht möglich): eingebetteter Stand wird verwendet.
+        console.warn('[Dashboard] voelker.json nicht ladbar, Fallback-Daten aktiv:', e && e.message);
+    }
+    renderAll();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDashboard);
+} else {
+    initDashboard();
 }
 </script>
 </body></html>
